@@ -1,0 +1,12 @@
+// shared
+@import "./_normalize";
+@import "./_base";
+@import "./_helpers";
+
+// components
+@import "./_footer";
+
+body {
+    background-image: url('../../assets/images/backgrounds/computer-mouse.jpg');
+    background-size: cover;
+}

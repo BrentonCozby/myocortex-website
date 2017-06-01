@@ -1,0 +1,12 @@
+extends ../layout
+
+block head
+    include ../partials/head
+    +makeHead('Home', 'this is an optional page description')
+
+block content
+    .container
+        br
+        h1 This is the homepage #[i.fa.fa-linkedin(aria-hidden="true")]
+        img.rocket(src="./assets/images/rocket.svg" width="200px")
+        a(href="/users/brian") See Brian's page

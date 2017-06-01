@@ -1,0 +1,11 @@
+extends ../../layout
+
+block head
+    include ../../partials/head
+    +makeHead('Brian', 'this is Brian\'s page')
+
+block content
+    .container
+        br
+        h1 This is Brian's page in the user/ folder
+        img.rocket(src="../../assets/images/rocket.svg" width="200px")
