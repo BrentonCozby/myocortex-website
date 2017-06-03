@@ -43,3 +43,39 @@
         width: 1170px;
     }
 }
+
+.down-arrow {
+    text-decoration: none;
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    line-height: 1;
+    color: #777;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: down-arrow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, .7);
+    }
+
+    i {
+        transition: all 0s;
+        padding: 0 8px;
+    }
+}
+
+@keyframes down-arrow {
+    0% {
+        transform: translateX(-50%) translateY(6px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-6px);
+    }
+}

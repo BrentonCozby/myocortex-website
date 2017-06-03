@@ -57,7 +57,7 @@ export default {
     },
     plugins: [
         new FaviconsPlugin({
-            logo: resolve(Dir.images, 'b-icon.png'),
+            logo: resolve(Dir.images, 'logos','mcx.png'),
             background: '#333',
             title: title,
             icons: {

@@ -1,0 +1,75 @@
+#main-logo-container {
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 500ms;
+
+    &.black-bg {
+        background-color: #ddd;
+    }
+
+    .main-logo {
+        height: 58px;
+        padding: 15px;
+
+        @media all and (min-width: 768px) {
+            height: 65px;
+        }
+    }
+}
+
+.above-the-fold {
+    height: 100vh;
+    background-image: url('../../assets/images/backgrounds/bg-home-1-mobile.jpg');
+    background-size: 120% auto;
+    background-position: 0 top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @media all and (min-width: 768px) {
+        background-size: auto 100%;
+        background-image: url('../../assets/images/backgrounds/home-bg-1@2x.jpg');
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .intro-text {
+        position: absolute;
+        bottom: 40px;
+
+        @media all and (min-width: 992px) {
+            bottom: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h4 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .mcx {
+            height: 45px;
+            margin-top: 15px;
+        }
+    }
+
+    .large-statement {
+        display: none;
+        position: absolute;
+        margin: 0;
+        font-size: 180px;
+        right: 0;
+        bottom: -40px;
+        line-height: 1;
+        color: darken($mcx-red, 15%);
+        transition: all 0s;
+
+        @media all and (min-width: 992px) {
+            display: block;
+        }
+    }
+}

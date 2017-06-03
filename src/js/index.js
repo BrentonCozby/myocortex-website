@@ -1,6 +1,14 @@
 import './contact_me.js'
-
 import '../scss/index.scss'
+
+import throttle from 'lodash.throttle'
+import smoothScrollInit from './smooth-scroll.js'
+import {
+    playAnimations,
+    mainLogo,
+    largeStatement,
+    respectTheProcessTitle
+} from './animations.js'
 
 // import views so they can live-reload during development
 if (process.env.NODE_ENV === 'development') {
@@ -16,4 +24,14 @@ if (process.env.NODE_ENV === 'development') {
 
 $(function() {
 
+    smoothScrollInit()
+
+
+    function onScroll() {
+        playAnimations()
+        mainLogo()
+        largeStatement()
+        respectTheProcessTitle()
+    }
+    $(document).scroll(throttle(onScroll, 100))
 })

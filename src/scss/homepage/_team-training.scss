@@ -1,0 +1,79 @@
+section.team-training {
+    overflow: hidden;
+    padding: 40px 0;
+    background-color: darken($mcx-red, 12%);
+
+    .images-container {
+        width: 100%;
+        height: 60vw;
+
+        @media all and (min-width: 992px) {
+            position: absolute;
+        }
+
+        .man {
+            position: absolute;
+            width: 45%;
+            right: -40px;
+            transform: rotateY(180deg);
+
+            @media all and (min-width: 992px) {
+                right: -220px;
+                transform: rotateY(180deg) scale(1.1) translateY(0);
+            }
+        }
+
+        .logo {
+            position: absolute;
+            width: 40%;
+            transform: translateY(140%);
+            right: 60px;
+            opacity: .7;
+
+            @media all and (min-width: 992px) {
+                right: 10%;
+                transform: translateY(90%);
+            }
+        }
+
+        .woman {
+            position: absolute;
+            right: 40%;
+            width: 50%;
+            transform: translateY(5%);
+
+            @media all and (min-width: 992px) {
+                right: 30%;
+                transform: translateY(-3%);
+            }
+        }
+    }
+
+    .text {
+        color: #fff;
+        max-width: 300px;
+        z-index: 1;
+        padding: 0 20px;
+        padding-bottom: 40px;
+
+        @media all and (min-width: 992px) {
+            margin-left: 5%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        p {
+            margin: 25px 0;
+        }
+
+        a {
+            color: #fff;
+        }
+    }
+}
