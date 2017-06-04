@@ -21,7 +21,9 @@
 
 .above-the-fold {
     height: 100vh;
-    background-image: url('../../assets/images/backgrounds/bg-home-1-mobile.jpg');
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 100%),
+        url('../../assets/images/backgrounds/bg-home-1-mobile.jpg');
     background-size: 120% auto;
     background-position: 0 top;
     background-repeat: no-repeat;
@@ -38,7 +40,7 @@
 
     .intro-text {
         position: absolute;
-        bottom: 40px;
+        bottom: 80px;
 
         @media all and (min-width: 992px) {
             bottom: auto;
@@ -70,6 +72,14 @@
 
         @media all and (min-width: 992px) {
             display: block;
+        }
+    }
+
+    .down-arrow {
+        bottom: 60px;
+
+        @media all and (min-width: 768px) {
+            bottom: 20px;
         }
     }
 }

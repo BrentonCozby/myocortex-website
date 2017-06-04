@@ -4,7 +4,7 @@ section.process {
     .title {
         position: absolute;
         display: inline-block;
-        font-size: 70px;
+        font-size: 50px;
         text-align: right;
         opacity: 0;
         right: 30px;
@@ -29,7 +29,7 @@ section.process {
     .container {
         display: flex;
         flex-flow: row wrap;
-        padding-top: 180px;
+        padding-top: 120px;
         min-height: 100vh;
 
         @media all and (min-width: 992px) {
@@ -40,11 +40,13 @@ section.process {
     .left {
         height: 60vw;
         width: 100%;
-        margin: 30px 0 10px 0;
+        margin: 30px 0 10px;
+        margin-left: 20px;
 
         @media all and (min-width: 992px) {
             height: auto;
             width: 60%;
+            margin-left: 0;
         }
 
         img {
@@ -93,7 +95,7 @@ section.process {
                     left: 5%;
                     opacity: 1;
                     transition: all 2s;
-                    transition-delay: 500ms;
+                    transition-delay: 300ms;
 
                     @media all and (min-width: 992px) {
                         left: 0;
@@ -112,14 +114,10 @@ section.process {
                 }
 
                 &.scroll-visible {
-                    left: 20%;
+                    left: 30%;
                     opacity: 1;
                     transition: all 2s;
                     transition-delay: 700ms;
-
-                    @media all and (min-width: 992px) {
-                        left: 30%;
-                    }
                 }
             }
         }

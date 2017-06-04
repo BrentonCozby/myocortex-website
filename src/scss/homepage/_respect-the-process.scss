@@ -42,6 +42,7 @@ section.respect-the-process {
 
         .learn-more-btn {
             padding: 12px 30px;
+            padding-right: 50px;
             border-radius: 22px;
             border: 2px solid #ddd;
             color: darken($mcx-red, 10%);
@@ -51,15 +52,22 @@ section.respect-the-process {
             letter-spacing: 3px;
 
             &::after {
+                position: absolute;
                 content: '→';
                 font-size: 20px;
                 line-height: 1;
                 margin-left: 3px;
+                top: 9px;
+                transition: all 200ms;
             }
 
             &:hover,
             &:focus {
                 border-color: darken($mcx-red, 10%);
+
+                &::after {
+                    margin-left: 9px;
+                }
             }
         }
     }
