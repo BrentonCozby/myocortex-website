@@ -483,7 +483,13 @@ AddDefaultCharset utf-8
 # http://cspisawesome.com/.
 
 <IfModule mod_headers.c>
-    Header set Content-Security-Policy "default-src 'self' data:; font-src https://fonts.googleapis.com; child-src 'none'; object-src 'none'"  
+    Header set Content-Security-Policy "
+        default-src 'self';
+        font-src https://fonts.gstatic.com;
+        style-src https://fonts.googleapis.com;
+        child-src 'none';
+        object-src 'none'
+    "
     # `mod_headers` cannot match based on the content-type, however,
     # the `Content-Security-Policy` response header should be send
     # only for HTML documents and not for the other resources.
