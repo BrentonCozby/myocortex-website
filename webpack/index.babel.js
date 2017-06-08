@@ -48,7 +48,7 @@ let common = {
     plugins: [
         new HtmlPlugin({
             filename: 'index.html',
-            template: resolve(Dir.pages, 'index.pug'),
+            template: resolve(Dir.pages, 'homepage.pug'),
             title, description, site_url
         }),
         new HtmlPlugin({
@@ -57,8 +57,18 @@ let common = {
             title, description, site_url
         }),
         new HtmlPlugin({
-            filename: 'users/brian/index.html',
-            template: resolve(Dir.views, 'users', 'brian', 'index.pug'),
+            filename: 'analysis/index.html',
+            template: resolve(Dir.pages, 'analysis.pug'),
+            title, description, site_url
+        }),
+        new HtmlPlugin({
+            filename: 'systems/index.html',
+            template: resolve(Dir.pages, 'systems.pug'),
+            title, description, site_url
+        }),
+        new HtmlPlugin({
+            filename: 'tools/index.html',
+            template: resolve(Dir.pages, 'tools.pug'),
             title, description, site_url
         }),
         new DefinePlugin({

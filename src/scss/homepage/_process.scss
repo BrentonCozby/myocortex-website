@@ -26,7 +26,7 @@ section.process {
         }
     }
 
-    .container {
+    .left-right {
         display: flex;
         flex-flow: row wrap;
         padding-top: 120px;
@@ -59,16 +59,16 @@ section.process {
                 max-width: 100%;
             }
 
-            &.guy1 {
-                max-height: 500px;
+            &.woman1 {
+                max-height: 450px;
                 left: -110%;
                 top: 50%;
-                transform: translate(0, -50%);
+                transform: translate(0, -50%) rotateY(180deg);
                 z-index: 2;
                 height: 100%;
 
                 &.scroll-visible {
-                    left: 0;
+                    left: -9%;
                     opacity: 1;
                     transition: all 2s;
                     transition-delay: 0s;
@@ -78,7 +78,7 @@ section.process {
                     height: auto;
                 }
             }
-            &.guy2 {
+            &.woman2 {
                 max-height: 350px;
                 left: -110%;
                 top: 70%;
@@ -102,7 +102,7 @@ section.process {
                     }
                 }
             }
-            &.guy3 {
+            &.woman3 {
                 max-height: 320px;
                 left: -110%;
                 top: 52%;
@@ -162,7 +162,7 @@ section.process {
 
                 .icon {
                     font-size: 40px;
-                    color: rgba(160, 0, 0, .8);
+                    color: $mcx-red;
                     border: 2px solid #ddd;
                     width: 70px;
                     padding-top: 13px;
@@ -170,14 +170,37 @@ section.process {
                 }
 
                 &-title {
+                    text-align: left;
                     margin: 0;
                     padding-top: 3px;
-                    font-size: 14px;
-                    letter-spacing: 1px;
+                    padding-left: 6px;
+                    font-size: 17px;
+                    letter-spacing: 2px;
                     width: 70px;
                     border-left: 2px solid #ddd;
                     display: inline-block;
                     color: #444;
+                }
+
+                &:last-of-type {
+
+                    .tab-title {
+                        text-align: center;
+                        padding-left: 0;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+
+                    .icon {
+                        border-color: #000;
+                    }
+
+                    .tab-title {
+                        border-color: #000;
+                        color: #000;
+                    }
                 }
             }
         }

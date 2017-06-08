@@ -1,0 +1,58 @@
+extends ../layout
+
+block head
+    include ../partials/head
+    +makeHead('Home')
+
+block content
+    #main-logo-container
+        img.main-logo(src="assets/images/logos/myocortex_wide.svg" alt="MYOCORTEX full logo")
+    section.above-the-fold
+        .container
+            .intro-text
+                h4 break barriers.#[br]redefine your results.
+                img.mcx(src="assets/images/logos/mcx.png" alt="MYOCORTEX MCX logo")
+            a.down-arrow(href='#process')
+                i.fa.fa-angle-down(aria-hidden="true")
+            h6.large-statement respect
+    section.process#process
+        .container
+            h2.title the#[br]process
+        .container.left-right
+            .left
+                img.woman1(src='assets/images/people/woman-jumping-cutout.png' alt="woman jumping")
+                img.woman2(src='assets/images/people/home2-athelete2@2x.png' alt="woman stretching")
+                img.woman3(src='assets/images/people/home2-athelete3@2x.png' alt="woman stretching")
+            .right
+                .content
+                    .mission-statement
+                        p MYOCORTEX is a premier (world-class) sport performance, health and wellness training facility that uses individual specific modalities to optimize human performance and function.  Our passion is to develop and train muscle contraction using processed execution through human movement.
+                        p At MCX we analyze our clients’ individual biomechanics and design a micro-progressive strength and conditioning regimen that includes isometric exercises and Muscle Activation TechniquesTM (MAT) which enables us to work with all ages and fitness levels.
+                        p #[em Click one of the icons below to learn more...]
+                    .tabs-container
+                        a.tab(href="analysis")
+                            i.icon.fa.fa-line-chart(aria-hidden="true")
+                            h4.tab-title analysis
+                        a.tab(href="systems")
+                            i.icon.fa.fa-heartbeat(aria-hidden="true")
+                            h4.tab-title systems
+                        a.tab(href="tools")
+                            i.icon.fa.fa-wrench(aria-hidden="true")
+                            h4.tab-title tools
+    section.team-training#team-training
+        .text
+            h4 team training content
+            p Irregardless lonche besito downtown no yeah, yeah no lummus park venetian causeway park west que fancy design district fire super.
+            p Que fancy de pinga 305 till I die, flagami casa de carajo telly ricer LIV croquetica venetian causeway gorda fire.
+            a.btn.mind-body-link(href='') Link to MIND BODY
+        .images-container
+            img.man(src='assets/images/people/footballer.png', alt='football quarterback')
+            img.logo(src='assets/images/logos/mcx-white.png', alt='White MYOCORTEX logo')
+            img.woman(src='assets/images/people/jumping-woman.png', alt='jumping woman')
+    section.respect-the-process#respect-the-process
+        h2.title respect the process
+        .text
+            h4 you deserve better
+            a.btn.learn-more-btn(href='analysis') learn more
+        
+        

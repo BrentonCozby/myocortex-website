@@ -2,7 +2,10 @@ extends ../layout
 
 block head
     include ../partials/head
-    +makeHead('Home', 'this is an optional page description')
+    +makeHead('Page Not Found')
 
 block content
     h1 404 Page Not Found
+    div
+        a(href="/")
+            button Go To Homepage

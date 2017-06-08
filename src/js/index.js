@@ -13,7 +13,10 @@ import {
 // import views so they can live-reload during development
 if (process.env.NODE_ENV === 'development') {
     // pages
-    require('../views/pages/index.pug')
+    require('../views/pages/homepage.pug')
+    require('../views/pages/analysis.pug')
+    require('../views/pages/systems.pug')
+    require('../views/pages/tools.pug')
     require('../views/pages/404.pug')
 
     // partials & sections

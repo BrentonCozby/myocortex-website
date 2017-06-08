@@ -2,9 +2,9 @@
 // added to them when they scroll into view
 let selectors = [
     $('#process .title'),
-    $('.guy1'),
-    $('.guy2'),
-    $('.guy3')
+    $('.woman1'),
+    $('.woman2'),
+    $('.woman3')
 ]
 
 let animElements = []
@@ -73,8 +73,10 @@ export { largeStatement }
 
 const $respectTheProcessTitle = $('#respect-the-process .title')
 function respectTheProcessTitle() {
-    const adjustment = (windowScroll() - $respectTheProcessTitle.offset().top) * .2
-    $respectTheProcessTitle.css('transform', `translate(-50%, ${adjustment}px)`)
+    if($respectTheProcessTitle.length) {
+        const adjustment = (windowScroll() - $respectTheProcessTitle.offset().top) * .2
+        $respectTheProcessTitle.css('transform', `translate(-50%, ${adjustment}px)`)
+    }
 }
 
 export { respectTheProcessTitle }

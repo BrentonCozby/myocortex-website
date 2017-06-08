@@ -29,12 +29,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
+    width: 100%;
     min-height: 100vh;
+
+    &.banner {
+        min-height: inherit;
+        height: 50vh;
+    }
 }
 
 a {
 
     &:hover {
         color: $mcx-red;
+    }
+}
+
+#main-logo-container {
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 500ms;
+
+    &.black-bg {
+        background-color: #ddd;
+    }
+
+    .main-logo {
+        height: 58px;
+        padding: 15px;
+
+        @media all and (min-width: 768px) {
+            height: 65px;
+        }
     }
 }
