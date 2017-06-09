@@ -1,8 +1,8 @@
 .above-the-fold {
     height: 100vh;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 100%),
-        url('../../assets/images/backgrounds/bg-home-1-mobile.jpg');
+    // background-image:
+    //     linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 100%),
+    //     url('../../assets/images/backgrounds/bg-home-1-mobile.jpg');
     background-size: 120% auto;
     background-position: 0 top;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 
     @media all and (min-width: 768px) {
         background-size: cover;
-        background-image: url('../../assets/images/backgrounds/home-bg-1@2x.jpg');
+        // background-image: url('../../assets/images/backgrounds/home-bg-1@2x.jpg');
     }
 
     .container {
