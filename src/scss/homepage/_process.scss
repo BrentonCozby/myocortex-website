@@ -67,13 +67,6 @@ section.process {
                 z-index: 2;
                 height: 100%;
 
-                &.scroll-visible {
-                    left: -9%;
-                    opacity: 1;
-                    transition: all 2s;
-                    transition-delay: 0s;
-                }
-
                 @media all and (min-width: 992px) {
                     height: auto;
                 }
@@ -90,17 +83,6 @@ section.process {
                     height: auto;
                     top: 62%;
                 }
-
-                &.scroll-visible {
-                    left: 5%;
-                    opacity: 1;
-                    transition: all 2s;
-                    transition-delay: 300ms;
-
-                    @media all and (min-width: 992px) {
-                        left: 0;
-                    }
-                }
             }
             &.woman3 {
                 max-height: 320px;
@@ -112,13 +94,37 @@ section.process {
                 @media all and (min-width: 992px) {
                     height: auto;
                 }
+            }
+        }
+    }
 
-                &.scroll-visible {
-                    left: 30%;
-                    opacity: 1;
-                    transition: all 2s;
-                    transition-delay: 700ms;
+    .three-women {
+
+        &.scroll-visible {
+
+            .woman1 {
+                left: -9%;
+                opacity: 1;
+                transition: all 2s;
+                transition-delay: 0s;
+            }
+
+            .woman2 {
+                left: 5%;
+                opacity: 1;
+                transition: all 2s;
+                transition-delay: 300ms;
+
+                @media all and (min-width: 992px) {
+                    left: 0;
                 }
+            }
+
+            .woman3 {
+                left: 30%;
+                opacity: 1;
+                transition: all 2s;
+                transition-delay: 700ms;
             }
         }
     }

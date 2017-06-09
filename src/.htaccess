@@ -485,8 +485,8 @@ AddDefaultCharset utf-8
 <IfModule mod_headers.c>
     Header set Content-Security-Policy "
         default-src 'self';
-        font-src https://fonts.gstatic.com;
-        style-src https://fonts.googleapis.com;
+        font-src https://fonts.gstatic.com 'self' data:;
+        style-src https://fonts.googleapis.com 'self';
         child-src 'none';
         object-src 'none'
     "
