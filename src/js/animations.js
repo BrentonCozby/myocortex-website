@@ -46,6 +46,7 @@ $(document).ready(function() {
         windowHeight = $(window).height()
         offset = windowHeight * .1
         _getPositions()
+        playAnimations()
     }, 1000)
 })
 

@@ -29,7 +29,6 @@ $(function() {
 
     smoothScrollInit()
 
-
     function onScroll() {
         playAnimations()
         mainLogo()
