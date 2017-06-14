@@ -47,9 +47,6 @@ export default {
                             limit: 40000,
                             name: '[path][name].[ext]'
                         }
-                    }, {
-                        loader: 'image-webpack-loader',
-                        options: {}
                     }
                 ]
             }
@@ -57,7 +54,7 @@ export default {
     },
     plugins: [
         new FaviconsPlugin({
-            logo: resolve(Dir.images, 'logos','mcx.png'),
+            logo: resolve(Dir.images, 'logos','favicon.png'),
             background: '#333',
             title: title,
             icons: {

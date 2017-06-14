@@ -1,14 +1,14 @@
 section.analysis {
-    background-color: #ddd;
+    background-color: #222;
 
     .intro-text {
-        position: absolute;
-        bottom: 10px;
+        padding: 25px;
 
         @media all and (min-width: 992px) {
-            bottom: auto;
+            position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(0, -50%);
         }
 
         .page-title {
@@ -25,6 +25,7 @@ section.analysis {
         .text-box {
             line-height: 1.7;
             color: #fff;
+            max-width: 500px;
 
             p {
                 font-size: 14px;

@@ -2,43 +2,38 @@ extends ../layout
 
 block head
     include ../partials/head
-    +makeHead('Analysis')
+    +makeHead('Systems')
 
 block content
     #main-logo-container
         img.main-logo(src="assets/images/logos/myocortex_wide.svg" alt="MYOCORTEX full logo")
-    section.analysis.top
-        img.banner-image(src='', alt='MYOCORTEX Analysis')
-        .banner-image-overlay
-        .container
-            .intro-text
-                h1.page-title analysis
-                h6 begin with a complimentary consultation
-    section.analysis.content
+    section.systems.top
+        .intro-text
+            h1.page-title Systems
+            img.mcx(src="assets/images/logos/mcx.png" alt="MYOCORTEX MCX logo")
+    section.systems.content
         .container
             .text-box
-                p The MYOCORTEX process begins with an initial complimentary 30-minute consulation to discuss your specific needs and goals. If we determine our system is a good fit for you, we will schedule a complete assessment using Greg Roskopf's #[a(href='') Muscle Activiation Techniques]#[sup TM] (MAT).
-                h3 Complete MAT assessment
-                p This 60-minute assessment consist of the following:
+                h4.content-title Muscle Activiation Techniques (MAT)
+                p MAT is a systematic approach to evaluate, treat and test muscle contraction, which was founded on the principle that normal movement is fundamental to human health and that a muscle’s ability to contract efficiently is important for functional exercise.
+                p Any loss of muscle contraction may be demonstrated as a loss of motion and decreased physical performance, which may lead to pain and/or the loss of physical capabilities.
+                p The human body is designed to be symmetrical. Comparing left to right motion evaluates an individual's muscle contractile capability.
+                p If asymmetry is determined then we use precise forces applied to restore and re-activate muscle efficiency. MAT is a mechanical study of functional movement.
+                
+                h4.content-title The Exercise Experience #[sup #[small TM]] (RTS)
+                div.equation
+                    div.left
+                        span Ex =&nbsp;
+                    div.right
+                        span.top #{'P/(M × J) + R/S + I/E + T/F'}
+                        span.bottom A
+                p Exercise is about forces; internal force production in response to external force application to produce a desired outcome. Exercise is a process; stimulating the appropriate level of contraction determined by your current status and goal. Exercise is a continual investigation; strategically manipulating range, movement pattern, or strength-resistance relationship™to orchestrate a focused challenge altering the level of difficulty.
+                p Clients Can Expect:
                 ul
-                    li Detailed health history
-                    li Postural examination
-                    li Range of motion evaluation
-                p After the assessment is complete, we will have a full understanding of your current physiological state, allowing us to create a plan tailored for your body.
-            .MAT-logo-container
-                img(src='assets/images/logos/mat-logo.png', alt='Muscle Activiation Techniques logo')
-            .aside-container
-                aside
-                    h2 Book Your Consultation
-                    form#analysis-contact.contact
-                        label First Name
-                        input(type='text', name='first_name', required)
-                        label Last Name
-                        input(type='text', name='last_name', required)
-                        label Email
-                        input(type='email', name='email', required)
-                        label Phone
-                        input(type='tel', name='phone', required)
-                        button(type='submit') RSVP
-                    p A representation from MYOCORTEX will contact you to schedule a date and time.
-                    
+                    li A Client-Defined Exercise Routine
+                    li Increase and/or maintain specific force generated strengths
+                    li Optimize muscular endurance
+                    li Stop, reverse, slow down the degenerative joint, musculoskeletal, and neuromuscular processes
+                    li Facilitate efficient and effective training
+                    li Deliver results while decreasing risk of injury and limit breakdowns
+                    li Promote overall health without pain                    

@@ -1,3 +1,27 @@
 section.systems.top {
-    
+    height: 100vh;
+    min-height: inherit;
+    background-color: #222;
+
+    @media all and (min-width: 768px) {
+        height: 50vh;
+    }
+
+    .intro-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .page-title {
+            font-size: 56px;
+            color: #fff;
+            margin: 0;
+            padding-bottom: 30px;
+        }
+
+        .mcx {
+            width: 160px;
+        }
+    }
 }

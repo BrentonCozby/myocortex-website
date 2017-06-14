@@ -10,6 +10,7 @@ section.process {
         right: 30px;
         top: 20px;
         margin: 0;
+        line-height: 1;
         transform: translateY(80px);
         transition: all 1s;
         transition-timing-function: ease-out;
@@ -20,7 +21,7 @@ section.process {
         }
 
         @media all and (min-width: 992px) {
-            font-size: 90px;
+            font-size: 120px;
             transform: translateY(80px);
             transition: all 1s;
         }

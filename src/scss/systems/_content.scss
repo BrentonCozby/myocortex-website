@@ -1,0 +1,56 @@
+section.systems.content {
+    padding: 20px;
+
+    @media all and (min-width: 768px) {
+        padding: 80px 20px;
+    }
+
+    .content-title {
+        font-size: 32px;
+        margin-top: 0;
+    }
+
+    p {
+        line-height: 1.7;
+    }
+
+    .equation {
+        display: flex;
+        width: 250px;
+        align-items: center;
+        text-align: center;
+        font-style: italic;
+
+        @media all and (min-width: 992px) {
+            width: 320px;
+            margin: auto;
+        }
+
+        .left {
+            font-size: 28px;
+            padding-right: 5px;
+
+            @media all and (min-width: 992px) {
+                font-size: 34px;
+            }
+        }
+
+        .right {
+
+            @media all and (min-width: 992px) {
+                font-size: 20px;
+            }
+
+            .top {
+                display: block;
+                padding: 5px 0;
+            }
+
+            .bottom {
+                display: block;
+                border-top: 2px solid #888;
+                padding: 5px 0;
+            }
+        }
+    }
+}

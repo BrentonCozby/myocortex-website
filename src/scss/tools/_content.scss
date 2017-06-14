@@ -1,0 +1,16 @@
+section.tools.content {
+    padding: 20px;
+
+    @media all and (min-width: 768px) {
+        padding: 80px 20px;
+    }
+
+    .content-title {
+        font-size: 32px;
+        margin-top: 0;
+    }
+
+    p {
+        line-height: 1.7;
+    }
+}
