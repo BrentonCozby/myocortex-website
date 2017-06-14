@@ -1,6 +1,6 @@
 footer
-    a(href='/')
-        img.logo(src='assets/images/logos/mcx-white.png', alt='MYOCORTEX logo')
+    a(href= htmlWebpackPlugin.options.rootUrl)
+        img.logo(src=`${htmlWebpackPlugin.options.rootUrl}assets/images/logos/mcx-white.png`, alt='MYOCORTEX logo')
     .social-media
         a(href='' title='MYOCORTEX Facebook')
             i.fa.fa-facebook-square(aria-hidden='true')

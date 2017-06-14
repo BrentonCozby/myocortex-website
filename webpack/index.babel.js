@@ -49,27 +49,32 @@ let common = {
         new HtmlPlugin({
             filename: 'index.html',
             template: resolve(Dir.pages, 'homepage.pug'),
-            title, description, site_url
+            title, description, site_url, rootUrl
         }),
         new HtmlPlugin({
             filename: '404.html',
             template: resolve(Dir.pages, '404.pug'),
-            title, description, site_url
+            title, description, site_url, rootUrl
         }),
         new HtmlPlugin({
             filename: 'analysis/index.html',
             template: resolve(Dir.pages, 'analysis.pug'),
-            title, description, site_url
+            title, description, site_url, rootUrl
         }),
         new HtmlPlugin({
             filename: 'systems/index.html',
             template: resolve(Dir.pages, 'systems.pug'),
-            title, description, site_url
+            title, description, site_url, rootUrl
         }),
         new HtmlPlugin({
             filename: 'tools/index.html',
             template: resolve(Dir.pages, 'tools.pug'),
-            title, description, site_url
+            title, description, site_url, rootUrl
+        }),
+        new HtmlPlugin({
+            filename: 'about/index.html',
+            template: resolve(Dir.pages, 'about.pug'),
+            title, description, site_url, rootUrl
         }),
         new DefinePlugin({
             'process.env': {
