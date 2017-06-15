@@ -9,12 +9,15 @@ section.analysis.top {
         url('../../assets/images/backgrounds/analysis-background-mobile.jpg');
     background-size: cover;
     background-position: right top;
+    height: 70vh;
+    min-height: inherit;
 
     @media all and (min-width: 992px) {
         background-position: center top;
         background-image:
             linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
             url('../../assets/images/backgrounds/analysis-background.jpg');
+        height: 100vh;
     }
 
     .intro-text {
@@ -82,7 +85,7 @@ section.analysis.top {
 
 section.analysis.mobile-content {
     background-color: #fff;
-    padding: 40px 0;
+    padding: 0 0 40px;
     min-height: inherit;
     line-height: 1.7;
 
