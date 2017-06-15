@@ -1,10 +1,21 @@
+#main-logo-container.black-bg {
+    background-color: #111;
+}
+
 section.analysis.top {
     background-color: #222;
-    background-size: cover;
-    background-position: center top;
     background-image:
         linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
-        url('../../assets/images/backgrounds/analysis-background.jpg');
+        url('../../assets/images/backgrounds/analysis-background-mobile.jpg');
+    background-size: cover;
+    background-position: right top;
+
+    @media all and (min-width: 992px) {
+        background-position: center top;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+            url('../../assets/images/backgrounds/analysis-background.jpg');
+    }
 
     .intro-text {
         position: absolute;
@@ -19,7 +30,7 @@ section.analysis.top {
         }
 
         .page-title {
-            font-size: 40px;
+            font-size: 60px;
             color: darken($mcx-red, 10%);
             margin: 0;
             line-height: 1;
