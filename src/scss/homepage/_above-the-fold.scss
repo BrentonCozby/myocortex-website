@@ -25,10 +25,17 @@
         overflow: hidden;
         background: #DBDBDB;
     }
-    .video-container .poster img {
+    .video-container .poster {
+        display: none;
+        background-image: url('../../assets/images/backgrounds/homepage-background-mobile.jpg');
+        background-size: cover;
         width: 100%;
-        top: 0;
-        position: absolute;
+        height: 100%;
+
+        @media all and (min-width: 992px) {
+            background-image: url('../../assets/images/backgrounds/homepage-background.jpg');
+            background-position: right top;
+        }
     }
     .video-container video {
         position: absolute;
