@@ -137,6 +137,7 @@ section.process {
             max-width: 400px;
 
             @media all and (min-width: 992px) {
+                position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
             }
