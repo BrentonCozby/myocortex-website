@@ -1,4 +1,5 @@
 import './contact_me.js'
+import './video.js'
 import '../scss/index.scss'
 
 import throttle from 'lodash.throttle'

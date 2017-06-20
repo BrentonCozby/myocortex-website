@@ -2,7 +2,8 @@
 // added to them when they scroll into view
 let selectors = [
     $('#process .title'),
-    $('#three-women')
+    $('#three-women'),
+    $('.appear')
 ]
 
 let animElements = []

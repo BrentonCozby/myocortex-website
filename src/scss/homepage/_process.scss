@@ -1,24 +1,17 @@
 section.process {
     padding-bottom: 60px;
+    background-color: #fff;
 
     .title {
         position: absolute;
         display: inline-block;
         font-size: 50px;
         text-align: right;
-        opacity: 0;
         right: 30px;
         top: 20px;
         margin: 0;
         line-height: 1;
-        transform: translateY(80px);
-        transition: all 1s;
-        transition-timing-function: ease-out;
-
-        &.scroll-visible {
-            transform: translateY(0);
-            opacity: 1;
-        }
+        @include appear(80px, 1s);
 
         @media all and (min-width: 992px) {
             font-size: 120px;
@@ -174,8 +167,8 @@ section.process {
                     color: $mcx-red;
                     border: 2px solid #ddd;
                     width: 70px;
-                    padding-top: 13px;
                     height: 70px;
+                    padding: 14px;
                 }
 
                 &-title {
@@ -201,13 +194,15 @@ section.process {
 
                 &:hover,
                 &:focus {
+                    outline: none;
 
                     .icon {
-                        border-color: #000;
+                        border-color: #999;
+                        padding: 8px;
                     }
 
                     .tab-title {
-                        border-color: #000;
+                        border-color: #999;
                         color: #000;
                     }
                 }

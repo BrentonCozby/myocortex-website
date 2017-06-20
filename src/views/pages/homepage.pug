@@ -6,10 +6,21 @@ block head
 
 block content
     #main-logo-container
-        img.main-logo(src="assets/images/logos/myocortex_wide.svg" alt="MYOCORTEX full logo")
+        a(href='')
+            img.main-logo(src="assets/images/logos/myocortex_wide.svg" alt="MYOCORTEX full logo")
     section.above-the-fold
+        .homepage-hero-module
+            .video-container
+                video.fillWidth(autoplay, loop)
+                    source(src='assets/videos/homepage.mp4', type='video/mp4')
+                    | Your browser does not support the video tag. I suggest you upgrade your browser.
+                    //- source(src='assets/videos/Typing.webm', type='video/webm')
+                    //- | Your browser does not support the video tag. I suggest you upgrade your browser.
+                .poster.hidden
+                    //- img(src='assets/videos/Typing.jpg', alt='')
+        .filter
         .container
-            .intro-text
+            .intro-text.appear
                 h4 break barriers.#[br]redefine your results.
                 img.mcx(src="assets/images/logos/mcx.png" alt="MYOCORTEX MCX logo")
             a.down-arrow(href='#process')
@@ -26,25 +37,25 @@ block content
             .right
                 .content
                     .mission-statement
-                        p Our Mission is to train muscles, not motions. MYOCORTEX is committed to strengthening the neuromuscular system with controlled movement and isometric exercises. Our goal is to build a healthy foundation while limiting breakdowns, pain and injures.
-                        p Click one of the icons below to learn more...
+                        p.appear Our Mission is to train muscles, not motions. MYOCORTEX is committed to strengthening the neuromuscular system with controlled movement and isometric exercises. Our goal is to build a healthy foundation while limiting breakdowns, pain and injures.
+                        p.appear Click one of the icons below to learn more...
                     .tabs-container
                         a.tab(href="analysis")
-                            i.icon.fa.fa-line-chart(aria-hidden="true")
+                            img.icon(src='assets/images/icons/analysis-icon.svg', alt='analysis icon')
                             h4.tab-title analysis
                         a.tab(href="systems")
-                            i.icon.fa.fa-heartbeat(aria-hidden="true")
+                            img.icon(src='assets/images/icons/systems-icon.svg', alt='analysis icon')
                             h4.tab-title systems
                         a.tab(href="tools")
-                            i.icon.fa.fa-wrench(aria-hidden="true")
+                            img.icon(src='assets/images/icons/tools-icon.svg', alt='analysis icon')
                             h4.tab-title tools
     section.team-training#team-training
         .text
             h4 team training
-            p The Workouts have specific goals using a periodization plan.
-            p It's not BootCamp.
-            p It's not CrossFit.
-            p It's Strength Training evaluated and recorded consistently to ensure positive muscular development. Our coaches bring accountability and empowerment to your training.
+            p.appear The Workouts have specific goals using a periodization plan.
+            p.appear It's not BootCamp.
+            p.appear It's not CrossFit.
+            p.appear It's Strength Training evaluated and recorded consistently to ensure positive muscular development. Our coaches bring accountability and empowerment to your training.
             a.btn.mind-body-link(href='') Link to MIND BODY
         .images-container
             img.man(src='assets/images/people/footballer.png', alt='football quarterback')
@@ -53,5 +64,5 @@ block content
     section.respect-the-process#respect-the-process
         h2.title respect the process
         .text
-            h4 you deserve better
-            a.btn.learn-more-btn(href='analysis') learn more
+            h4.appear you deserve better
+            a.btn.appear.learn-more-btn(href='analysis') learn more

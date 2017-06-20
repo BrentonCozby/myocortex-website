@@ -45,6 +45,15 @@ a {
     }
 }
 
+.btn {
+    color: darken($mcx-red, 10%);
+
+    &:hover,
+    &:focus {
+        border-color: darken($mcx-red, 10%);
+    }
+}
+
 #main-logo-container {
     position: fixed;
     display: block;

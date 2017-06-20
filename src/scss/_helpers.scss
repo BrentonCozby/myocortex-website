@@ -50,7 +50,6 @@
     padding-right: 50px;
     border-radius: 22px;
     border: 2px solid #ddd;
-    color: darken($mcx-red, 10%);
     text-transform: uppercase;
     text-decoration: none;
     font-size: 14px;
@@ -69,7 +68,6 @@
 
     &:hover,
     &:focus {
-        border-color: darken($mcx-red, 10%);
 
         &::after {
             margin-left: 9px;
@@ -111,4 +109,20 @@
     100% {
         transform: translateX(-50%) translateY(-6px);
     }
+}
+
+@mixin appear($offset, $speed) {
+    opacity: 0;
+    transform: translateY($offset);
+    transition: all $speed;
+    transition-timing-function: ease-out;
+
+    &.scroll-visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.appear {
+    @include appear(30px, 700ms);
 }
