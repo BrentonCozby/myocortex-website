@@ -78,13 +78,12 @@
     }
 
     .large-statement {
-        display: none;
         position: absolute;
         margin: 0;
-        font-size: 180px;
-        font-family: $header-font-narrow;
-        right: 0;
-        bottom: -50px;
+        font-size: 42px;
+        // font-family: $header-font-narrow;
+        right: 20px;
+        bottom: -20px;
         line-height: 1;
         color: darken($mcx-red, 15%);
         transition: all 0s;
@@ -92,6 +91,7 @@
 
         @media all and (min-width: 992px) {
             display: block;
+            font-size: 120px;
         }
     }
 
