@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans|Pathway+Gothic+One');
 
-$header-font: 'Pathway Gothic One', sans-serif;
+@font-face {
+    font-family: 'Pirulen';
+    src: url('../../fonts/pirulen/pirulen.ttf');
+}
+
+$header-font: 'Pirulen', sans-serif;
+$header-font-narrow: 'Pathway Gothic One', sans-serif;
 $main-font: 'Droid Sans', sans-serif;
 $mcx-red: #C3050F;
 

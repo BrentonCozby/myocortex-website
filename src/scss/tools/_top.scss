@@ -12,12 +12,17 @@ section.tools.top {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
 
         .page-title {
-            font-size: 56px;
+            font-size: 36px;
             color: #fff;
             margin: 0;
             padding-bottom: 30px;
+
+            @media all and (min-width: 992px) {
+                font-size: 60px;
+            }
         }
 
         .mcx {

@@ -37,4 +37,10 @@ $(function() {
         respectTheProcessTitle()
     }
     $(document).scroll(throttle(onScroll, 100))
+
+    setTimeout(function() {
+        particlesJS.load('particles-js', 'vendor/particlesjs/particlesjs-config.json', function() {
+            
+        });
+    }, 1000)
 })

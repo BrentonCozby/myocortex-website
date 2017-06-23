@@ -40,7 +40,7 @@ section.analysis.top {
             line-height: 1;
 
             @media all and (min-width: 992px) {
-                font-size: 110px;
+                font-size: 65px;
             }
         }
 
@@ -69,13 +69,14 @@ section.analysis.top {
             }
 
             h3 {
+                font-family: $header-font-narrow;
                 font-size: 38px;
                 margin: 55px 0 20px;
                 line-height: 1;
             }
 
             ul li {
-                font-family: $header-font;
+                font-family: $header-font-narrow;
                 font-size: 18px;
                 letter-spacing: 1px;
                 margin: 10px 0;

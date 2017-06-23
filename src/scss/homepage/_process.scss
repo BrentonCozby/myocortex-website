@@ -7,21 +7,38 @@ section.process {
         min-height: 900px;
     }
 
+    #particles-js {
+        display: none;
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        width: 45vw;
+        height: 90vh;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+
+        @media all and (min-width: 992px) {
+            display: block;
+        }
+    }
+
     .title {
         position: absolute;
         display: inline-block;
-        font-size: 50px;
+        font-size: 40px;
         text-align: right;
-        right: 30px;
+        right: 20px;
         top: 20px;
         margin: 0;
         line-height: 1;
         @include appear(80px, 1s);
 
         @media all and (min-width: 992px) {
-            font-size: 120px;
+            font-size: 60px;
             transform: translateY(80px);
             transition: all 1s;
+            top: 60px;
+            right: 10px;
         }
     }
 
@@ -175,6 +192,7 @@ section.process {
                     width: 70px;
                     height: 70px;
                     padding: 14px;
+                    margin-bottom: -4px;
                 }
 
                 &-title {
@@ -183,6 +201,7 @@ section.process {
                     padding-top: 3px;
                     padding-left: 6px;
                     font-size: 17px;
+                    font-family: $header-font-narrow;
                     letter-spacing: 2px;
                     width: 70px;
                     border-left: 2px solid #ddd;
