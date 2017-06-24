@@ -113,3 +113,32 @@ section.analysis.mobile-content {
         margin: 10px 0;
     }
 }
+
+section.cta {
+    background-color: darken($mcx-red, 15%);
+    padding: 20px;
+    min-height: 50vh;
+
+    .text {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+    }
+
+    h4 {
+        line-height: 1.5;
+    }
+
+    .btn {
+        border-color: #444;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            border-color: #fff;
+        }
+    }
+}
