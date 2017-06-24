@@ -19,3 +19,29 @@ section.tools.content {
         line-height: 1.7;
     }
 }
+
+section.tools.cta {
+    background-image: url('../../assets/images/backgrounds/canvas-texture.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    min-height: 50vh;
+
+    .text {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+    }
+
+    h4 {
+        line-height: 1.5;
+        font-size: 20px;
+
+        @media all and (min-width: 768px) {
+            font-size: 24px;
+        }
+    }
+}

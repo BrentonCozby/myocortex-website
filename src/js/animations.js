@@ -41,6 +41,7 @@ function playAnimations() {
             el.element.removeClass('scroll-visible')
     })
 }
+export { playAnimations }
 
 $(document).ready(function() {
     setInterval(function() {
@@ -51,8 +52,6 @@ $(document).ready(function() {
     }, 1000)
 })
 
-export { playAnimations }
-
 const $mainLogoContainer = $('#main-logo-container')
 function mainLogo() {
     if($(window).width() <= 768 && windowScroll() > 80)
@@ -60,15 +59,28 @@ function mainLogo() {
     else
         $mainLogoContainer.removeClass('black-bg')
 }
-
 export { mainLogo }
+
+function switchLogo(page) {
+    const $topSection = $(`section.${page}.top`)
+    if($topSection.length === 0) return false
+
+    const height = $topSection.height()
+    const $mainLogo = $('#main-logo-container .main-logo')
+
+    if(windowScroll() > height - 15) {
+        $mainLogo.attr('src', '../assets/images/logos/myocortex_logo_black.svg')
+    } else {
+        $mainLogo.attr('src', '../assets/images/logos/myocortex_logo_white.svg')
+    }
+}
+export { switchLogo }
 
 const $largeStatement = $('.large-statement')
 function largeStatement() {
     const adjustment = windowScroll() * .1
     $largeStatement.css('transform', `translateY(-${adjustment}%)`)
 }
-
 export { largeStatement }
 
 const $respectTheProcessTitle = $('#respect-the-process .title')
@@ -78,5 +90,4 @@ function respectTheProcessTitle() {
         $respectTheProcessTitle.css('transform', `translate(-50%, ${adjustment}px)`)
     }
 }
-
 export { respectTheProcessTitle }

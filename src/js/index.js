@@ -8,7 +8,8 @@ import {
     playAnimations,
     mainLogo,
     largeStatement,
-    respectTheProcessTitle
+    respectTheProcessTitle,
+    switchLogo
 } from './animations.js'
 
 // import views so they can live-reload during development
@@ -19,6 +20,8 @@ if (process.env.NODE_ENV === 'development') {
     require('../views/pages/systems.pug')
     require('../views/pages/tools.pug')
     require('../views/pages/404.pug')
+    require('../views/pages/about.pug')
+    require('../views/pages/sign-up.pug')
 
     // partials & sections
     require('../views/layout.pug')
@@ -35,12 +38,16 @@ $(function() {
         mainLogo()
         largeStatement()
         respectTheProcessTitle()
+        switchLogo('systems')
+        switchLogo('tools')
     }
     $(document).scroll(throttle(onScroll, 100))
 
     setTimeout(function() {
-        particlesJS.load('particles-js', 'vendor/particlesjs/particlesjs-config.json', function() {
-            
-        });
+        if($('#particles-js').length > 0) {
+            particlesJS.load('particles-js', 'vendor/particlesjs/particlesjs-config.json', function() {
+
+            });
+        }
     }, 1000)
 })

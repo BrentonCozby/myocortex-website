@@ -1,7 +1,9 @@
 section.tools.top {
     height: 100vh;
     min-height: inherit;
-    background-color: #222;
+    background-image: url('../../assets/images/backgrounds/tools-background.jpg');
+    background-size: cover;
+    background-position: center;
 
     @media all and (min-width: 768px) {
         height: 50vh;

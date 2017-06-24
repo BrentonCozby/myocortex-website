@@ -76,6 +76,11 @@ let common = {
             template: resolve(Dir.pages, 'about.pug'),
             title, description, site_url, rootUrl
         }),
+        new HtmlPlugin({
+            filename: 'sign-up/index.html',
+            template: resolve(Dir.pages, 'sign-up.pug'),
+            title, description, site_url, rootUrl
+        }),
         new DefinePlugin({
             'process.env': {
                'NODE_ENV': JSON.stringify(process.env.NODE_ENV)

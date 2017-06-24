@@ -34,7 +34,8 @@ section.analysis.top {
         }
 
         .page-title {
-            font-size: 60px;
+            font-size: 35px;
+            text-shadow: 0 1px 2px #000;
             color: darken($mcx-red, 10%);
             margin: 0;
             line-height: 1;
@@ -114,8 +115,8 @@ section.analysis.mobile-content {
     }
 }
 
-section.cta {
-    background-color: darken($mcx-red, 15%);
+section.analysis.cta {
+    background: darken($mcx-red, 15%);
     padding: 20px;
     min-height: 50vh;
 
@@ -130,10 +131,16 @@ section.cta {
 
     h4 {
         line-height: 1.5;
+        font-size: 20px;
+        color: #888;
+
+        @media all and (min-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     .btn {
-        border-color: #444;
+        border-color: #777;
         color: #fff;
 
         &:hover,
