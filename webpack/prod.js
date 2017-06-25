@@ -45,7 +45,7 @@ export default {
                         loader: 'url-loader',
                         options: {
                             limit: 40000,
-                            name: '[path][name].[ext]'
+                            name: '/[path][name].[ext]'
                         }
                     }
                 ]
