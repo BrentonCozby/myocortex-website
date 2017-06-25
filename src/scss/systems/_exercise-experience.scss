@@ -1,0 +1,96 @@
+section.systems.exercise-experience {
+    background-color: #333;
+    min-height: inherit;
+
+    .text {
+        padding: 15px;
+        color: #fff;
+
+        @media all and (min-width: 992px) {
+            background-color: #fff;
+            color: #000;
+            margin: 100px auto;
+            padding: 5px 25px;
+            box-shadow: 0 3px 25px 8px rgba(0, 0, 0, .9);
+
+            .border {
+                box-sizing: content-box;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: -12px;
+                left: -12px;
+                padding: 8px;
+                border: 4px solid $mcx-red;
+            }
+        }
+
+        h3 {
+            line-height: 1.6;
+            font-size: 28px;
+            margin-top: 15px;
+        }
+
+        p, li {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+    }
+
+    div.equation {
+        display: flex;
+        width: 250px;
+        align-items: center;
+        text-align: center;
+        font-style: italic;
+        color: $mcx-red;
+
+        @media all and (min-width: 992px) {
+            width: 320px;
+            margin: auto;
+        }
+
+        .left {
+            font-size: 28px;
+            padding-right: 5px;
+
+            @media all and (min-width: 992px) {
+                font-size: 34px;
+            }
+        }
+
+        .right {
+
+            @media all and (min-width: 992px) {
+                font-size: 20px;
+            }
+
+            .top {
+                display: block;
+                padding: 5px 0;
+            }
+
+            .bottom {
+                display: block;
+                border-top: 2px solid #888;
+                padding: 5px 0;
+            }
+        }
+    }
+
+    .joints {
+        display: block;
+        width: 80%;
+        bottom: 0;
+        margin-left: auto;
+
+        @media all and (min-width: 992px) {
+            width: auto;
+            bottom: auto;
+            position: absolute;
+            height: 90%;
+            bottom: 0;
+            right: 10px;
+        }
+    }
+}

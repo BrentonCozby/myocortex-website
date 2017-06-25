@@ -10,6 +10,7 @@ section.team-training {
         @media all and (min-width: 992px) {
             position: absolute;
             bottom: 0;
+            height: 100%;
         }
 
         .footballers {
@@ -44,8 +45,9 @@ section.team-training {
             right: 55%;
 
             @media all and (min-width: 992px) {
-                height: 140%;
-                right: 40%;
+                height: 180%;
+                right: 32%;
+                top: 0;
             }
         }
     }

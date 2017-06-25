@@ -1,47 +1,97 @@
 section.tools.content {
-    padding: 20px;
+    padding: 20px 0;
 
     @media all and (min-width: 768px) {
-        padding: 80px 20px;
+        padding: 80px 0px;
     }
 
-    .content-title {
-        font-family: $header-font-narrow;
-        font-size: 32px;
-        margin: 30px 0;
+    .tool-box {
+        background-color: #eee;
+        margin: 40px 0;
+        box-shadow: 0 5px 12px -2px rgba(0, 0, 0, .5);
+
+        .image {
+            width: 100%;
+            padding-bottom: 70%;
+            background-size: cover;
+            background-position: center;
+
+            @media all and (min-width: 992px) {
+                width: 50%;
+                padding-bottom: 35%;
+            }
+        }
+
+        .text-box {
+            padding: 0 15px;
+
+            h3 {
+                font-size: 24px;
+                margin-top: 20px;
+
+                @media all and (min-width: 992px) {
+                    font-size: 28px;
+                }
+            }
+
+            p, li {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+        }
 
         @media all and (min-width: 992px) {
-            font-size: 50px;
+            margin: 100px 0;
+
+            &::before {
+                box-sizing: content-box;
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: -16px;
+                top: -16px;
+                border: 4px solid #ccc;
+                padding: 12px;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -85px;
+                left: calc(50% - 2px);
+                width: 4px;
+                background-color: #ccc;
+                height: 70px;
+            }
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+
+            &::after {
+                display: none;
+            }
         }
     }
 
-    p {
-        line-height: 1.7;
-    }
-}
-
-section.tools.cta {
-    background-image: url('../../assets/images/backgrounds/canvas-texture.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    min-height: 50vh;
-
-    .text {
-        position: absolute;
-        text-align: center;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 300px;
+    .tool-box:nth-of-type(1) .image {
+        background-image: url('../../assets/images/people/isophit.jpeg');
+        background-position: center bottom;
     }
 
-    h4 {
-        line-height: 1.5;
-        font-size: 20px;
+    .tool-box:nth-of-type(2) .image {
+        background-image: url('../../assets/images/people/contrology.jpeg');
+        background-position: right center;
+    }
 
-        @media all and (min-width: 768px) {
-            font-size: 24px;
-        }
+    .tool-box:nth-of-type(3) .image {
+        background-image: url('../../assets/images/people/weight-training.jpeg');
+        background-position: center bottom;
     }
 }

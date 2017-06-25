@@ -11,6 +11,7 @@ import {
     respectTheProcessTitle,
     switchLogo
 } from './animations.js'
+import { initMenu } from './menu.js'
 
 // import views so they can live-reload during development
 if (process.env.NODE_ENV === 'development') {
@@ -31,6 +32,7 @@ if (process.env.NODE_ENV === 'development') {
 
 $(function() {
 
+    initMenu()
     smoothScrollInit()
 
     function onScroll() {
