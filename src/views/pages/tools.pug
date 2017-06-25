@@ -5,13 +5,14 @@ block head
     +makeHead('Tools')
 
 block content
+    - var globals = htmlWebpackPlugin.options
     #main-logo-container
-        a(href='..')
-            img.main-logo(src="../assets/images/logos/myocortex_logo_white.svg" alt="MYOCORTEX full logo")
+        a(href= globals.rootUrl + '/')
+            img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_logo_white.svg", alt="MYOCORTEX full logo")
     section.tools.top
         .container
             .intro-text
-                img.mcx(src="../assets/images/logos/mcx.png" alt="MYOCORTEX MCX logo")
+                img.mcx(src= globals.rootUrl + "/assets/images/logos/mcx.png", alt="MYOCORTEX MCX logo")
                 h1.page-title Tools
     section.tools.content
         .container
@@ -39,5 +40,5 @@ block content
     section.tools.cta
         .text
             h4.appear get started
-            a.btn.appear.learn-more-btn(href='../sign-up') sign up
+            a.btn.appear.learn-more-btn(href= globals.rootUrl + '/sign-up') sign up
         #particles-js

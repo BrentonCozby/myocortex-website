@@ -5,7 +5,8 @@ block head
     +makeHead('Page Not Found')
 
 block content
+    - var globals = htmlWebpackPlugin.options
     h1 404 Page Not Found
     div
-        a(href="/")
+        a(href= globals.rootUrl + "/")
             button Go To Homepage

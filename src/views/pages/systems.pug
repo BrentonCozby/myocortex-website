@@ -5,16 +5,17 @@ block head
     +makeHead('Systems')
 
 block content
+    - var globals = htmlWebpackPlugin.options
     #main-logo-container
-        a(href='..')
-            img.main-logo(src="../assets/images/logos/myocortex_logo_white.svg" alt="MYOCORTEX full logo")
+        a(href= globals.rootUrl + '/')
+            img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_logo_white.svg", alt="MYOCORTEX full logo")
     section.systems.top
         .container
             .intro-text
-                img.mcx(src="../assets/images/logos/mcx.png" alt="MYOCORTEX MCX logo")
+                img.mcx(src= globals.rootUrl + "/assets/images/logos/mcx.png", alt="MYOCORTEX MCX logo")
                 h1.page-title Systems
     section.systems.MAT
-        img.golfer(src='assets/images/people/golfer-color.jpg', alt='golfer')
+        img.golfer(src= globals.rootUrl + '/assets/images/people/golfer-color.jpg', alt='golfer')
         .container
             div.split-2
                 .split-box
@@ -46,9 +47,9 @@ block content
                         li Deliver results while decreasing risk of injury and limit breakdowns
                         li Promote overall health without pain
                 .split-box
-        img.joints(src='assets/images/people/joints.png', alt='joints')
+        img.joints(src= globals.rootUrl + '/assets/images/people/joints.png', alt='joints')
     section.systems.cta
         div#particles-js
         .text
             h4.appear learn about our tools
-            a.btn.appear.learn-more-btn(href='../tools') continue          
+            a.btn.appear.learn-more-btn(href= globals.rootUrl + '/tools') continue          

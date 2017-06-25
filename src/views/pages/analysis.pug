@@ -5,9 +5,10 @@ block head
     +makeHead('Analysis')
 
 block content
+    - var globals = htmlWebpackPlugin.options
     #main-logo-container.analysis
-        a(href='..')
-            img.main-logo(src="../assets/images/logos/myocortex_logo_white_with_mcx.svg" alt="MYOCORTEX full logo")
+        a(href= globals.rootUrl + '/')
+            img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_logo_white_with_mcx.svg", alt="MYOCORTEX full logo")
     section.analysis.top
         .intro-text
             h1.page-title analysis
@@ -33,4 +34,4 @@ block content
     section.analysis.cta
         .text
             h4.appear learn about our systems
-            a.btn.appear.learn-more-btn(href='../systems') continue
+            a.btn.appear.learn-more-btn(href= globals.rootUrl + '/systems') continue

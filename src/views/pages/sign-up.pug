@@ -5,15 +5,16 @@ block head
     +makeHead('Sign-up')
 
 block content
+    - var globals = htmlWebpackPlugin.options
     #main-logo-container
-        a(href='..')
-            img.main-logo(src="../assets/images/logos/myocortex_logo_black_with_mcx.svg" alt="MYOCORTEX full logo")
+        a(href= globals.rootUrl + '/')
+            img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_logo_black_with_mcx.svg", alt="MYOCORTEX full logo")
     section.sign-up.top
         .text-box
             h1.page-title Your Team
             .founders
                 a.founder-container(target='_blank', rel='noopnener', href='')
-                    img(src='../assets/images/people/rob_headshot.jpg', alt="Rob")
+                    img(src= globals.rootUrl + '/assets/images/people/rob_headshot.jpg', alt="Rob")
                     .name-and-title
                         p.name Rob DiDonato
                         ul.title
@@ -22,7 +23,7 @@ block content
                             li Bachelors of Science in Exercise &amp; Sports Science
                             li Member of the NSCA
                 a.founder-container(target='_blank', rel='noopnener', href='')
-                    img(src='../assets/images/people/courtney_headshot.jpg', alt="Courtney")
+                    img(src= globals.rootUrl + '/assets/images/people/courtney_headshot.jpg', alt="Courtney")
                     .name-and-title
                         p.name Courtney Paige Alvarez
                         ul.title

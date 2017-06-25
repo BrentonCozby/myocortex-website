@@ -5,11 +5,12 @@ block head
     +makeHead('About')
 
 block content
+    - var globals = htmlWebpackPlugin.options
     #main-logo-container
         a(href='..')
-            img.main-logo(src="../assets/images/logos/myocortex_wide.svg" alt="MYOCORTEX full logo")
+            img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_wide.svg", alt="MYOCORTEX full logo")
     section.about.top
-        img.banner-image(src='', alt='MYOCORTEX About')
+        img.banner-image(src= globals.rootUrl + '/', alt='MYOCORTEX About')
         .banner-image-overlay
         .container
             .intro-text
