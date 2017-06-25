@@ -2,7 +2,7 @@ import {resolve} from 'path'
 
 export const rootUrl = (process.env.NODE_ENV === 'production')
     ? '/myocortex-website/dist/'
-    : '/'
+    : ''
 
 export const title = 'MYOCORTEX'
 export const description = 'MYOCORTEX is a premier (world-class) sport performance, health and wellness training facility that uses individual specific modalities to optimize human performance and function.'
