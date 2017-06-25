@@ -76,13 +76,6 @@ function switchLogo(page) {
 }
 export { switchLogo }
 
-const $largeStatement = $('.large-statement')
-function largeStatement() {
-    const adjustment = windowScroll() * .1
-    $largeStatement.css('transform', `translateY(-${adjustment}%)`)
-}
-export { largeStatement }
-
 const $respectTheProcessTitle = $('#respect-the-process .title')
 function respectTheProcessTitle() {
     if($respectTheProcessTitle.length) {

@@ -7,7 +7,6 @@ import smoothScrollInit from './smooth-scroll.js'
 import {
     playAnimations,
     mainLogo,
-    largeStatement,
     respectTheProcessTitle,
     switchLogo
 } from './animations.js'
@@ -38,7 +37,6 @@ $(function() {
     function onScroll() {
         playAnimations()
         mainLogo()
-        largeStatement()
         respectTheProcessTitle()
         switchLogo('systems')
         switchLogo('tools')
