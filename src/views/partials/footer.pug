@@ -1,12 +1,14 @@
+- var rootUrl = htmlWebpackPlugin.options.rootUrl
+
 footer
-    a(href= htmlWebpackPlugin.options.rootUrl)
-        img.logo(src=`${htmlWebpackPlugin.options.rootUrl}assets/images/logos/mcx-white.png`, alt='MYOCORTEX logo')
+    a(href= rootUrl + '/')
+        img.logo(src=`${rootUrl}/assets/images/logos/mcx-white.png`, alt='MYOCORTEX logo')
     .site-links
-        a(href='/') home
-        a(href='analysis') analysis
-        a(href='systems') systems
-        a(href='tools') tools
-        a(href='sign-up') sign-up
+        a(href= rootUrl + '/') home
+        a(href= rootUrl + '/analysis') analysis
+        a(href= rootUrl + '/systems') systems
+        a(href= rootUrl + '/tools') tools
+        a(href= rootUrl + '/sign-up') sign-up
     .social-media
         a(href='' title='MYOCORTEX Facebook')
             i.fa.fa-facebook-square(aria-hidden='true')
