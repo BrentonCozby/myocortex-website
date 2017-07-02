@@ -60,10 +60,16 @@ section.tools.content {
                 display: block;
                 position: absolute;
                 bottom: -85px;
-                left: calc(50% - 2px);
+                left: 25%;
                 width: 4px;
                 background-color: #ccc;
                 height: 70px;
+            }
+
+            &:nth-of-type(2) {
+                &::after {
+                    left: 75%;
+                }
             }
         }
 
@@ -81,17 +87,17 @@ section.tools.content {
     }
 
     .tool-box:nth-of-type(1) .image {
-        background-image: url('../../assets/images/people/isophit.jpeg');
+        background-image: url('../../assets/images/isophit.jpg');
         background-position: center bottom;
     }
 
     .tool-box:nth-of-type(2) .image {
-        background-image: url('../../assets/images/people/contrology.jpeg');
+        background-image: url('../../assets/images/contrology.jpeg');
         background-position: right center;
     }
 
     .tool-box:nth-of-type(3) .image {
-        background-image: url('../../assets/images/people/weight-training.jpeg');
+        background-image: url('../../assets/images/weight-training.jpeg');
         background-position: center bottom;
     }
 }

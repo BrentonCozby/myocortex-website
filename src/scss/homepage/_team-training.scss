@@ -1,7 +1,7 @@
 section.team-training {
     overflow: hidden;
     padding: 40px 0 0;
-    background-color: darken($mcx-red, 12%);
+    background-color: $mcx-red;
 
     .images-container {
         width: 100%;
@@ -16,6 +16,7 @@ section.team-training {
         .footballers {
             position: absolute;
             width: 55%;
+            max-width: 700px;
             right: 0;
             bottom: -12%;
 
@@ -30,12 +31,12 @@ section.team-training {
             width: 40%;
             right: 25%;
             bottom: 5%;
-            opacity: .8;
+            opacity: .6;
 
             @media all and (min-width: 992px) {
-                right: 20%;
+                right: 15%;
                 width: 30%;
-                bottom: 20%;
+                bottom: 15%;
             }
         }
 

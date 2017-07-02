@@ -2,7 +2,7 @@ section.respect-the-process {
     padding: 40px 20px;
     background-image:
         linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
-        url('../../assets/images/backgrounds/canvas-texture.jpg');
+        url('../../assets/images/backgrounds/particles-background-white.jpg');
     background-size: cover;
     background-position: center;
 
@@ -31,10 +31,13 @@ section.respect-the-process {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 300px;
+        width: 100%;
+
 
         h4 {
             font-size: 20px;
+            line-height: 1.4;
+            margin-top: 40px;
 
             @media all and (min-width: 768px) {
                 font-size: 24px;
@@ -43,6 +46,12 @@ section.respect-the-process {
 
         .learn-more-btn {
 
+        }
+
+        .logo {
+            display: block;
+            margin: 40px auto 0;
+            width: 100px;
         }
     }
 }

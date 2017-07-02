@@ -69,11 +69,17 @@
         h4 {
             font-size: 18px;
             margin: 0;
+            border-bottom: 2px solid #999;
+            padding-bottom: 15px;
+
+            @media all and (min-width: 768px) {
+                font-size: 26px;
+            }
         }
 
         .mcx {
             height: 45px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
     }
 
@@ -85,14 +91,14 @@
         right: 20px;
         bottom: -20px;
         line-height: 1;
-        color: darken($mcx-red, 15%);
+        color: $mcx-red;
         transition: all 0s;
         z-index: 1;
 
         @media all and (min-width: 992px) {
             display: block;
-            font-size: 120px;
-            bottom: -40px;
+            font-size: 80px;
+            bottom: -30px;
         }
     }
 

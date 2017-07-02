@@ -9,39 +9,38 @@ block content
     #main-logo-container
         a(href= globals.rootUrl + '/')
             img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_logo_black_with_mcx.svg", alt="MYOCORTEX full logo")
+        h4 break barriers.#[br]redefine your results.
     section.sign-up.top
-        .text-box
-            h1.page-title Your Team
-            .founders
-                a.founder-container(target='_blank', rel='noopnener', href='')
-                    img(src= globals.rootUrl + '/assets/images/people/rob_headshot.jpg', alt="Rob")
-                    .name-and-title
-                        p.name Rob DiDonato
-                        ul.title
-                            li Muscle Activation Techniques™ Specialist
-                            li Certified Strength &amp; Conditioning Specialist
-                            li Bachelors of Science in Exercise &amp; Sports Science
-                            li Member of the NSCA
-                a.founder-container(target='_blank', rel='noopnener', href='')
-                    img(src= globals.rootUrl + '/assets/images/people/courtney_headshot.jpg', alt="Courtney")
-                    .name-and-title
-                        p.name Courtney Paige Alvarez
-                        ul.title
-                            li Pilates Coordinator
-                            li Muscle Activation Techniques™ Specialist
-                            li Resistance Training Specialist™ 1 2 3
-                            li PMA Certified Instructor
-                            li Bachelor of Science in Dance Studies
-        .form-container
-            h2 Book Your Consultation
-            form#analysis-contact.contact
-                label First Name
-                input(type='text', name='first_name', required)
-                label Last Name
-                input(type='text', name='last_name', required)
-                label Email
-                input(type='email', name='email', required)
-                label Phone
-                input(type='tel', name='phone', required)
-                button(type='submit') RSVP
-            p A representation from MYOCORTEX will contact you to schedule a date and time.
+        .flex-container
+            .text-box
+                h1.page-title founders
+                .founders
+                    a.founder-container(target='_blank', rel='noopnener', href='')
+                        img(src= globals.rootUrl + '/assets/images/people/rob_headshot.jpg', alt="Rob")
+                        .name-and-title
+                            p.name Rob DiDonato
+                    a.founder-container(target='_blank', rel='noopnener', href='')
+                        img(src= globals.rootUrl + '/assets/images/people/courtney_headshot.jpg', alt="Courtney")
+                        .name-and-title
+                            p.name Courtney Paige Alvarez
+            .form-container
+                h2 Information Inquiry
+                form#analysis-contact.contact
+                    label Name
+                    input(type='text', name='name', required)
+                    label Email
+                    input(type='email', name='email', required)
+                    label Phone
+                    input(type='tel', name='phone', required)
+                    label Subject
+                    select(name='subject')
+                      option(value='General Inquiry', selected='true') -- Select --
+                      option(value='Muscle Activation') Muscle Activation
+                      option(value='Exercise Experience') Exercise Experience
+                      option(value='Book Appointment') Book Appointment
+                      option(value='More Information') More Information
+                    label Message
+                    textarea(name='message')
+                    button(type='submit') SEND
+                p A representation from MYOCORTEX will contact you to schedule a date and time.
+        h4.statement respect the process

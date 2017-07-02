@@ -1,13 +1,10 @@
 section.tools.top {
-    height: 70vh;
-    min-height: inherit;
-    background-image: url('../../assets/images/backgrounds/tools-background.jpg');
+    height: 100vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+        url('../../assets/images/backgrounds/tools-background-full-red.jpg');
     background-size: cover;
     background-position: center;
-
-    @media all and (min-width: 768px) {
-        height: 50vh;
-    }
 
     .container {
         height: 100%;
@@ -46,6 +43,14 @@ section.tools.top {
                 font-size: 60px;
                 margin-left: 110px;
             }
+        }
+    }
+
+    .down-arrow {
+        bottom: 60px;
+
+        @media all and (min-width: 768px) {
+            bottom: 20px;
         }
     }
 }

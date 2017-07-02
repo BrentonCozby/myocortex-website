@@ -36,7 +36,7 @@ section.analysis.top {
         .page-title {
             font-size: 35px;
             text-shadow: 0 1px 2px #000;
-            color: darken($mcx-red, 10%);
+            color: $mcx-red;
             margin: 0;
             line-height: 1;
 
@@ -84,6 +84,14 @@ section.analysis.top {
             }
         }
     }
+
+    .down-arrow {
+        bottom: 60px;
+
+        @media all and (min-width: 768px) {
+            bottom: 20px;
+        }
+    }
 }
 
 section.analysis.mobile-content {
@@ -116,7 +124,7 @@ section.analysis.mobile-content {
 }
 
 section.analysis.cta {
-    background: darken($mcx-red, 15%);
+    background: $mcx-red;
     padding: 20px;
     min-height: 50vh;
 
@@ -132,7 +140,7 @@ section.analysis.cta {
     h4 {
         line-height: 1.5;
         font-size: 20px;
-        color: #888;
+        color: #222;
 
         @media all and (min-width: 768px) {
             font-size: 24px;
@@ -140,7 +148,7 @@ section.analysis.cta {
     }
 
     .btn {
-        border-color: #777;
+        border-color: #555;
         color: #fff;
 
         &:hover,

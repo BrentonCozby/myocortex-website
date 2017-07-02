@@ -14,7 +14,9 @@ block content
             .intro-text
                 img.mcx(src= globals.rootUrl + "/assets/images/logos/mcx.png", alt="MYOCORTEX MCX logo")
                 h1.page-title Tools
-    section.tools.content
+        a.down-arrow(href='#content')
+            i.fa.fa-angle-down(aria-hidden="true")
+    section.tools.content#content
         .container
             .tool-box.appear.split-2
                 .split-box.image
@@ -39,6 +41,6 @@ block content
                     p The basic principles involve a manipulation of the number of reps, sets, tempo, exercise types, and weights moved to cause desired increases in strength, endurance, and size. The specific combinations depends on the the individual performing the exercise.
     section.tools.cta
         .text
-            h4.appear get started
+            h4.appear Invest In Yourself
             a.btn.appear.learn-more-btn(href= globals.rootUrl + '/sign-up') sign up
-        #particles-js
+            img.logo(src= globals.rootUrl + '/assets/images/logos/mcx-contrast-dark.png')
