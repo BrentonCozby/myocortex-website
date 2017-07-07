@@ -173,6 +173,14 @@ section.process {
             }
         }
 
+        .learn-more {
+            font-size: 22px;
+
+            @media all and (min-width: 768px) {
+                font-size: 28px;
+            }
+        }
+
         .tabs-container {
             display: flex;
             justify-content: space-between;
@@ -199,13 +207,14 @@ section.process {
                     margin: 0;
                     padding-top: 3px;
                     padding-left: 6px;
-                    font-size: 17px;
+                    font-size: 14px;
                     font-family: $header-font-narrow;
                     letter-spacing: 2px;
                     width: 70px;
                     border-left: 2px solid #ddd;
                     display: inline-block;
-                    color: #444;
+                    color: $mcx-red;
+                    font-weight: bold;
                 }
 
                 &:last-of-type {

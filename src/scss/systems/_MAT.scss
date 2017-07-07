@@ -21,9 +21,15 @@ section.systems.MAT {
 
     .text {
         margin: 15px 0;
+        background-color: rgba(255, 255, 255, .8);
 
         @media all and (min-width: 992px) {
-            margin: 240px 0 160px;
+            margin: 10% 0 7%;
+            padding: 15px;
+        }
+
+        @media all and (min-width: 1300px) {
+            margin: 20% 0 15%;
         }
 
         h3 {

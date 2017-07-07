@@ -23,7 +23,7 @@ block content
             .intro-text
                 h4 break barriers.#[br]redefine your results.
                 img.mcx(src= globals.rootUrl + "/assets/images/logos/mcx.png", alt="MYOCORTEX MCX logo")
-            a.down-arrow(href='#process')
+            span.down-arrow
                 i.fa.fa-angle-down(aria-hidden="true")
         h6.large-statement respect
     section.process#process
@@ -38,12 +38,14 @@ block content
                 .content
                     .mission-statement
                         p.appear Our Mission is to train muscles, not motions. MYOCORTEX is committed to strengthening the neuromuscular system with controlled movement and isometric exercises. Our goal is to build a healthy foundation while limiting breakdowns, pain and injures.
-                        p.appear Click one of the icons below to learn more...
+                        br
+                        h3.learn-more.appear learn more...
+                        br
                     .tabs-container
-                        a.tab.appear(href="analysis")
+                        a.tab.appear(href= globals.rootUrl + "/analysis")
                             img.icon(src= globals.rootUrl + '/assets/images/icons/analysis-icon.svg', alt='analysis icon')
                             h4.tab-title analysis
-                        a.tab.appear.delay-200(href="systems")
+                        a.tab.appear.delay-200(href= globals.rootUrl + "/systems")
                             img.icon(src= globals.rootUrl + '/assets/images/icons/systems-icon.svg', alt='analysis icon')
                             h4.tab-title systems
                         a.tab.appear.delay-400(href="tools")
@@ -56,7 +58,7 @@ block content
             p.appear It's not BootCamp.
             p.appear It's not CrossFit.
             p.appear It's Strength Training evaluated and recorded consistently to ensure positive muscular development. Our coaches bring accountability and empowerment to your training.
-            a.btn.mind-body-link(href='') schedule
+            a.btn.mind-body-link(href= globals.rootUrl + '/sign-up') schedule
         .images-container
             img.footballers(src= globals.rootUrl + '/assets/images/people/footballers.png', alt='football players')
             img.logo(src= globals.rootUrl + '/assets/images/logos/mcx-white.png', alt='White MYOCORTEX logo')
