@@ -12,7 +12,7 @@ block content
     section.above-the-fold
         .homepage-hero-module
             .video-container
-                video.fillWidth(autoplay, loop)
+                video.fillWidth(autoplay, loop, poster= globals.rootUrl + '/assets/images/backgrounds/homepage-video-poster.jpg')
                     source(src= globals.rootUrl + '/assets/videos/homepage-background.mp4', type='video/mp4')
                     | Your browser does not support the video tag. I suggest you upgrade your browser.
                     //- source(src='assets/videos/Typing.webm', type='video/webm')
