@@ -172,74 +172,21 @@ section.process {
                 margin-bottom: 30px;
             }
         }
+    }
 
-        .learn-more {
-            font-size: 22px;
+    .buttons-container {
 
-            @media all and (min-width: 768px) {
-                font-size: 28px;
+        .btn {
+            font-size: 12px;
+
+            @media all and (min-width: 375px) {
+                font-size: 14px;
             }
         }
 
-        .tabs-container {
-            display: flex;
-            justify-content: space-between;
-
-            .tab {
-                width: 30%;
-                max-width: 100px;
-                text-align: center;
-                cursor: pointer;
-                text-decoration: none;
-
-                .icon {
-                    font-size: 40px;
-                    color: $mcx-red;
-                    border: 2px solid #ddd;
-                    width: 70px;
-                    height: 70px;
-                    padding: 14px;
-                    margin-bottom: -4px;
-                }
-
-                &-title {
-                    text-align: left;
-                    margin: 0;
-                    padding-top: 3px;
-                    padding-left: 6px;
-                    font-size: 14px;
-                    font-family: $header-font-narrow;
-                    letter-spacing: 2px;
-                    width: 70px;
-                    border-left: 2px solid #ddd;
-                    display: inline-block;
-                    color: $mcx-red;
-                    font-weight: bold;
-                }
-
-                &:last-of-type {
-
-                    .tab-title {
-                        text-align: center;
-                        padding-left: 0;
-                    }
-                }
-
-                &:hover,
-                &:focus {
-                    outline: none;
-
-                    .icon {
-                        border-color: #999;
-                        padding: 8px;
-                    }
-
-                    .tab-title {
-                        border-color: #999;
-                        color: #000;
-                    }
-                }
-            }
+        .btn:nth-of-type(2) {
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
     }
 }

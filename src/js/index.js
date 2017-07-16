@@ -16,11 +16,12 @@ import { initMenu } from './menu.js'
 if (process.env.NODE_ENV === 'development') {
     // pages
     require('../views/pages/homepage.pug')
+    require('../views/pages/private-training.pug')
+    require('../views/pages/group-training.pug')
     require('../views/pages/analysis.pug')
     require('../views/pages/systems.pug')
     require('../views/pages/tools.pug')
     require('../views/pages/404.pug')
-    require('../views/pages/about.pug')
     require('../views/pages/sign-up.pug')
 
     // partials & sections

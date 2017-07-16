@@ -124,7 +124,7 @@ section.analysis.mobile-content {
 }
 
 section.analysis.cta {
-    background: $mcx-red;
+    background: darken($mcx-red, 10%);
     padding: 20px;
     min-height: 50vh;
 

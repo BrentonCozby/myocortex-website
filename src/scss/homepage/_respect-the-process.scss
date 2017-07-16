@@ -1,8 +1,9 @@
 section.respect-the-process {
     padding: 40px 20px;
+    background-color: #fff;
     background-image:
-        linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
-        url('../../assets/images/backgrounds/particles-background-white.jpg');
+        linear-gradient(rgba(255, 255, 255, .65), rgba(255, 255, 255, .65)),
+        url('../../assets/images/backgrounds/particles-background.png');
     background-size: cover;
     background-position: center;
 
@@ -17,7 +18,7 @@ section.respect-the-process {
         text-align: center;
         line-height: 1;
         letter-spacing: 0px;
-        color: rgba(50, 50, 50, .3);
+        color: #ccc;
         transition: all 100ms;
 
         @media all and (min-width: 992px) {
@@ -42,10 +43,6 @@ section.respect-the-process {
             @media all and (min-width: 768px) {
                 font-size: 24px;
             }
-        }
-
-        .learn-more-btn {
-
         }
 
         .logo {

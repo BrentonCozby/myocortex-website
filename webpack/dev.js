@@ -16,7 +16,8 @@ export default {
         ]
     },
     output: {
-        filename: 'js/[name].js'
+        filename: 'js/[name].js',
+        publicPath: rootUrl + '/'
     },
     module: {
         rules: [

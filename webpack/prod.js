@@ -9,7 +9,7 @@ import ResourceHintsPlugin from 'resource-hints-webpack-plugin'
 import FaviconsPlugin from 'favicons-webpack-plugin'
 import { resolve } from 'path'
 
-import { Dir, title } from '../config.js'
+import { Dir, title, rootUrl } from '../config.js'
 
 export default {
     entry: {
@@ -21,7 +21,8 @@ export default {
     },
     output: {
         filename: 'js/[name].[chunkhash].js',
-        chunkFilename: 'js/[name].[chunkhash].js'
+        chunkFilename: 'js/[name].[chunkhash].js',
+        publicPath: rootUrl + '/'
     },
     module: {
         rules: [
@@ -45,7 +46,7 @@ export default {
                         loader: 'url-loader',
                         options: {
                             limit: 40000,
-                            name: '/[path][name].[ext]'
+                            name: '[path][name].[ext]'
                         }
                     }
                 ]

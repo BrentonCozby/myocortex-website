@@ -62,8 +62,7 @@ a {
 
 #main-logo-container {
     position: fixed;
-    display: block;
-    width: 100%;
+    display: inline-block;
     z-index: 10;
     transition: background-color 500ms;
 

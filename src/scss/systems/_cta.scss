@@ -1,5 +1,8 @@
 section.systems.cta {
-    background-image: url('../../assets/images/backgrounds/particles-background-white.jpg');
+    background-color: #fff;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .65), rgba(255, 255, 255, .65)),
+        url('../../assets/images/backgrounds/particles-background.png');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -11,7 +14,7 @@ section.systems.cta {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 300px;
+        width: 100%;
     }
 
     h4 {

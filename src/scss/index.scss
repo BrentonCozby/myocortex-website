@@ -8,8 +8,14 @@
 // homepage sections
 @import "homepage/above-the-fold";
 @import "homepage/process";
-@import "homepage/team-training";
 @import "homepage/respect-the-process";
+
+// personal training
+@import "private-training/top";
+@import "private-training/cta";
+// group training
+@import "group-training/top";
+@import "group-training/cta";
 
 // analysis
 @import "analysis/index";

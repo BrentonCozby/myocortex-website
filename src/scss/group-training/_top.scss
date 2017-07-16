@@ -1,4 +1,4 @@
-section.team-training {
+section.group-training.top {
     overflow: hidden;
     padding: 40px 0 0;
     background-color: $mcx-red;
@@ -83,25 +83,12 @@ section.team-training {
         }
 
         a.mind-body-link {
-            margin: 10px 0;
-            padding: 12px 20px;
-            padding-right: 36px;
             border-color: #777;
             color: #fff;
-            font-size: 12px;
-
-            &::after {
-                top: 7px;
-            }
 
             &:hover,
             &:focus {
                 border-color: #fff;
-                padding-right: 40px;
-
-                &::after {
-                    margin-left: 6px;
-                }
             }
         }
     }

@@ -1,7 +1,7 @@
 import {resolve} from 'path'
 
 export const rootUrl = (process.env.NODE_ENV === 'production')
-    ? '/myocortex-website/dist'
+    ? ''
     : ''
 
 export const title = 'MYOCORTEX'

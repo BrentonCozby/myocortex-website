@@ -1,5 +1,6 @@
 doctype html
 html(lang='en')
+    - var globals = htmlWebpackPlugin.options
     head
         block head
     body
@@ -9,4 +10,4 @@ html(lang='en')
             
         include ./partials/footer
 
-        script(src='vendor/particlesjs/particles.min.js')
+        script(src= globals.rootUrl + '/vendor/particlesjs/particles.min.js')

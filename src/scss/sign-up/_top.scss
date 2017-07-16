@@ -17,7 +17,10 @@ section.sign-up.top {
     padding-bottom: 15px;
 
     @media all and (min-width: 768px) {
-        background-image: url('../../assets/images/backgrounds/particles-background-white.jpg');
+        background-color: #fff;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, .65), rgba(255, 255, 255, .65)),
+            url('../../assets/images/backgrounds/particles-background.png');
         background-size: 130% auto;
         background-position: right center;
         padding-bottom: 0;

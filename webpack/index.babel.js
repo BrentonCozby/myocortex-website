@@ -57,6 +57,16 @@ let common = {
             title, description, site_url, rootUrl
         }),
         new HtmlPlugin({
+            filename: 'private-training/index.html',
+            template: resolve(Dir.pages, 'private-training.pug'),
+            title, description, site_url, rootUrl
+        }),
+        new HtmlPlugin({
+            filename: 'group-training/index.html',
+            template: resolve(Dir.pages, 'group-training.pug'),
+            title, description, site_url, rootUrl
+        }),
+        new HtmlPlugin({
             filename: 'analysis/index.html',
             template: resolve(Dir.pages, 'analysis.pug'),
             title, description, site_url, rootUrl
@@ -69,11 +79,6 @@ let common = {
         new HtmlPlugin({
             filename: 'tools/index.html',
             template: resolve(Dir.pages, 'tools.pug'),
-            title, description, site_url, rootUrl
-        }),
-        new HtmlPlugin({
-            filename: 'about/index.html',
-            template: resolve(Dir.pages, 'about.pug'),
             title, description, site_url, rootUrl
         }),
         new HtmlPlugin({
