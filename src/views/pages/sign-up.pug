@@ -6,7 +6,7 @@ block head
 
 block content
     - var globals = htmlWebpackPlugin.options
-    #main-logo-container
+    #main-logo-container.sign-up
         a(href= globals.rootUrl + '/')
             img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_logo_black_with_mcx.svg", alt="MYOCORTEX full logo")
         h4 break barriers.#[br]redefine your results.
@@ -15,11 +15,11 @@ block content
             .text-box
                 h1.page-title founders
                 .founders
-                    a.founder-container(target='_blank', rel='noopnener', href='')
+                    a.founder-container(href= globals.rootUrl + '/rob')
                         img(src= globals.rootUrl + '/assets/images/people/rob_headshot.jpg', alt="Rob")
                         .name-and-title
                             p.name Rob DiDonato
-                    a.founder-container(target='_blank', rel='noopnener', href='')
+                    a.founder-container(href= globals.rootUrl + '/courtney')
                         img(src= globals.rootUrl + '/assets/images/people/courtney_headshot.jpg', alt="Courtney")
                         .name-and-title
                             p.name Courtney Paige Alvarez

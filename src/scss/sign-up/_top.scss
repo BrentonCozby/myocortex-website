@@ -1,4 +1,4 @@
-#main-logo-container {
+#main-logo-container.sign-up {
     position: absolute;
 
     h4 {
@@ -70,6 +70,7 @@ section.sign-up.top {
             border-radius: 100%;
             border: 8px solid #ddd;
             box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
+            transition: all 400ms;
 
             @media all and (min-width: 992px) {
                 filter: grayscale(1) brightness(.8);
@@ -77,6 +78,8 @@ section.sign-up.top {
                 &:hover,
                 &:focus {
                     filter: none;
+                    box-shadow: 0 20px 30px -15px rgba(0, 0, 0, .6);
+                    transform: translateY(-3px);
                 }
             }
         }

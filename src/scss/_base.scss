@@ -62,17 +62,24 @@ a {
 
 #main-logo-container {
     position: fixed;
-    display: inline-block;
+    display: block;
+    width: 100%;
     z-index: 10;
     transition: background-color 500ms;
 
-    &.black-bg {
+    &.solid-bg {
         background-color: #ddd;
     }
 
+    a {
+        display: inline-block;
+    }
+
     .main-logo {
+        display: block;
         height: 58px;
         padding: 15px;
+        padding-bottom: 11px;
 
         @media all and (min-width: 768px) {
             height: 72px;

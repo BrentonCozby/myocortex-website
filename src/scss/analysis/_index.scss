@@ -1,5 +1,5 @@
-#main-logo-container.analysis.black-bg {
-    background-color: rgba(0, 0, 0, .8);
+#main-logo-container.analysis.solid-bg {
+    background-color: rgba(0, 0, 0, 1);
 }
 
 section.analysis.top {
@@ -9,7 +9,6 @@ section.analysis.top {
         url('../../assets/images/backgrounds/analysis-background-mobile.jpg');
     background-size: cover;
     background-position: right top;
-    background-attachment: fixed;
     height: 70vh;
     min-height: inherit;
 

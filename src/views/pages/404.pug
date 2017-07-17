@@ -6,6 +6,9 @@ block head
 
 block content
     - var globals = htmlWebpackPlugin.options
+    #main-logo-container
+        a(href= globals.rootUrl + '/')
+            img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_logo_black_with_mcx.svg", alt="MYOCORTEX full logo")
     h1 404 Page Not Found
     div
         a(href= globals.rootUrl + "/")

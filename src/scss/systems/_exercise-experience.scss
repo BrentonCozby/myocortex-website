@@ -2,6 +2,16 @@ section.systems.exercise-experience {
     background-color: #333;
     min-height: inherit;
 
+    .split-box {
+        @media all and (min-width: 768px) {
+            width: 100%;
+        }
+
+        @media all and (min-width: 992px) {
+            width: 50%;
+        }
+    }
+
     .text {
         padding: 15px;
         color: #fff;
@@ -81,16 +91,16 @@ section.systems.exercise-experience {
     .guy {
         display: block;
         width: 80%;
-        bottom: 0;
-        margin-left: auto;
+        bottom: 10px;
+        margin: auto;
 
         @media all and (min-width: 992px) {
-            width: auto;
+            width: 40%;
+            max-width: 650px;
             bottom: auto;
             position: absolute;
-            height: 100%;
-            bottom: 0;
-            right: 10px;
+            bottom: 2%;
+            right: 5%;
         }
     }
 }

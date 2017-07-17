@@ -55,15 +55,16 @@ $(document).ready(function() {
 const $mainLogoContainer = $('#main-logo-container')
 function mainLogo() {
     if($(window).width() <= 768 && windowScroll() > 80)
-        $mainLogoContainer.addClass('black-bg')
+        $mainLogoContainer.addClass('solid-bg')
     else
-        $mainLogoContainer.removeClass('black-bg')
+        $mainLogoContainer.removeClass('solid-bg')
 }
 export { mainLogo }
 
 function switchLogo(page) {
     const $topSection = $(`section.${page}.top`)
     if($topSection.length === 0) return false
+    if($(window).width() < 768) return false
 
     const height = $topSection.height()
     const $mainLogo = $('#main-logo-container .main-logo')
