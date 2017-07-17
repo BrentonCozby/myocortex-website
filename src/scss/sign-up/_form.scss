@@ -33,8 +33,9 @@
             background-color: rgba(255, 255, 255, .15);
             border: 1px solid #222;
             color: #fff;
-            appearance: none;
+            -moz-appearance: none;
             -webkit-appearance: none;
+            appearance: none;
             border-radius: 0;
 
             &:focus,
@@ -43,8 +44,16 @@
             }
         }
 
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+        }
+
         textarea {
             height: 100px;
+            resize: vertical;
         }
 
         button {
@@ -70,6 +79,25 @@
                 transition: all 0s;
                 transform: translateY(0);
             }
+        }
+    }
+
+    #feedback {
+        display: none;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 3px;
+        margin: 10px 0;
+        font-size: 14px;
+
+        &.success {
+            background-color: #73B566;
+        }
+
+        &.error {
+            background-color: #E5AF5F;
         }
     }
 

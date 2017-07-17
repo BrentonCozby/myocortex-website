@@ -362,11 +362,11 @@ AddDefaultCharset utf-8
 # Redirect from the `http://` to the `https://` version of the URL.
 # https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
 
-<IfModule mod_rewrite.c>
-   RewriteEngine On
-   RewriteCond %{HTTPS} !=on
-   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-</IfModule>
+# <IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteCond %{HTTPS} !=on
+#    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+# </IfModule>
 
 # ----------------------------------------------------------------------
 # | Suppressing / Forcing the `www.` at the beginning of URLs          |
@@ -404,14 +404,14 @@ AddDefaultCharset utf-8
 # Be aware that the following might not be a good idea if you use "real"
 # subdomains for certain parts of your website.
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP_HOST} !^www\. [NC]
-    RewriteCond %{SERVER_ADDR} !=127.0.0.1
-    RewriteCond %{SERVER_ADDR} !=::1
-    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-</IfModule>
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} !=on
+#     RewriteCond %{HTTP_HOST} !^www\. [NC]
+#     RewriteCond %{SERVER_ADDR} !=127.0.0.1
+#     RewriteCond %{SERVER_ADDR} !=::1
+#     RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# </IfModule>
 
 
 # ######################################################################
@@ -482,21 +482,15 @@ AddDefaultCharset utf-8
 # things easier, you can use an online CSP header generator such as:
 # http://cspisawesome.com/.
 
-<IfModule mod_headers.c>
-    Header set Content-Security-Policy "
-        default-src 'self';
-        font-src https://fonts.gstatic.com 'self' data:;
-        style-src https://fonts.googleapis.com 'self';
-        child-src 'none';
-        object-src 'none'
-    "
-    # `mod_headers` cannot match based on the content-type, however,
-    # the `Content-Security-Policy` response header should be send
-    # only for HTML documents and not for the other resources.
-    <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|woff2?|xloc|xml|xpi)$">
-        Header unset Content-Security-Policy
-    </FilesMatch>
-</IfModule>
+# <IfModule mod_headers.c>
+#     Header set Content-Security-Policy "script-src 'self'; object-src 'self'"
+#     # `mod_headers` cannot match based on the content-type, however,
+#     # the `Content-Security-Policy` response header should be send
+#     # only for HTML documents and not for the other resources.
+#     <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|woff2?|xloc|xml|xpi)$">
+#         Header unset Content-Security-Policy
+#     </FilesMatch>
+# </IfModule>
 
 # ----------------------------------------------------------------------
 # | File access                                                        |

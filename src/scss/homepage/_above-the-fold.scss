@@ -57,11 +57,10 @@
     }
 
     .intro-text {
-        position: absolute;
-        bottom: 80px;
+        top: 60%;
 
         @media all and (min-width: 992px) {
-            bottom: auto;
+            position: absolute;
             top: 50%;
             transform: translateY(-50%);
         }

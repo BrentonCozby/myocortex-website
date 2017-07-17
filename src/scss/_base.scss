@@ -52,11 +52,11 @@ a {
 }
 
 .btn {
-    color: darken($mcx-red, 10%);
+    color: $mcx-red;
 
     &:hover,
     &:focus {
-        border-color: darken($mcx-red, 10%);
+        border-color: #000;
     }
 }
 

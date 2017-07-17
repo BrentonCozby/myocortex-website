@@ -86,6 +86,9 @@ section.private-training.top {
                 height: 100%;
                 padding: 20%;
                 margin-bottom: -4px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-image: radial-gradient(circle at center, #fff 20%, #000 100%);
             }
 
             &-title {
@@ -99,7 +102,7 @@ section.private-training.top {
                 width: 100%;
                 border-left: 2px solid #ddd;
                 display: inline-block;
-                color: $mcx-red;
+                color: #fff;
                 font-weight: bold;
 
                 @media all and (min-width: 992px) {
@@ -120,13 +123,12 @@ section.private-training.top {
                 outline: none;
 
                 .icon {
-                    border-color: #999;
-                    padding: 15%;
+                    border-color: $mcx-red;
+                    background-image: radial-gradient(circle at center, #fff 40%, #000 100%);
                 }
 
                 .tab-title {
-                    border-color: #999;
-                    color: #fff;
+                    border-color: $mcx-red;
                 }
             }
         }

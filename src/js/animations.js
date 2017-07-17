@@ -49,7 +49,7 @@ $(document).ready(function() {
         offset = windowHeight * .1
         _getPositions()
         playAnimations()
-    }, 1000)
+    }, 500)
 })
 
 const $mainLogoContainer = $('#main-logo-container')

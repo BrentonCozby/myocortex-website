@@ -105,6 +105,10 @@ let common = {
                 to: resolve(Dir.dist, 'vendor')
             },
             {
+                from: resolve(Dir.src, 'mail'),
+                to: resolve(Dir.dist, 'mail')
+            },
+            {
                 from: Dir.assets,
                 to: resolve(Dir.dist, 'assets')
             }

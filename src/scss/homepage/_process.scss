@@ -178,9 +178,17 @@ section.process {
 
         .btn {
             font-size: 12px;
+            background-color: #111;
+            color: #fff;
+            border-color: $mcx-red;
+            box-shadow: 0 17px 10px -15px rgba(0, 0, 0, .7);
 
             @media all and (min-width: 375px) {
                 font-size: 14px;
+            }
+
+            @media all and (min-width: 768px) {
+                font-size: 16px;
             }
         }
 

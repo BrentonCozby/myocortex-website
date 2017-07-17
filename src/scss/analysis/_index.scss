@@ -110,13 +110,14 @@ section.analysis.mobile-content {
     }
 
     h3 {
+        font-family: $header-font-narrow;
         font-size: 38px;
         margin: 55px 0 20px;
         line-height: 1;
     }
 
     ul li {
-        font-family: $header-font;
+        font-family: $header-font-narrow;
         font-size: 18px;
         letter-spacing: 1px;
         margin: 10px 0;
@@ -124,7 +125,7 @@ section.analysis.mobile-content {
 }
 
 section.analysis.cta {
-    background: darken($mcx-red, 10%);
+    background-color: darken($mcx-red, 10%);
     padding: 20px;
     min-height: 50vh;
 
@@ -134,25 +135,29 @@ section.analysis.cta {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 300px;
+        width: 100%;
     }
 
     h4 {
         line-height: 1.5;
         font-size: 20px;
-        color: #222;
+        color: #eee;
+        margin: 0;
 
         @media all and (min-width: 768px) {
-            font-size: 24px;
+            font-size: 28px;
         }
     }
 
     .btn {
-        border-color: #555;
+        border-color: #aaa;
+        background-color: #222;
         color: #fff;
+        margin-top: 40px;
 
         &:hover,
         &:focus {
+            background-color: #000;
             border-color: #fff;
         }
     }

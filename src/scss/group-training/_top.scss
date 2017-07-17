@@ -1,7 +1,7 @@
 section.group-training.top {
     overflow: hidden;
     padding: 40px 0 0;
-    background-color: $mcx-red;
+    background-color: darken($mcx-red, 5%);
 
     .images-container {
         width: 100%;
@@ -59,8 +59,10 @@ section.group-training.top {
         z-index: 1;
         padding: 0 20px;
         padding-bottom: 40px;
+        padding-top: 60px;
 
         @media all and (min-width: 992px) {
+            padding-top: 0;
             margin-left: 5%;
             position: absolute;
             top: 50%;
@@ -68,6 +70,7 @@ section.group-training.top {
         }
 
         h4 {
+            color: #000;
             margin: 0;
             font-size: 38px;
         }
@@ -83,7 +86,7 @@ section.group-training.top {
         }
 
         a.mind-body-link {
-            border-color: #777;
+            background-color: #111;
             color: #fff;
 
             &:hover,

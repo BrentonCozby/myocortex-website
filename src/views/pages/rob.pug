@@ -1,0 +1,12 @@
+extends ../layout
+
+block head
+    include ../partials/head
+    +makeHead('Rob DiDonato')
+
+block content
+    - var globals = htmlWebpackPlugin.options
+    #main-logo-container.analysis
+        a(href= globals.rootUrl + '/')
+            img.main-logo(src= globals.rootUrl + "/assets/images/logos/myocortex_logo_white_with_mcx.svg", alt="MYOCORTEX full logo")
+    

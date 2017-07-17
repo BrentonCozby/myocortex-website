@@ -21,7 +21,7 @@ section.sign-up.top {
         background-image:
             linear-gradient(rgba(255, 255, 255, .65), rgba(255, 255, 255, .65)),
             url('../../assets/images/backgrounds/particles-background.png');
-        background-size: 130% auto;
+        background-size: 120% auto;
         background-position: right center;
         padding-bottom: 0;
     }
@@ -29,7 +29,7 @@ section.sign-up.top {
     .flex-container {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         min-height: 100vh;
     }
@@ -40,9 +40,10 @@ section.sign-up.top {
         padding-top: 120px;
 
         @media all and (min-width: 992px) {
-            width: calc(70% - 300px);
+            width: 60%;
             max-width: 800px;
             padding-top: 0;
+            margin-right: 5%;
         }
     }
 
