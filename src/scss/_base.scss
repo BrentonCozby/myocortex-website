@@ -65,10 +65,11 @@ a {
     display: block;
     width: 100%;
     z-index: 10;
-    transition: background-color 500ms;
+    transition: all 500ms;
 
     &.solid-bg {
         background-color: #ddd;
+        box-shadow: 0 -2px 7px #444;
     }
 
     a {

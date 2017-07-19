@@ -34,7 +34,16 @@
 section.group-training.top {
     overflow: hidden;
     padding: 40px 0 0;
-    background-color: darken($mcx-red, 5%);
+    background:
+        linear-gradient(rgba(109, 3, 0, .85), rgba(109, 3, 0, .85)),
+        url('../../assets/images/backgrounds/particles-background.png');
+    background-size: cover;
+    background-position: center;
+
+    @media all and (min-width: 992px) {
+        background-size: 120% auto;
+        background-position: right center;
+    }
 
     .images-container {
         width: 100%;
