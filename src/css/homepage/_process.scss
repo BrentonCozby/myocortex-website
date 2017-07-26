@@ -1,0 +1,200 @@
+section.process {
+    padding-bottom: 60px;
+    background-color: #fff;
+
+    @media all and (min-width: 992px) {
+        height: 100vh;
+        min-height: 900px;
+    }
+
+    #particles-js {
+        display: none;
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        width: 45vw;
+        height: 90vh;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+
+        @media all and (min-width: 992px) {
+            display: block;
+        }
+    }
+
+    .title {
+        position: absolute;
+        display: inline-block;
+        font-size: 40px;
+        text-align: right;
+        right: 20px;
+        top: 20px;
+        margin: 0;
+        line-height: 1;
+        @include appear(80px, 1s);
+
+        @media all and (min-width: 992px) {
+            font-size: 60px;
+            transform: translateY(80px);
+            transition: all 1s;
+            top: 60px;
+        }
+    }
+
+    .left-right {
+        display: flex;
+        flex-flow: row wrap;
+        padding-top: 120px;
+        min-height: 100%;
+
+        @media all and (min-width: 992px) {
+            padding-top: 0;
+        }
+    }
+
+    .left {
+        height: 60vw;
+        width: 100%;
+        margin: 30px 0 10px;
+        margin-left: 20px;
+        align-self: center;
+
+        @media all and (min-width: 992px) {
+            height: auto;
+            width: 60%;
+            margin-left: 0;
+        }
+
+        img {
+            position: absolute;
+            transition: all 200ms;
+            transition-timing-function: ease-out;
+            opacity: 0;
+
+            @media all and (min-width: 992px) {
+                max-width: 100%;
+            }
+
+            &.woman1 {
+                max-height: 300px;
+                left: -110%;
+                top: 50%;
+                transform: translate(0, -35%);
+                z-index: 2;
+                height: 70%;
+
+                @media all and (min-width: 992px) {
+                    height: auto;
+                }
+            }
+            &.woman2 {
+                max-height: 350px;
+                left: -20%;
+                top: 50%;
+                transform: translate(0, -60%) scale(.9);
+                z-index: 1;
+                height: 85%;
+
+                @media all and (min-width: 992px) {
+                    height: auto;
+                }
+            }
+            &.woman3 {
+                max-height: 400px;
+                left: 70%;
+                top: 48%;
+                transform: translate(0, -50%) scale(.6);
+                height: 100%;
+
+                @media all and (min-width: 992px) {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .three-women {
+
+        &.scroll-visible {
+
+            .woman1 {
+                left: 0%;
+                opacity: 1;
+                transition: all 2s;
+                transition-delay: 0s;
+            }
+
+            .woman2 {
+                left: 18%;
+                transform: translate(0, -45%) scale(1);
+                opacity: 1;
+                transition: all 2s;
+                transition-delay: 900ms;
+
+                @media all and (min-width: 992px) {
+                    left: 20%;
+                }
+            }
+
+            .woman3 {
+                left: 65%;
+                opacity: 1;
+                transition: all 2s;
+                transition-delay: 1600ms;
+                transform: translate(0, -50%) scale(1);
+            }
+        }
+    }
+
+    .right {
+        width: 100%;
+        padding: 0 20px;
+
+        @media all and (min-width: 992px) {
+            width: 40%;
+        }
+
+        .content {
+            max-width: 400px;
+
+            @media all and (min-width: 992px) {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .mission-statement {
+
+            p {
+                font-size: 14px;
+                line-height: 1.7;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .buttons-container {
+
+        .btn {
+            font-size: 12px;
+            background-color: #111;
+            color: #fff;
+            border-color: $mcx-red;
+            box-shadow: 0 17px 10px -15px rgba(0, 0, 0, .7);
+
+            @media all and (min-width: 375px) {
+                font-size: 14px;
+            }
+
+            @media all and (min-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        .btn:nth-of-type(2) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}

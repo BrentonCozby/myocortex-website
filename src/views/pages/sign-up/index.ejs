@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include(`${partials}/head`, {pageTitle: 'Sign-up'}); -%>
+<body>
+    <%- include(`${partials}/menu`); -%>
+
+    <div class="sign-up" id="main-logo-container">
+        <a href="<%= PUBLIC_PATH %>">
+            <img class="main-logo" src="<%= PUBLIC_PATH %>images/logos/myocortex_logo_black.svg" alt="MYOCORTEX full logo">
+        </a>
+    </div>
+
+    <section class="sign-up top">
+        <div class="flex-container">
+            <div class="text-box">
+                <h1 class="page-title">founders</h1>
+                <div class="founders"><a href="<%= PUBLIC_PATH %>rob" class="founder-container"><img src="<%= PUBLIC_PATH %>images/people/rob_headshot.jpg" alt="Rob"/>
+              <div class="name-and-title">
+                <p class="name">Rob DiDonato</p>
+              </div></a><a href="<%= PUBLIC_PATH %>courtney" class="founder-container"><img src="<%= PUBLIC_PATH %>images/people/courtney_headshot.jpg" alt="Courtney"/>
+              <div class="name-and-title">
+                <p class="name">Courtney Paige Alvarez</p>
+              </div></a></div>
+            </div>
+            <div class="form-container">
+                <h2>Information Inquiry</h2>
+                <form id="sign-up-form">
+                    <label>Name</label>
+                    <input type="text" id="name" name="name" required="required" />
+                    <label>Email</label>
+                    <input type="email" id="email" name="email" required="required" />
+                    <label>Phone</label>
+                    <input type="tel" id="phone" name="phone" required="required" />
+                    <label>Subject</label>
+                    <select id="subject" name="subject">
+              <option value="General Inquiry" selected="true">-- Select --</option>
+              <option value="Muscle Activation">Muscle Activation</option>
+              <option value="Exercise Experience">Exercise Experience</option>
+              <option value="Book Appointment">Book Appointment</option>
+              <option value="More Information">More Information</option>
+            </select>
+                    <label>Message</label>
+                    <textarea id="message" name="message" value=" "></textarea>
+                    <button type="submit">SEND</button>
+                    <div id="feedback"></div>
+                </form>
+                <p>A representation from MYOCORTEX will contact you to schedule a date and time.</p>
+            </div>
+        </div>
+        <h4 class="statement">respect the process</h4>
+    </section>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/bottom`); -%>
+</body>
+</html>

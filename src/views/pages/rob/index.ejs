@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include(`${partials}/head`, {pageTitle: 'Rob DiDonato'}); -%>
+<body>
+    <%- include(`${partials}/menu`); -%>
+
+    <div class="rob" id="main-logo-container">
+        <a href="<%= PUBLIC_PATH %>">
+            <img class="main-logo" src="<%= PUBLIC_PATH %>images/logos/myocortex_logo_black.svg" alt="MYOCORTEX full logo">
+        </a>
+    </div>
+
+    <section class="bio">
+        <div class="container">
+            <div class="image-and-name">
+                <img src="<%= PUBLIC_PATH %>images/people/rob_headshot.jpg" alt="Rob DiDonato" />
+                <h2 class="name">Rob DiDonato</h2>
+            </div>
+            <div class="bio-text">
+                <p>A native of Waterbury, CT Rob moved to New Hampshire at the age of 10. He was a varsity letterman in both his high school and prep school’s football and baseball teams. Serious arm injuries and a diagnosis of spondylolisthesis sidelined his baseball career in the college ranks. This setback motivated him to seek a greater understanding of human performance and sports medicine. He moved to Miami and obtained a degree in Exercise and Sports Science with a specialization in strength and conditioning from Florida International University. During an internship  as an assistant Strength and Conditioning Coach he realized the importance of mentoring young athletes in and outside the training arena.</p>
+                <p>For over a decade, he has devoted himself to the fields of strength and conditioning and biomechanics.  In August 2007, Rob founded Executive Fitness. He has continued to hone his expertise by interning and volunteering with some of the premier strength coaches and therapists in the country. While being mentored himself, he learned about Muscle Activation Techniques (MAT) and in 2012 he became a MAT Jump Start Practitioner.  As he witnessed how this technique optimized his client’s overall strength, performance and health, he made a life-changing decision to become a MAT Specialist in 2013.  He continues his mastery level education in MAT.</p>
+            </div>
+        </div>
+    </section>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/bottom`); -%>
+</body>
+</html>

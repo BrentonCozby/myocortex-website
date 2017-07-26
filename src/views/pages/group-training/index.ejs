@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include(`${partials}/head`, {pageTitle: 'Group Training'}); -%>
+<body>
+    <%- include(`${partials}/menu`); -%>
+
+    <div class="group-training" id="main-logo-container">
+        <a href="<%= PUBLIC_PATH %>">
+            <img class="main-logo" src="<%= PUBLIC_PATH %>images/logos/myocortex_logo_black.svg" alt="MYOCORTEX full logo">
+        </a>
+    </div>
+
+    <section class="group-training top">
+        <div class="text">
+            <h4>Group Training</h4>
+            <p>The Group Workouts have specific goals using a periodization plan.</p>
+            <p>It's not BootCamp.</p>
+            <p>It's not CrossFit.</p>
+            <p>It's Strength Training evaluated and recorded consistently to ensure positive muscular development. Our coaches bring accountability and empowerment to your training.</p>
+            <div class="appear">
+                <a href="<%= PUBLIC_PATH %>sign-up" class="btn mind-body-link">schedule</a>
+            </div>
+        </div>
+        <div class="images-container">
+            <img src="<%= PUBLIC_PATH %>images/people/footballers.png" alt="football players" class="footballers" />
+            <img src="<%= PUBLIC_PATH %>images/logos/mcx-white.png" alt="White MYOCORTEX logo" class="logo" />
+            <img src="<%= PUBLIC_PATH %>images/people/jumping-woman.png" alt="jumping woman" class="woman" />
+        </div>
+    </section>
+    <section class="group-training cta">
+        <div class="text">
+            <h4 class="appear">Learn More</h4>
+            <a href="<%= PUBLIC_PATH %>sign-up" class="btn appear learn-more-btn">Contact Us</a>
+            <img src="<%= PUBLIC_PATH %>images/logos/mcx-contrast-dark.png" class="logo" />
+        </div>
+    </section>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/bottom`); -%>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include(`${partials}/head`, {pageTitle: 'Private Training'}); -%>
+<body>
+    <%- include(`${partials}/menu`); -%>
+
+    <div class="private-training" id="main-logo-container">
+        <a href="<%= PUBLIC_PATH %>">
+            <img class="main-logo" src="<%= PUBLIC_PATH %>images/logos/myocortex_logo_white.svg" alt="MYOCORTEX full logo">
+        </a>
+    </div>
+
+    <section class="private-training top">
+        <div class="content">
+            <div class="intro-text">
+                <img src="<%= PUBLIC_PATH %>images/logos/mcx.png" alt="MYOCORTEX MCX logo" class="mcx" />
+                <h1 class="page-title">Private<br/>Training </h1>
+            </div>
+            <div class="tabs-container-outer">
+                <div class="tabs-container-inner">
+                    <a href="<%= PUBLIC_PATH %>analysis" class="tab appear">
+                        <img src="<%= PUBLIC_PATH %>images/icons/analysis-icon.svg" alt="analysis icon" class="icon"/>
+                        <h4 class="tab-title">analysis</h4>
+                    </a>
+                    <a href="<%= PUBLIC_PATH %>systems" class="tab appear delay-200">
+                        <img src="<%= PUBLIC_PATH %>images/icons/systems-icon.svg" alt="analysis icon" class="icon"/>
+                        <h4 class="tab-title">systems</h4>
+                    </a>
+                    <a href="<%= PUBLIC_PATH %>tools" class="tab appear delay-400">
+                        <img src="<%= PUBLIC_PATH %>images/icons/tools-icon.svg" alt="analysis icon" class="icon"/>
+                        <h4 class="tab-title">tools</h4>
+                    </a>
+              </div>
+            </div>
+        </div>
+    </section>
+    <section class="private-training cta">
+        <div class="filter"></div>
+        <div class="text">
+            <h4 class="appear">Get Started</h4><a href="<%= PUBLIC_PATH %>sign-up" class="btn appear learn-more-btn">Sign Up</a><img src="<%= PUBLIC_PATH %>images/logos/mcx-contrast-dark.png" class="logo" />
+        </div>
+    </section>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/bottom`); -%>
+</body>
+</html>
