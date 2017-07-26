@@ -20,16 +20,6 @@ if(fs.existsSync(resolve(DEV_PATH, 'filename-map.json'))) {
     filenameMap = JSON.parse(fileContents)
 }
 
-function createDir(dirPath) {
-    dirPath.split(sep).reduce((path, dir) => {
-        if (!fs.existsSync(resolve(path, dir))) {
-            fs.mkdirSync(resolve(path, dir))
-        }
-
-        return resolve(path, dir)
-    }, sep)
-}
-
 function transformer(filename, inputDir, outputDir) {
     const filePath = resolve(inputDir, filename)
     const ejsTemplate = fs.readFileSync(filePath, 'utf-8')
