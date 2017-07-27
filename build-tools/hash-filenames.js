@@ -11,7 +11,7 @@ const dirs = [
 
 let mapData = {}
 
-function transformer(filename, inputDir, outputDir) {
+function hashOneFile(filename, inputDir, outputDir) {
     const oldFilePath = resolve(inputDir, filename)
 
     const fileContents = fs.readFileSync(oldFilePath, 'utf-8')
@@ -41,13 +41,15 @@ function transformer(filename, inputDir, outputDir) {
     console.log(`${filename} was renamed to ${filenameHashed}`);
 }
 
+
+
 function hashFilenames(directories) {
     if(!Dir.dist) return false
 
     console.log('Hashing filenames...\n');
 
     directories.forEach(dir => {
-        transformFiles(dir, {}, transformer)
+        transformFiles(dir, {}, hashOneFile)
     })
 
     fs.writeFileSync(resolve(DEV_PATH, 'filename-map.json'), JSON.stringify(mapData), 'utf-8')
