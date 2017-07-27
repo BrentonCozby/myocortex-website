@@ -46,6 +46,10 @@ section {
 
 a {
 
+    &:visited {
+        color: #555;
+    }
+
     &:hover {
         color: $mcx-red;
     }

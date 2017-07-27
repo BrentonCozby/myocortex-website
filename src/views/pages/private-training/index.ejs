@@ -13,7 +13,7 @@
     <section class="private-training top">
         <div class="content">
             <div class="intro-text">
-                <img src="<%= PUBLIC_PATH %>images/logos/mcx.png" alt="MYOCORTEX MCX logo" class="mcx" />
+                <img src="<%= PUBLIC_PATH %>images/logos/mcx-white-TM.png" alt="MYOCORTEX MCX logo" class="mcx" />
                 <h1 class="page-title">Private<br/>Training </h1>
             </div>
             <div class="tabs-container-outer">
@@ -36,12 +36,17 @@
     </section>
     <section class="private-training cta">
         <div class="filter"></div>
+        <div class="content">
+            <h3 class="appear">Take Your Training to the Next Level</h3>
+            <p class="appear delay-200">We are an elite Strength and Conditioning platform that offers one-on-one, tandem and  semi-private training.</p>
+            <p class="appear delay-400">Our coaches prescribe and develop effective goal driven training programs designed to optimize your endurance, strength and performance while improving your overall physical well-being. These proactive specific training regimens build resilience and flexibility while mitigating injury risk.</p>
+        </div>
         <div class="text">
             <h4 class="appear">Get Started</h4><a href="<%= PUBLIC_PATH %>sign-up" class="btn appear learn-more-btn">Sign Up</a><img src="<%= PUBLIC_PATH %>images/logos/mcx-contrast-dark.png" class="logo" />
         </div>
     </section>
 
-    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/footer`, {classNames: ''}); -%>
     <%- include(`${partials}/bottom`); -%>
 </body>
 </html>

@@ -77,11 +77,19 @@ function switchLogo(page) {
 }
 export { switchLogo }
 
-const $respectTheProcessTitle = $('#respect-the-process .title')
-function respectTheProcessTitle() {
-    if($respectTheProcessTitle.length) {
-        const adjustment = (windowScroll() - $respectTheProcessTitle.offset().top) * .2
-        $respectTheProcessTitle.css('transform', `translate(-50%, ${adjustment}px)`)
+const $ctaTitle = $('#cta .title')
+function ctaTitle() {
+    let topOffset = 100
+
+    if($(window).width() > 1200) {
+        topOffset = 200
+    }
+
+    if($ctaTitle.length) {
+        const adjustment = (windowScroll() - $ctaTitle.offset().top) * .3
+        $ctaTitle.css({
+            transform: `translate(-50%, ${adjustment + topOffset}px)`
+        })
     }
 }
-export { respectTheProcessTitle }
+export { ctaTitle }

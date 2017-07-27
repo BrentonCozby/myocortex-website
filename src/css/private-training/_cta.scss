@@ -5,7 +5,7 @@ section.private-training.cta {
     background-size: cover;
     background-position: center;
     padding: 20px;
-    min-height: 80vh;
+    min-height: 100vh;
 
     .filter {
         position: absolute;
@@ -14,6 +14,26 @@ section.private-training.cta {
         height: 100%;
         top: 0;
         left: 0;
+    }
+
+    .content {
+        color: #fff;
+        text-align: center;
+        max-width: 900px;
+        margin: auto;
+
+        h3 {
+
+            @media all and (min-width: 992px) {
+                font-size: 26px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #bbb;
+        }
     }
 
     .text {

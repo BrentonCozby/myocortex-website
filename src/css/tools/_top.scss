@@ -1,10 +1,18 @@
 section.tools.top {
-    height: 100vh;
+    height: 50vh;
+    min-height: inherit;
     background-image:
-        linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+        linear-gradient(rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1) 95%),
+        linear-gradient(rgba(0, 0, 0, .3) 0, rgba(0, 0, 0, .3) 100%),
         url('../../images/backgrounds/tools-background-full-red.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center 40%;
+    margin-bottom: -100px;
+
+    @media all and (min-width: 992px) {
+        height: 100vh;
+        margin-bottom: -50vh;
+    }
 
     .container {
         height: 100%;
@@ -17,7 +25,7 @@ section.tools.top {
         @media all and (min-width: 992px) {
             padding-top: 0;
             position: absolute;
-            top: 50%;
+            top: 30%;
             transform: translateY(-50%);
             text-align: left;
         }

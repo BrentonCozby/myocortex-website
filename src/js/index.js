@@ -5,7 +5,7 @@ import smoothScrollInit from './smooth-scroll.js'
 import {
     playAnimations,
     mainLogo,
-    respectTheProcessTitle,
+    ctaTitle,
     switchLogo
 } from './animations.js'
 import { initMenu } from './menu.js'
@@ -19,7 +19,7 @@ $(function() {
     function onScroll() {
         playAnimations()
         mainLogo()
-        respectTheProcessTitle()
+        ctaTitle()
         switchLogo('systems')
         switchLogo('tools')
     }

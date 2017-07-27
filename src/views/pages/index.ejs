@@ -53,17 +53,17 @@
         </div>
     </section>
 
-    <section class="respect-the-process" id="respect-the-process">
+    <section class="homepage cta" id="cta">
         <div class="filter"></div>
-        <h2 class="title">respect the process</h2>
+        <h2 class="title">commit to excellence</h2>
         <div class="text">
-            <h4 class="appear">Commit To Excellence</h4>
+            <!-- <h4 class="appear">learn more</h4> -->
             <a class="btn appear" href="<%= PUBLIC_PATH %>analysis">Continue</a>
             <img class="logo" src="<%= PUBLIC_PATH %>images/logos/mcx-contrast-dark.png">
         </div>
     </section>
 
-    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/footer`, {classNames: ''}); -%>
     <%- include(`${partials}/bottom`); -%>
 </body>
 </html>

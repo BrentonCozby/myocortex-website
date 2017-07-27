@@ -39,6 +39,30 @@ section.systems.exercise-experience {
             line-height: 1.6;
             font-size: 18px;
             margin-top: 15px;
+
+            a {
+                color: #fff;
+
+                &:visited {
+                    color: #555;
+                }
+
+                &:hover {
+                    color: $mcx-red;
+                }
+
+                @media all and (min-width: 992px) {
+                    color: #000;
+
+                    &:visited {
+                        color: #555;
+                    }
+
+                    &:hover {
+                        color: $mcx-red;
+                    }
+                }
+            }
         }
 
         p, li {

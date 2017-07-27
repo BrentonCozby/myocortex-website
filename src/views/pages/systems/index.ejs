@@ -12,7 +12,8 @@
 
     <section class="systems top">
         <div class="container">
-            <div class="intro-text"><img src="<%= PUBLIC_PATH %>images/logos/mcx.png" alt="MYOCORTEX MCX logo" class="mcx" />
+            <div class="intro-text">
+                <img src="<%= PUBLIC_PATH %>images/logos/mcx-white-TM.png" alt="MYOCORTEX MCX logo" class="mcx" />
                 <h1 class="page-title">Systems</h1>
             </div>
         </div>
@@ -22,9 +23,9 @@
             <div class="split-2">
                 <div class="split-box"></div>
                 <div class="text split-box appear">
-                    <h3>Muscle Activiation Techniques</h3>
+                    <h3>Muscle Activiation Techniques<sup><small>TM</small></sup></h3>
                     <hr/>
-                    <p>MAT (Muscle Activiation Techniques) is a systematic approach to evaluate, treat and test muscle contraction. It was founded on the principle that normal movement is fundamental to human health and that a muscle’s ability to contract efficiently is important for functional exercise. Any loss of muscle contraction may be demonstrated as a loss of motion and decreased physical performance, which may lead to pain and/or the loss of physical capabilities.</p>
+                    <p>MAT (<a target="_blank" rel="noopnener" href="http://muscleactivation.com/">Muscle Activiation Techniques</a><sup><small>TM</small></sup>) is a systematic approach to evaluate, treat and test muscle contraction. It was founded on the principle that normal movement is fundamental to human health and that a muscle’s ability to contract efficiently is important for functional exercise. Any loss of muscle contraction may be demonstrated as a loss of motion and decreased physical performance, which may lead to pain and/or the loss of physical capabilities.</p>
                     <p>The human body is designed to be symmetrical. Comparing left to right motion evaluates an individual's muscle contractile capability. If asymmetry is determined then we use precise forces applied to restore and re-activate muscle efficiency. MAT is a mechanical study of functional movement.</p>
                 </div>
             </div>
@@ -35,13 +36,12 @@
             <div class="split-2">
                 <div class="text split-box appear">
                     <div class="border"></div>
-                    <h3>The Exercise Experience <sup><small>TM</small></sup> (RTS)</h3>
+                    <h3>The Exercise Experience<sup><small>TM</small></sup> <a target="_blank" rel="noopener" href="http://www.resistancetrainingspecialist.com/">(RTS)</a></h3>
                     <div class="equation">
                         <div class="left"><span>Ex =&nbsp;</span></div>
                         <div class="right"><span class="top">P/(M × J) + R/S + I/E + T/F</span><span class="bottom">A</span></div>
                     </div>
-                    <p>Exercise is about forces; internal force production in response to external force application to produce a desired outcome. Exercise is a process; stimulating the appropriate level of contraction determined by your current status and goal.
-                        Exercise is a continual investigation; strategically manipulating range, movement pattern, or strength-resistance relationship™to orchestrate a focused challenge altering the level of difficulty.</p>
+                    <p>Exercise is about forces; internal force production in response to external force application to produce a desired outcome. Exercise is a process; stimulating the appropriate level of contraction determined by your current status and goal. Exercise is a continual investigation; strategically manipulating range, movement pattern, or strength-resistance relationship™ to orchestrate a focused challenge altering the level of difficulty.</p>
                     <p>Clients Can Expect:</p>
                     <ul>
                         <li>A Client-Defined Exercise Routine</li>
@@ -59,11 +59,11 @@
     </section>
     <section class="systems cta">
         <div class="text">
-            <h4 class="appear">our tools</h4><a href="<%= PUBLIC_PATH %>tools" class="btn appear learn-more-btn">learn more        </a><img src="<%= PUBLIC_PATH %>images/logos/mcx-contrast-dark.png" class="logo" />
+            <h4 class="appear">our tools</h4><a href="<%= PUBLIC_PATH %>tools" class="btn appear learn-more-btn">learn more</a><img src="<%= PUBLIC_PATH %>images/logos/mcx-contrast-dark.png" class="logo" />
         </div>
     </section>
 
-    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/footer`, {classNames: ''}); -%>
     <%- include(`${partials}/bottom`); -%>
 </body>
 </html>

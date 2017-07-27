@@ -6,7 +6,7 @@
 
     <div class="sign-up" id="main-logo-container">
         <a href="<%= PUBLIC_PATH %>">
-            <img class="main-logo" src="<%= PUBLIC_PATH %>images/logos/myocortex_logo_black.svg" alt="MYOCORTEX full logo">
+            <img class="main-logo" src="<%= PUBLIC_PATH %>images/logos/myocortex_logo_black_with_mcx.svg" alt="MYOCORTEX full logo">
         </a>
     </div>
 
@@ -47,10 +47,14 @@
                 <p>A representation from MYOCORTEX will contact you to schedule a date and time.</p>
             </div>
         </div>
-        <h4 class="statement">respect the process</h4>
     </section>
 
-    <%- include(`${partials}/footer`); -%>
+    <section class="sign-up break-barriers">
+        <h4 class="break-barriers-statement">break barriers.<br>redefine your results.</h4>
+        <h4 class="respect-the-process">respect the process</h4>
+    </section>
+
+    <%- include(`${partials}/footer`, {classNames: 'sign-up'}); -%>
     <%- include(`${partials}/bottom`); -%>
 </body>
 </html>

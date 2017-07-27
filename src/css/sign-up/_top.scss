@@ -19,6 +19,7 @@ section.sign-up.top {
     @media all and (min-width: 768px) {
         background-color: #fff;
         background-image:
+            linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%),
             linear-gradient(rgba(255, 255, 255, .65), rgba(255, 255, 255, .65)),
             url('../../images/backgrounds/particles-background.png');
         background-size: 120% auto;
@@ -93,22 +94,6 @@ section.sign-up.top {
                 font-size: 14px;
                 font-family: $header-font;
             }
-        }
-    }
-
-    .statement {
-        width: 100%;
-        text-align: center;
-        margin: 60px 0 10px;
-        line-height: 1;
-        color: rgba(0, 0, 0, .4);
-
-        @media all and (min-width: 992px) {
-            letter-spacing: 4px;
-            font-size: 40px;
-            position: absolute;
-            bottom: 15px;
-            margin: 0;
         }
     }
 }

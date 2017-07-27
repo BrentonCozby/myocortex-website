@@ -1,5 +1,7 @@
 section.tools.content {
     padding: 20px 0;
+    margin-bottom: -10vh;
+    z-index: 1;
 
     @media all and (min-width: 768px) {
         padding: 80px 0px;
@@ -25,6 +27,14 @@ section.tools.content {
         .text-box {
             padding: 0 15px;
 
+            @media all and (min-width: 768px) {
+                width: 100%;
+            }
+
+            @media all and (min-width: 992px) {
+                width: 50%;
+            }
+
             h3 {
                 font-size: 24px;
                 margin-top: 20px;
@@ -34,9 +44,31 @@ section.tools.content {
                 }
             }
 
+            a {
+                color: #000;
+
+                &:visited {
+                    color: #555;
+                }
+
+                &:hover {
+                    color: $mcx-red;
+                }
+            }
+
             p, li {
                 font-size: 14px;
                 line-height: 1.7;
+
+                @media all and (min-width: 992px) {
+                    font-size: 12px;
+                    line-height: 1.5;
+                }
+
+                @media all and (min-width: 1200px) {
+                    font-size: 14px;
+                    line-height: 1.7;
+                }
             }
         }
 

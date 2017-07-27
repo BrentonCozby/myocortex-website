@@ -20,39 +20,87 @@ section.analysis.top {
         height: 100vh;
     }
 
+    .content {
+        height: 100%;
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-title-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+
+        @media all and (min-width: 992px) {
+            position: relative;
+            justify-content: flex-start;
+            flex-direction: row;
+            width: 48%;
+            bottom: auto;
+            // top: -19%;
+        }
+    }
+
+    .mcx {
+        width: 100px;
+        display: block;
+        margin-bottom: 20px;
+
+        @media all and (min-width: 992px) {
+            display: inline-block;
+            width: 60px;
+            margin-bottom: 0;
+            margin-right: 15px;
+        }
+
+        @media all and (min-width: 1200px) {
+            width: 100px;
+        }
+    }
+
+    .page-title {
+        display: inline-block;
+        font-size: 34px;
+        text-shadow: 0 1px 2px #000;
+        color: #fff;
+        margin: 0;
+        line-height: 1;
+
+        @media all and (min-width: 992px) {
+            font-size: 50px;
+        }
+
+        @media all and (min-width: 1200px) {
+            font-size: 70px;
+        }
+    }
+
     .intro-text {
         position: absolute;
         padding: 25px;
-        bottom: 0;
+        display: none;
+        width: 100%;
 
         @media all and (min-width: 992px) {
-            top: 50%;
-            left: 50%;
-            bottom: auto;
-            transform: translate(0, -50%);
-        }
-
-        .page-title {
-            font-size: 35px;
-            text-shadow: 0 1px 2px #000;
-            color: $mcx-red;
-            margin: 0;
-            line-height: 1;
-
-            @media all and (min-width: 992px) {
-                font-size: 65px;
-            }
+            position: relative;
+            display: block;
+            width: 48%;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(0, -50%);
         }
 
         .text-box {
-            display: none;
             line-height: 1.7;
             color: #fff;
             max-width: 500px;
-
-            @media all and (min-width: 992px) {
-                display: block;
-            }
 
             p {
                 font-size: 14px;
@@ -85,17 +133,18 @@ section.analysis.top {
     }
 
     .down-arrow {
-        bottom: 60px;
+        bottom: 20px;
+        display: none;
 
-        @media all and (min-width: 768px) {
-            bottom: 20px;
+        @media all and (min-width: 992px) {
+            display: block;
         }
     }
 }
 
 section.analysis.mobile-content {
     background-color: #fff;
-    padding: 0 0 40px;
+    padding: 3% 0;
     min-height: inherit;
     line-height: 1.7;
 

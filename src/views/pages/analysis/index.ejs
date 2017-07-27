@@ -11,24 +11,31 @@
     </div>
 
     <section class="analysis top">
-        <div class="intro-text">
-            <h1 class="page-title">analysis</h1>
-            <div class="text-box">
-                <p>The MYOCORTEX process begins with an initial complimentary 30-minute consulation to discuss your specific needs and goals. If we determine our system is a good fit for you, we will schedule a complete assessment using Greg Roskopf's <a href="/systems">Muscle Activiation Techniques</a><sup><small>TM</small></sup>                (MAT).</p>
-                <h3>Complete MAT assessment</h3>
-                <p>This 60-minute assessment consist of the following:</p>
-                <ul>
-                    <li>Detailed health history</li>
-                    <li>Postural examination</li>
-                    <li>Range of motion evaluation</li>
-                </ul>
-                <p>After the assessment is complete, we will have a full understanding of your current physiological state, allowing us to create a plan tailored for your body.</p>
+        <div class="content">
+            <div class="page-title-container">
+                <img src="<%= PUBLIC_PATH %>images/logos/mcx-white-TM.png" alt="MYOCORTEX MCX logo" class="mcx" />
+                <h1 class="page-title">analysis</h1>
             </div>
-        </div><a href="#cta" class="down-arrow"><i aria-hidden="true" class="fa fa-angle-down"></i></a>
+            <div class="intro-text">
+                <div class="text-box">
+                    <p>The MYOCORTEX process begins with an initial complimentary 30-minute consulation to discuss your specific needs and goals. If we determine our system is a good fit for you, we will schedule a complete assessment using Greg Roskopf's <a target="_blank" rel="noopener" href="http://muscleactivation.com/">Muscle Activiation Techniques</a><sup><small>TM</small></sup> (MAT).</p>
+                    <h3>Complete MAT assessment</h3>
+                    <p>This 60-minute assessment consist of the following:</p>
+                    <ul>
+                        <li>Detailed health history</li>
+                        <li>Postural examination</li>
+                        <li>Range of motion evaluation</li>
+                    </ul>
+                    <p>After the assessment is complete, we will have a full understanding of your current physiological state, allowing us to create a plan tailored for your body.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#cta" class="down-arrow"><i aria-hidden="true" class="fa fa-angle-down"></i></a>
     </section>
+
     <section class="analysis mobile-content">
         <div class="container">
-            <p class="appear">The MYOCORTEX process begins with an initial complimentary 30-minute consulation to discuss your specific needs and goals. If we determine our system is a good fit for you, we will schedule a complete assessment using Greg Roskopf's <a href="/systems">Muscle Activiation Techniques</a><sup><small>TM</small></sup>            (MAT).</p>
+            <p class="appear">The MYOCORTEX process begins with an initial complimentary 30-minute consulation to discuss your specific needs and goals. If we determine our system is a good fit for you, we will schedule a complete assessment using Greg Roskopf's <a target="_blank" rel="noopener" href="http://muscleactivation.com/">Muscle Activiation Techniques</a><sup><small>TM</small></sup> (MAT).</p>
             <h3 class="appear">Complete MAT assessment</h3>
             <p class="appear">This 60-minute assessment consist of the following:</p>
             <ul class="appear">
@@ -39,6 +46,7 @@
             <p class="appear">After the assessment is complete, we will have a full understanding of your current physiological state, allowing us to create a plan tailored for your body.</p>
         </div>
     </section>
+
     <section id="cta" class="analysis cta">
         <div class="text">
             <h4 class="appear">our systems</h4>
@@ -46,7 +54,7 @@
         </div>
     </section>
 
-    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/footer`, {classNames: ''}); -%>
     <%- include(`${partials}/bottom`); -%>
 </body>
 </html>

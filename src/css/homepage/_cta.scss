@@ -1,4 +1,4 @@
-section.respect-the-process {
+section.homepage.cta {
     padding: 40px 20px;
     background-color: #fff;
     background-image:
@@ -31,6 +31,10 @@ section.respect-the-process {
         transition: all 100ms;
 
         @media all and (min-width: 992px) {
+            font-size: 70px;
+        }
+
+        @media all and (min-width: 1200px) {
             font-size: 90px;
         }
     }
