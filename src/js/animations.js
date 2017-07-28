@@ -80,13 +80,15 @@ export { switchLogo }
 const $ctaTitle = $('#cta .title')
 function ctaTitle() {
     let topOffset = 100
+    let multiplier = .3
 
     if($(window).width() > 1200) {
-        topOffset = 200
+        topOffset = 100
+        multiplier = .3
     }
 
     if($ctaTitle.length) {
-        const adjustment = (windowScroll() - $ctaTitle.offset().top) * .3
+        const adjustment = (windowScroll() - $ctaTitle.offset().top) * multiplier
         $ctaTitle.css({
             transform: `translate(-50%, ${adjustment + topOffset}px)`
         })
