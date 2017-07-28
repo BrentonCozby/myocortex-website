@@ -5,7 +5,7 @@ export const PUBLIC_PATH = '/'
 
 export const SITE_TITLE = 'Myocortex'
 export const SITE_NAME = 'myocortex-website'
-export const DESCRIPTION = 'Our Mission is to train muscles, not motions. MYOCORTEX is committed to strengthening the neuromuscular system with controlled movement and isometric exercises. Our goal is to build a healthy foundation while limiting breakdowns, pain and injures.'
+export const DESCRIPTION = 'Our Mission is to train muscles, not motions. MYOCORTEX is committed to strengthening the neuromuscular system with controlled movement and isometric exercises. Our goal is to build a healthy foundation while limiting breakdowns, pain and injuries.'
 export const SITE_URL = 'www.myocortex.com'
 export const DEVELOPER_NAME = 'Brenton Cozby'
 export const DEVELOPER_URL = 'https://brentoncozby.com'
