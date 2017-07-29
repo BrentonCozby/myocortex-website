@@ -32,7 +32,8 @@ $(function() {
                     message: message
                 },
                 cache: false,
-                success: function() {
+                success: function(response) {
+                    console.log(response)
                     // Success message
                     $('#feedback').show(100)
                     $('#feedback').html("Your message has been sent!");
