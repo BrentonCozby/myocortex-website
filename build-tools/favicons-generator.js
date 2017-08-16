@@ -17,8 +17,8 @@ const config = {
     appDescription: DESCRIPTION,           // Your application's description. `string`
     developerName: DEVELOPER_NAME,            // Your (or your developer's) name. `string`
     developerURL: DEVELOPER_URL,             // Your (or your developer's) URL. `string`
-    background: "#111",             // Background colour for flattened icons. `string`
-    theme_color: "#111",            // Theme color for browser chrome. `string`
+    background: "#ffffff",             // Background colour for flattened icons. `string`
+    theme_color: "#ffffff",            // Theme color for browser chrome. `string`
     path: join(PUBLIC_PATH, 'images', 'favicons'),                      // Path for overriding default icons path. `string`
     display: "standalone",          // Android display: "browser" or "standalone". `string`
     orientation: "portrait",        // Android orientation: "portrait" or "landscape". `string`
