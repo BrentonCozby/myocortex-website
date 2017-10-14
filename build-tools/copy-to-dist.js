@@ -34,47 +34,21 @@ function setEncoding(filename) {
     return encoding
 }
 
-// Copy directories
-function copyDir(filename, inputDir, outputDir) {
-    const filePath = resolve(inputDir, filename)
-    const newFilePath = resolve(outputDir, filename)
+transformFiles(
+    Dir.static,
+    { destination: Dir.dist },
+    copyDir
+)
+
+function copyDir({ filename, sourcePath, destinationPath }) {
+    const filePath = resolve(sourcePath, filename)
+    const newFilePath = resolve(destinationPath, filename)
 
     fs.readFile(filePath, setEncoding(filename), (err, fileContents) => {
-        if(err) return console.log(err)
+        if (err) throw new Error(err)
 
         fs.writeFile(newFilePath, fileContents, err => {
-            if(err) return console.log(err)
+            if (err) throw new Error(err)
         })
     })
 }
-
-transformFiles(
-    resolve(Dir.vendor),
-    { dest: resolve(Dir.dist, 'vendor') },
-    copyDir
-)
-transformFiles(
-    resolve(Dir.images),
-    { dest: resolve(Dir.dist, 'images') },
-    copyDir
-)
-transformFiles(
-    resolve(Dir.src, 'videos'),
-    { dest: resolve(Dir.dist, 'videos') },
-    copyDir
-)
-transformFiles(
-    resolve(Dir.src, 'mail'),
-    { dest: resolve(Dir.dist, 'mail') },
-    copyDir
-)
-transformFiles(
-    resolve(Dir.src, 'fonts'),
-    { dest: resolve(Dir.dist, 'fonts') },
-    copyDir
-)
-transformFiles(
-    resolve(Dir.misc),
-    { dest: resolve(Dir.dist) },
-    copyDir
-)

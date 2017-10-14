@@ -1,6 +1,3 @@
-import './contact_me.js'
-import './video.js'
-
 import smoothScrollInit from './smooth-scroll.js'
 import {
     playAnimations,
@@ -11,7 +8,7 @@ import {
 import { initMenu } from './menu.js'
 
 
-$(function() {
+$(function () {
 
     initMenu()
     smoothScrollInit()
@@ -25,11 +22,11 @@ $(function() {
     }
     $(document).scroll(throttle(onScroll, 100))
 
-    setTimeout(function() {
-        if($('#particles-js').length > 0) {
-            particlesJS.load('particles-js', 'vendor/particlesjs/particlesjs-config.json', function() {
+    setTimeout(function () {
+        if ($('#particles-js').length > 0) {
+            particlesJS.load('particles-js', 'vendor/particlesjs/particlesjs-config.json', function () {
 
-            });
+            })
         }
     }, 1000)
 })

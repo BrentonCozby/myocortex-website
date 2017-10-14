@@ -2,14 +2,22 @@
 <html lang="en">
 <%- include(`${partials}/head`, {pageTitle: 'Page Not Found'}); -%>
 <body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
     <section>
         <div class="container">
-            <h1>404 Page Not Found</h1>
-            <p>Go back <a href="<%= PUBLIC_PATH %>">Home</a>.</p>
+            <h1>Lost?</h1>
+            <p>The page you're looking for is unavailable (
+                <span style="color: red">404</span>).</p>
+            <p>Go back
+                <a href="<%= PP %>">Home</a>.</p>
         </div>
     </section>
 
-    <%- include(`${partials}/bottom`, {classNames: ''}); -%>
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/bottom`); -%>
 </body>
 </html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->

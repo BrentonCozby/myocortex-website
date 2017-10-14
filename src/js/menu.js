@@ -1,5 +1,3 @@
-
-
 export function initMenu() {
     const $menuButton = $('#menu-button')
     const $menuContainer = $('#menu-container')

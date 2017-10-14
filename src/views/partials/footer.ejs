@@ -1,13 +1,13 @@
-<footer class="<%= classNames %>">
-    <a href="<%= PUBLIC_PATH %>">
-        <img class="logo" src="<%= PUBLIC_PATH %>images/logos/mcx-white.png" alt="MYOCORTEX logo">
+<footer class="<%= locals.classNames %>">
+    <a href="<%= PP %>">
+        <img class="logo" src="<%= PP %>images/logos/mcx-white.png" alt="MYOCORTEX logo">
     </a>
     <div class="site-links">
-        <a href="<%= PUBLIC_PATH %>">home</a>
-        <a href="<%= PUBLIC_PATH %>analysis">analysis</a>
-        <a href="<%= PUBLIC_PATH %>systems">systems</a>
-        <a href="<%= PUBLIC_PATH %>tools">tools</a>
-        <a href="<%= PUBLIC_PATH %>sign-up">sign-up</a>
+        <a href="<%= PP %>">home</a>
+        <a href="<%= PP %>analysis">analysis</a>
+        <a href="<%= PP %>systems">systems</a>
+        <a href="<%= PP %>tools">tools</a>
+        <a href="<%= PP %>sign-up">sign-up</a>
     </div>
     <div class="contact-info">
         <a href="tel:305-400-4727">(305) 400-4727</a>
@@ -27,6 +27,6 @@
             <i class="fa fa-twitter-square" aria-hidden="true"></i>
         </a>
     </div>
-    <p>© 2017 MYOCORTEX. All rights reserved.</p>
+    <p>© <%= (new Date).getFullYear() %> MYOCORTEX. All rights reserved.</p>
     <p>Developed by <a class="developer" href="https://brentoncozby.com">Brenton Cozby</a>.</p>
 </footer>

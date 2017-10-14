@@ -1,6 +1,6 @@
 import './jqBootstrapValidation.js'
-import escape from 'escape-html'
 
+/* eslint-disable */
 $(function() {
 
     $("#sign-up-form input, #sign-up-form textarea").jqBootstrapValidation({
@@ -22,7 +22,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "/mail/contact_me.php",
+                url: `${PP}mail/contact_me.php`,
                 method: "POST",
                 data: {
                     name: name,
@@ -62,11 +62,12 @@ $(function() {
         $(this).tab("show");
     });
 });
+/* eslint-enable */
 
 
 /*When clicking on Full hide fail/success boxes */
 $('#name, #email, #message, #subject, #phone').focus(function() {
     $('#feedback').hide(100)
-    $('#feedback').html('');
-    $('#feedback').removeClass('success error');
-});
+    $('#feedback').html('')
+    $('#feedback').removeClass('success error')
+})

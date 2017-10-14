@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function smoothScrollInit() {
     // Select all links with hashes
     $('a[href*="#"]')

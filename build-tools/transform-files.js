@@ -1,53 +1,95 @@
+/* eslint-disable no-console */
+
 import fs from 'fs'
-import { resolve } from 'path'
-import createDir from './createDir.js'
+import path from 'path'
 
-function findFiles(rootDir, directory, options, transformer) {
-    const results = fs.readdirSync(directory)
+let rootPath = undefined
 
-    results.forEach(item => {
-        const itemPath = resolve(directory, item)
-        const stats = fs.statSync(itemPath)
+const defaultOptions = {
+    destination: null,
+    flatten: false
+}
 
-        if(stats.isDirectory()) {
-            findFiles(rootDir, itemPath, options, transformer)
-        }
-        else {
-            let outputDir = directory
-            if(options.dest) {
-                if(options.flatten) {
-                    outputDir = options.dest
-                }
-                else {
-                    // need to slice(1) to remove the / from front of path
-                    // so that resolve will work properly (can't resolve
-                    // two absolute paths)
-                    const path = directory.replace(rootDir, '').slice(1)
-                    outputDir = resolve(options.dest, path)
-                }
-            }
+export default function transformFiles(
+    sourcePath = '',
+    options = defaultOptions,
+    fileTransformer = function() {}
+) {
+    validateArgs()
 
-            // need create each dir in the outputDir because you can't
-            // write to it if it doesn't exist
-            createDir(outputDir)
+    if (!rootPath) rootPath = sourcePath
 
-                 // filename, inputDir, outputDir
-            transformer(item, directory, outputDir)
+    const dirContents = fs.readdirSync(sourcePath)
+
+    dirContents.forEach(fileOrDirName => {
+        const fileOrDirPath = path.resolve(sourcePath, fileOrDirName)
+        const destinationPath = setDestinationPath(sourcePath, options)
+
+        if (isDir(fileOrDirPath)) {
+            transformFiles(fileOrDirPath, options, fileTransformer)
+        } else {
+            transformThisFile(fileOrDirName, sourcePath, destinationPath, fileTransformer)
         }
     })
-}
 
-// directory parameter must be an absolute path
-/*
-    options: {
-        dest: absolute path to write files to,
-        flatten: boolean. don't preserve folder structure
+    function validateArgs() {
+        if (!path.isAbsolute(sourcePath)) {
+            throw new Error('sourcePath argument must be an absolute path.\n')
+        }
+        if (options.destination && !path.isAbsolute(options.destination)) {
+            throw new Error('options.desintation must be an absolute path.\n')
+        }
+        if (options.flatten && typeof options.flatten !== 'boolean') {
+            throw new TypeError('options.flatten must be a boolean value.\n')
+        }
+        for (let optionName in options) {
+            if (optionName in defaultOptions === false) {
+                throw new Error(`'${optionName}' is not a valid option.\n`)
+            }
+        }
     }
-*/
-function transformFiles(directory, options, transformer) {
-    const rootDir = directory
 
-    findFiles(rootDir, directory, options, transformer)
+    function transformThisFile(filename, sourcePath, destinationPath, fileTransformer) {
+        createDirsInPath(destinationPath)
+
+        fileTransformer({
+            filename,
+            sourcePath,
+            destinationPath
+        })
+    }
+
+    function isDir(pathToFileOrDir) {
+        return fs.statSync(pathToFileOrDir).isDirectory()
+    }
+
+    function setDestinationPath(source, {destination, flatten}) {
+        let destPath = source
+        if (destination) {
+            if (flatten) {
+                destPath = options.destination
+            } else {
+                const relativePathFromRootPath = source.replace(rootPath, '').slice(1)
+                destPath = path.resolve(options.destination, relativePathFromRootPath)
+            }
+        }
+        return destPath
+    }
 }
 
-export default transformFiles
+export function createDirsInPath(dirPath) {
+    forEachDirInPath(createDirIfDoesntExist)
+
+    function forEachDirInPath(pathReducer) {
+        dirPath
+            .split(path.sep)
+            .reduce(pathReducer, path.sep)
+    }
+
+    function createDirIfDoesntExist(dirPath, nextDir) {
+        if (!fs.existsSync(path.resolve(dirPath, nextDir))) {
+            fs.mkdirSync(path.resolve(dirPath, nextDir))
+        }
+        return path.resolve(dirPath, nextDir)
+    }
+}

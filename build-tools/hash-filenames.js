@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import fs from 'fs'
 import crypto from 'crypto'
 import { resolve } from 'path'
@@ -11,15 +13,15 @@ const dirs = [
 
 let mapData = {}
 
-function hashOneFile(filename, inputDir, outputDir) {
-    const oldFilePath = resolve(inputDir, filename)
+function transformer({ filename, sourcePath, destinationPath }) {
+    const oldFilePath = resolve(sourcePath, filename)
 
     const fileContents = fs.readFileSync(oldFilePath, 'utf-8')
 
     const hash = crypto.createHash('md5').update(fileContents).digest('hex')
 
     if(filename.indexOf(hash) !== -1) {
-        console.log(`${filename} is unchanged.`);
+        console.log(`${filename} is unchanged.`)
 
         const str = filename.split('.')
         str.splice(str.indexOf(hash), 1)
@@ -32,29 +34,27 @@ function hashOneFile(filename, inputDir, outputDir) {
     const str = filename.split('')
     str.splice(filename.lastIndexOf('.'), 0, '.' + hash)
     const filenameHashed = str.join('')
-    const newFilePath = resolve(outputDir, filenameHashed)
+    const newFilePath = resolve(destinationPath, filenameHashed)
 
     fs.renameSync(oldFilePath, newFilePath)
 
     mapData[filename] = filenameHashed
 
-    console.log(`${filename} was renamed to ${filenameHashed}`);
+    console.log(`${filename} was renamed to ${filenameHashed}`)
 }
-
-
 
 function hashFilenames(directories) {
     if(!Dir.dist) return false
 
-    console.log('Hashing filenames...\n');
+    console.log('Hashing filenames...\n')
 
     directories.forEach(dir => {
-        transformFiles(dir, {}, hashOneFile)
+        transformFiles(dir, {}, transformer)
     })
 
     fs.writeFileSync(resolve(DEV_PATH, 'filename-map.json'), JSON.stringify(mapData), 'utf-8')
 
-    console.log('\nFilenames hashed!\n');
+    console.log('\nFilenames hashed!\n')
 }
 
 hashFilenames(dirs)
