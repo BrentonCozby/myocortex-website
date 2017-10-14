@@ -19,7 +19,7 @@
         echo "mailed failed to send to: $to";
     }
     if(mail($to,$email_subject,$email_body,$headers)) {
-        echo "mail sent successfully to: $backup";
+        echo "\nmail sent successfully to: $backup";
     }
     else {
         echo "\n\nmailed failed to send to: $to";
