@@ -4,7 +4,7 @@
     "description": "Website for MYOCORTEX Human Performance Systems. Miami, FL.",
     "main": "src/js/index.js",
     "scripts": {
-        "start": "serve dist",
+        "start": "babel-node server.js",
         "bs": "browser-sync start -s 'dist' -f 'dist' --no-open --no-notify --reload-debounce 50",
         "setup-for-dev": "npm-run-all --sequential rmprod copy-to-dist build:html",
         "dev": "NODE_ENV=development npm-run-all --parallel bs watch:*",
@@ -51,9 +51,13 @@
         "webpack": "^3.8.1"
     },
     "dependencies": {
+        "body-parser": "^1.18.2",
+        "dotenv": "^4.0.0",
         "escape-html": "^1.0.3",
+        "express": "^4.16.2",
         "jquery": "^3.2.1",
-        "lodash.throttle": "^4.1.1"
+        "lodash.throttle": "^4.1.1",
+        "nodemailer": "^4.4.0"
     },
     "repository": {
         "type": "git",

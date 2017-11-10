@@ -22,7 +22,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: `${PP}mail/contact_me.php`,
+                url: `${PP}mail`,
                 method: "POST",
                 data: {
                     name: name,
@@ -42,7 +42,8 @@ $(function() {
                     //clear all fields
                     $('#sign-up-form').trigger("reset");
                 },
-                error: function() {
+                error: function (err) {
+                    console.log(err)
                     // Fail message
                     $('#feedback').show(100)
                     $('#feedback').html("Sorry! Please try again later.");

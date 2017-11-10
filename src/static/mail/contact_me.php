@@ -12,17 +12,20 @@
     $email_body = "Subject: $subject\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
     $headers = "From: contact@myocortex.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
     $headers .= "Reply-To: $email_address";
+
     if(mail($to,$email_subject,$email_body,$headers)) {
         echo "mail sent successfully to: $to";
     }
     else {
         echo "mailed failed to send to: $to";
     }
-    if(mail($to,$email_subject,$email_body,$headers)) {
+
+    if(mail($backup,$email_subject,$email_body,$headers)) {
         echo "\nmail sent successfully to: $backup";
     }
     else {
-        echo "\n\nmailed failed to send to: $to";
+        echo "\n\nmailed failed to send to: $backup";
     }
+
     return true;
 ?>
