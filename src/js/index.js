@@ -7,7 +7,6 @@ import {
 } from './animations.js'
 import { initMenu } from './menu.js'
 
-
 $(function () {
 
     initMenu()
