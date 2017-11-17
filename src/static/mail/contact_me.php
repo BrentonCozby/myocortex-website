@@ -21,7 +21,7 @@
     }
 
     if(mail($backup,$email_subject,$email_body,$headers)) {
-        echo "\nmail sent successfully to: $backup";
+        echo "\n\nmail sent successfully to: $backup";
     }
     else {
         echo "\n\nmailed failed to send to: $backup";
