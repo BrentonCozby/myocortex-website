@@ -19,7 +19,7 @@ $(function () {
         switchLogo('systems')
         switchLogo('tools')
     }
-    $(document).scroll(throttle(onScroll, 100))
+    $(document).scroll(throttle(onScroll, 50))
 
     setTimeout(function () {
         if ($('#particles-js').length > 0) {
