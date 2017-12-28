@@ -1,4 +1,4 @@
-import './jqBootstrapValidation.js'
+import './jqBootstrapValidation'
 
 /* eslint-disable */
 $(function() {
@@ -66,8 +66,8 @@ $(function() {
 /* eslint-enable */
 
 
-/*When clicking on Full hide fail/success boxes */
-$('#name, #email, #message, #subject, #phone').focus(function() {
+/* When clicking on Full hide fail/success boxes */
+$('#name, #email, #message, #subject, #phone').focus(() => {
     $('#feedback').hide(100)
     $('#feedback').html('')
     $('#feedback').removeClass('success error')

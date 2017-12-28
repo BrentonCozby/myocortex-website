@@ -74,12 +74,14 @@ section.private-training.top {
         .tab {
             width: 30%;
             max-width: 70px;
+            max-height: 70px;
             text-align: center;
             cursor: pointer;
             text-decoration: none;
 
             @media all and (min-width: 992px) {
                 max-width: 90px;
+                max-height: 90px;
             }
 
             .icon {

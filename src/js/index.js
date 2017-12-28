@@ -1,14 +1,13 @@
-import smoothScrollInit from './smooth-scroll.js'
+import smoothScrollInit from './smooth-scroll'
 import {
     playAnimations,
     mainLogo,
     ctaTitle,
-    switchLogo
-} from './animations.js'
-import { initMenu } from './menu.js'
+    switchLogo,
+} from './animations'
+import initMenu from './menu'
 
-$(function () {
-
+$(() => {
     initMenu()
     smoothScrollInit()
 
@@ -21,9 +20,9 @@ $(function () {
     }
     $(document).scroll(throttle(onScroll, 50))
 
-    setTimeout(function () {
+    setTimeout(() => {
         if ($('#particles-js').length > 0) {
-            particlesJS.load('particles-js', 'vendor/particlesjs/particlesjs-config.json', function () {
+            particlesJS.load('particles-js', 'vendor/particlesjs/particlesjs-config.json', () => {
 
             })
         }
