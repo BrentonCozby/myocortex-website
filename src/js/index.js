@@ -18,7 +18,8 @@ $(() => {
         switchLogo('systems')
         switchLogo('tools')
     }
-    $(document).scroll(throttle(onScroll, 50))
+
+    $(document).scroll(throttle(onScroll, 100, { leading: true }))
 
     setTimeout(() => {
         if ($('#particles-js').length > 0) {

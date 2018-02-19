@@ -1,6 +1,7 @@
 dist
 .env
 .DS_Store
+filename-map.json
 
 # Logs
 logs

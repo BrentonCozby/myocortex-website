@@ -1,3 +1,5 @@
+const debounce = require('lodash.debounce')
+
 // Add selectors here and they will all have the class 'scroll-visible'
 // added to them when they scroll into view
 const selectors = [
@@ -6,9 +8,11 @@ const selectors = [
     $('.appear'),
 ]
 
-const animElements = []
+let animElements = []
 
 function populateElements() {
+    animElements = []
+
     selectors.forEach($selector => {
         $selector.each((i, el) => {
             animElements.push({ element: $(el), position: null })
@@ -45,12 +49,12 @@ function playAnimations() {
 export { playAnimations }
 
 $(document).ready(() => {
-    setInterval(() => {
+    $(document).resize(debounce(() => {
         windowHeight = $(window).height()
         offset = windowHeight * 0.1
         getPositions()
         playAnimations()
-    }, 500)
+    }, 100))
 })
 
 const $mainLogoContainer = $('#main-logo-container')
