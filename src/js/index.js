@@ -7,19 +7,17 @@ import {
 } from './animations'
 import initMenu from './menu'
 
-$(() => {
+$(document).ready(() => {
     initMenu()
     smoothScrollInit()
 
-    function onScroll() {
+    document.addEventListener('scroll', throttle(() => {
         playAnimations()
         mainLogo()
         ctaTitle()
         switchLogo('systems')
         switchLogo('tools')
-    }
-
-    $(document).scroll(throttle(onScroll, 100, { leading: true }))
+    }, 100, { leading: true }))
 
     setTimeout(() => {
         if ($('#particles-js').length > 0) {

@@ -4,11 +4,10 @@
     "description": "Website for MYOCORTEX Human Performance Systems. Miami, FL.",
     "main": "src/js/index.js",
     "scripts": {
-        "start": "babel-node server.js",
-        "bs": "browser-sync start -s 'dist' -f 'dist' --no-open --no-notify --reload-debounce 50",
+        "start": "browser-sync start -s 'dist' -f 'dist' --no-open --no-notify --reload-debounce 50",
         "setup-for-dev": "npm-run-all --sequential rmprod copy-to-dist build:html",
-        "dev": "NODE_ENV=development npm-run-all --parallel bs watch:*",
-        "prod": "NODE_ENV=production npm-run-all --sequential rmprod copy-to-dist minify:js minify:css prepend-banner hash-filenames minify:html build:sw",
+        "dev": "NODE_ENV=development npm-run-all --parallel start watch:*",
+        "build": "NODE_ENV=production npm-run-all --sequential rmprod copy-to-dist minify:js minify:css prepend-banner hash-filenames minify:html",
         "build:html": "NODE_ENV=production babel-node build-tools/ejs-to-html.js",
         "build:js": "webpack -d",
         "build:css": "npm run sass && npm run autoprefixer",
@@ -23,7 +22,6 @@
         "copy-to-dist": "babel-node build-tools/copy-to-dist.js",
         "hash-filenames": "babel-node build-tools/hash-filenames.js",
         "prepend-banner": "babel-node build-tools/prepend-banner.js",
-        "build:sw": "babel-node build-tools/build-service-worker.js",
         "rmprod": "rimraf filename-map.json && rimraf dist",
         "eslint": "eslint"
     },
@@ -51,7 +49,6 @@
         "postcss-cli": "^4.1.1",
         "rimraf": "^2.6.2",
         "serve": "^6.4.3",
-        "sw-precache": "^5.2.0",
         "uglifyjs-webpack-plugin": "^0.4.6",
         "webpack": "^3.10.0"
     },

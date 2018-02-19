@@ -48,12 +48,18 @@ function playAnimations() {
 }
 export { playAnimations }
 
+function showItemsInView() {
+    windowHeight = $(window).height()
+    offset = windowHeight * 0.1
+    getPositions()
+    playAnimations()
+}
+
 $(document).ready(() => {
+    showItemsInView()
+
     $(document).resize(debounce(() => {
-        windowHeight = $(window).height()
-        offset = windowHeight * 0.1
-        getPositions()
-        playAnimations()
+        showItemsInView()
     }, 100))
 })
 
