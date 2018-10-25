@@ -1,3 +1,4 @@
+import throttle from 'lodash.throttle'
 import smoothScrollInit from './smooth-scroll'
 import {
     playAnimations,
@@ -17,7 +18,7 @@ $(document).ready(() => {
         ctaTitle()
         switchLogo('systems')
         switchLogo('tools')
-    }, 100, { leading: true }))
+    }, 200, { leading: true }))
 
     setTimeout(() => {
         if ($('#particles-js').length > 0) {

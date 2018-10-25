@@ -1,3 +1,4 @@
+import escape from 'escape-html'
 import './jqBootstrapValidation'
 
 /* eslint-disable */

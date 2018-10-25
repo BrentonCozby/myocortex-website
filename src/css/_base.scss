@@ -13,7 +13,6 @@ $mcx-red: #B63033;
 * {
     box-sizing: border-box;
     position: relative;
-    transition: all 200ms;
     font-family: $main-font;
     font-weight: 300;
 }
@@ -57,10 +56,70 @@ a {
 
 .btn {
     color: $mcx-red;
+    display: inline-block;
+    padding: 12px 30px;
+    padding-right: 50px;
+    border-radius: 22px;
+    border: 2px solid #ddd;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 3px;
+
+    &::after {
+        position: absolute;
+        content: '→';
+        font-size: 20px;
+        line-height: 1;
+        top: 9px;
+        right: 20px;
+        transition: right 200ms;
+    }
 
     &:hover,
     &:focus {
         border-color: #000;
+
+        &::after {
+            right: 10px;
+        }
+    }
+}
+
+.down-arrow {
+    text-decoration: none;
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    line-height: 1;
+    color: #777;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: down-arrow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, .7);
+    }
+
+    i {
+        transition: all 0s;
+        padding: 0 8px;
+    }
+}
+
+@keyframes down-arrow {
+    0% {
+        transform: translateX(-50%) translateY(6px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-6px);
     }
 }
 

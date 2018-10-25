@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include(`${partials}/head`, {pageTitle: 'NFL Combine'}); -%>
+<body>
+    <%- include(`${partials}/menu`); -%>
+
+    <div class="nfl-combine" id="main-logo-container">
+        <a href="<%= PP %>">
+            <img class="main-logo" src="<%= PP %>images/logos/myocortex_logo_white.svg" alt="MYOCORTEX full logo">
+        </a>
+    </div>
+
+    <section class="nfl-combine top">
+        <a href="#cta" class="down-arrow"><i aria-hidden="true" class="fa fa-angle-down"></i></a>
+    </section>
+
+    <section class="nfl-combine cta" id="cta">
+        <div class="filter"></div>
+        <div class="text">
+            <h4 class="appear">NFL Combine | Pro Day</h4>
+            <a href="<%= PP %>sign-up" class="btn appear learn-more-btn">sign up</a>
+            <img src="<%= PP %>images/logos/mcx-contrast-dark.png" class="logo" />
+        </div>
+    </section>
+
+    <%- include(`${partials}/footer`, {classNames: ''}); -%>
+    <%- include(`${partials}/bottom`); -%>
+</body>
+</html>

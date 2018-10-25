@@ -9,14 +9,7 @@
  *
  */
 
-window.libs = {}
-// Import the following libraries in other files like this:
-//
-//      const { sanitizeHTML } = libs
-//
 window.$ = window.jQuery = require('jquery') // eslint-disable-line no-multi-assign
-window.throttle = require('lodash.throttle')
-window.escape = require('escape-html')
 
 // Dump static code here
 require('./errors.js')
