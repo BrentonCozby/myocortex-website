@@ -1,0 +1,31 @@
+section.nfl-combine-pro-day.trent-saunders {
+    background-color: #fff;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)),
+        url('../../images/backgrounds/particles-background.png');
+    background-size: cover;
+    background-position: 0% 20%;
+
+    .split-2 .split-box:nth-child(1) {
+        padding: 30px;
+
+        @media all and (min-width: 900px) {
+            padding: 60px;
+        }
+
+        h3 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: $main-font;
+        }
+    }
+
+    .split-2 .split-box:nth-child(2) {
+        img {
+            width: 100%;
+        }
+    }
+}

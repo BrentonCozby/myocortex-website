@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include(`${partials}/head`, {pageTitle: 'NFL Combine | Pro Day'}); -%>
+<body>
+    <%- include(`${partials}/menu`); -%>
+
+    <div class="nfl-combine-pro-day" id="main-logo-container">
+        <a href="<%= PP %>">
+            <img class="main-logo" src="<%= PP %>images/logos/myocortex_logo_white.svg" alt="MYOCORTEX full logo">
+        </a>
+    </div>
+
+    <section class="nfl-combine-pro-day top">
+        <div class="filter"></div>
+        <div class="textbox">
+            <h1 class="title large">NFL Combine | <span class="pro-day">Pro Day</span></h1>
+            <h1 class="title small">NFL Combine <span class="pro-day">Pro Day</span></h1>
+            <p class="subtitle">8-week training program</p>
+            <p class="subtitle date">Jan. 2 - Feb. 27</p>
+        </div>
+        <a href="#trent-saunders" class="down-arrow"><i aria-hidden="true" class="fa fa-angle-down"></i></a>
+    </section>
+
+    <section class="nfl-combine-pro-day trent-saunders" id="trent-saunders">
+        <div class="split-2">
+            <div class="split-box">
+                <h3>Trent Saunders, OL AAF Unsigned</h3>
+                <div class="quote">
+                    <p>The experience at MYOCROTEX is top-of-line. They target muscles in the most interactive way with isolation and muscle technique exercises which transfer to real power instead of compensated power, allowing max performance. The only way to describe MYOCORTEX is that it is a game changer.</p>
+                </div>
+            </div>
+            <div class="split-box">
+                <img src="<%= PP %>images/people/trent-saunders.jpg" alt="Trent Saunders">
+            </div>
+        </div>
+    </section>
+
+    <section class="nfl-combine-pro-day path-to-the-draft">
+        <div class="textbox">
+            <h3>Path to the Draft</h3>
+            <p>At MYOCORTEX, we have developed a proprietary regeneration phase in order to provide specific athlete-defined training programs. We hold ourselves accountable for every rep by checking our work before and after every session to ensure our athletes are progressing.</p>
+            <p>Our goal is to build resiliency and durability while improving and developing speed, strength, agility, explosive power and endurance.</p>
+        </div>
+        <img class="footballers appear delay-600" src="<%= PP %>images/people/footballers.png" alt="footballers">
+    </section>
+
+    <section class="nfl-combine-pro-day medical">
+        <img src="<%= PP %>images/people/kneeling-stretch.png" alt="kneeling-stretch" class="kneeling-stretch">
+        <h3>Medical</h3>
+        <div class="textbox">
+            <ul>
+                <li>Concierge Physical Therapy</li>
+                <li>Chiropractic Therapy</li>
+                <li>Muscle Activation Techniques</li>
+                <li>Massage Therapy</li>
+                <li>Cupping</li>
+                <li>Kinesio-tapping</li>
+                <li>Myofascial Release</li>
+                <li>Acupuncture</li>
+            </ul>
+            <ul>
+                <li>Dry Needling</li>
+                <li>TCM Acupuncture</li>
+                <li>Ultrasound</li>
+                <li>Low-energy Shockwave</li>
+                <li>PRP</li>
+                <li>Adipose Stem Cells</li>
+                <li>Adipose Bone Marrow Stem Cells</li>
+                <li>Neurofunctional Electric and IV Therapy</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="nfl-combine-pro-day wonderlic">
+        <h3>Wonderlic Test Interview Training Preparation</h3>
+        <p>By working with our in-house Sports Psychologist, each athlete will get insight into the test with test-taking strategies will become prepared for team and media interviews.</p>
+    </section>
+
+    <section class="nfl-combine-pro-day dedrick-mackey">
+        <div class="textbox">
+            <h3>Dedrick Mackey, DB Purdue University</h3>
+            <p>"When I first started training at MCX, they immediately used MAT to address my imbalances that were causing my hamstring to be very tight. Rob developed my strength the right way and I never felt more mobile and strong, all while improving my footwork."</p>
+            <p>"They taught me how training smarter, not harder, is best and that has carried on to my success on the field. I look forward to working with them during my school breaks in the future."</p>
+        </div>
+    </section>
+
+    <section class="nfl-combine-pro-day cta">
+        <div class="filter"></div>
+        <div class="text">
+            <h4 class="appear">NFL Combine | Pro Day</h4>
+            <a href="<%= PP %>sign-up" class="btn appear sign-up-btn">sign up</a>
+            <img src="<%= PP %>images/logos/mcx-contrast-dark.png" class="logo" />
+        </div>
+    </section>
+
+    <%- include(`${partials}/footer`, {classNames: ''}); -%>
+    <%- include(`${partials}/bottom`); -%>
+</body>
+</html>

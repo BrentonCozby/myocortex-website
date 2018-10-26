@@ -1,4 +1,4 @@
-section.nfl-combine.cta {
+section.nfl-combine-pro-day.cta {
     background-color: #fff;
     background-image:
         linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
@@ -34,6 +34,10 @@ section.nfl-combine.cta {
         @media all and (min-width: 768px) {
             font-size: 24px;
         }
+    }
+
+    .sign-up-btn {
+        font-weight: bold;
     }
 
     .logo {

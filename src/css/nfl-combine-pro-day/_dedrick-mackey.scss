@@ -1,0 +1,68 @@
+section.nfl-combine-pro-day.dedrick-mackey {
+    background-image: url('../../images/people/dedrick-mackey.jpg');
+    background-size: cover;
+    background-position: 40% 0%;
+    min-height: 40vh;
+    padding: 20px;
+
+    @media all and (min-width: 800px) {
+        background-position: 0% 0%;
+        min-height: 60vh;
+    }
+
+    @media all and (min-width: 1100px) {
+        min-height: 80vh;
+    }
+
+    @media all and (min-width: 1400px) {
+        min-height: 95vh;
+    }
+
+    .textbox {
+        background-color: rgba(0, 0, 0, .75);
+        border: 4px solid $mcx-red;
+        padding: 15px 20px 0;
+        margin-top: 30vh;
+        box-shadow: 0 10px 30px -4px #000;
+        
+        @media all and (min-width: 1100px) {
+            margin-top: 0;
+            max-width: 400px;
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+        }
+
+        @media all and (min-width: 1400px) {
+            margin-top: 0;
+            max-width: 600px;
+        }
+    }
+
+    h3 {
+        color: #eee;
+        font-size: 36px;
+
+        @media all and (min-width: 800px) {
+            font-size: 42px;
+        }
+
+        @media all and (min-width: 1400px) {
+            font-size: 58px;
+            max-width: 400px;
+        }
+
+        span {
+            display: block;
+            font-family: inherit;
+        }
+    }
+
+    p {
+        color: #eee;
+        font-family: $header-font-narrow;
+        font-size: 24px;
+        line-height: 1.6;
+    }
+}

@@ -1,0 +1,67 @@
+section.nfl-combine-pro-day.top {
+    background-color: #000;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .90), rgba(0, 0, 0, .90)),
+        url('../../images/backgrounds/particles-background-gray.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 0 40px;
+
+    .textbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .title {
+        color: $mcx-red;
+        margin: 0;
+
+        .pro-day {
+            color: #ccc;
+            font-family: inherit;
+        }
+
+        &.small {
+            font-size: 32px;
+
+            .pro-day {
+                display: block;
+            }
+
+            @media all and (min-width: 600px) {
+                font-size: 42px;
+            }
+        }
+
+        &.large {
+            font-size: 48px;
+            display: none;
+        }
+
+        @media all and (min-width: 900px) {
+            &.small {
+                display: none;
+            }
+            &.large {
+                display: block;
+            }
+        }
+    }
+
+    .subtitle {
+        color: #eee;
+        font-family: $header-font-narrow;
+        font-size: 22px;
+        text-transform: uppercase;
+        margin: 10px 0;
+
+        @media all and (min-width: 600px) {
+            font-size: 26px;
+        }
+    }
+}
