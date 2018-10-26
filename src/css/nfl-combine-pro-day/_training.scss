@@ -1,0 +1,31 @@
+section.nfl-combine-pro-day.training {
+    padding: 0 40px 40px 40px;
+
+    .training-title {
+        display: block;
+        font-family: $header-font;
+        font-size: 36px;
+        text-align: center;
+        color: rgba(0, 0, 0, .3);
+        margin-top: 80px;
+        margin-bottom: 60px;
+
+        @media all and (min-width: 800px) {
+            font-size: 44px;
+        }
+
+        @media all and (min-width: 1200px) {
+            font-size: 70px;
+        }
+    }
+
+    .split-box {
+        padding: 15px 30px;
+
+        h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: $mcx-red;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+section.nfl-combine-pro-day.support-at-indy {
+    padding: 25px;
+
+    .main-title {
+        text-align: center;
+        font-family: $header-font;
+        font-size: 32px;
+        margin-top: 3%;
+        color: #555;
+        margin-bottom: 20px;
+
+        @media all and (min-width: 800px) {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        @media all and (min-width: 1300px) {
+            font-size: 54px;
+        }
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.4;
+        max-width: 800px;
+        margin: auto;
+        font-family: $main-font;
+
+        @media all and (min-width: 800px) {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    }
+
+    .split-4 {
+        margin-top: 5%;
+        justify-content: center;
+
+        @media all and (min-width: 1000px) {
+            margin-top: 4%;
+            padding: 0 10%;
+        }
+
+        .split-box {
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+
+            h4 {
+                color: $mcx-red;
+                font-size: 24px;
+                margin: 0;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                font-family: $main-font;
+                font-size: 16px;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+        }
+    }
+}

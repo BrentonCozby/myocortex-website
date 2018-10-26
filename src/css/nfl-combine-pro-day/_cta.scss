@@ -6,7 +6,7 @@ section.nfl-combine-pro-day.cta {
     background-size: cover;
     background-position: center;
     padding: 20px;
-    min-height: 80vh;
+    min-height: 60vh;
 
     .filter {
         position: absolute;
@@ -29,7 +29,7 @@ section.nfl-combine-pro-day.cta {
     h4 {
         line-height: 1.5;
         font-size: 20px;
-        margin-top: 0;
+        margin-top: 40px;
 
         @media all and (min-width: 768px) {
             font-size: 24px;
