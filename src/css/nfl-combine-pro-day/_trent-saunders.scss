@@ -9,8 +9,8 @@ section.nfl-combine-pro-day.trent-saunders {
     .split-2 .split-box:nth-child(1) {
         padding: 30px;
 
-        @media all and (min-width: 900px) {
-            padding: 60px;
+        @media all and (min-width: 1300px) {
+            padding: 55px;
         }
 
         h3 {
@@ -18,8 +18,16 @@ section.nfl-combine-pro-day.trent-saunders {
         }
 
         p {
-            font-size: 20px;
+            font-size: 16px;
             font-family: $main-font;
+
+            @media all and (min-width: 1000px) {
+                font-size: 18px;
+            }
+
+            @media all and (min-width: 1400px) {
+                font-size: 20px;
+            }
         }
     }
 

@@ -19,8 +19,13 @@ section.nfl-combine-pro-day.training {
         }
     }
 
+    .split-3 {
+        justify-content: center;
+    }
+
     .split-box {
         padding: 15px 30px;
+        max-width: 450px;
 
         h3 {
             font-size: 36px;
