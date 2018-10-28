@@ -8,6 +8,18 @@ section.nfl-combine-pro-day.top {
     min-height: 100vh;
     padding: 0 40px;
 
+    .mcx-logo {
+        position: absolute;
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @media all and (min-width: 600px) {
+            width: 70%;
+        }
+    }
+
     .textbox {
         position: absolute;
         top: 50%;
@@ -18,7 +30,7 @@ section.nfl-combine-pro-day.top {
     }
 
     .title {
-        color: $mcx-red;
+        color: darken($mcx-red, 5%);
         margin: 0;
 
         .pro-day {

@@ -11,19 +11,8 @@ section.nfl-combine-pro-day {
         margin-top: 0;
         line-height: 1.2;
     }
+}
 
-    .quote {
-        max-width: 600px;
-        margin-top: 30px;
-        padding: 0 30px;
-        &::before {
-            content: '"';
-            font-family: $header-font;
-            font-size: 100px;
-            position: absolute;
-            top: -40px;
-            left: -15px;
-            color: rgba(0, 0, 0, .5);
-        }
-    }
+.nfl-combine-pro-day#main-logo-container.solid-bg {
+    background-color: #000;
 }

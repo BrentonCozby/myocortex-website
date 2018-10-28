@@ -15,18 +15,23 @@ section.nfl-combine-pro-day.trent-saunders {
 
         h3 {
             font-size: 36px;
+            margin-bottom: 20px;
+
+            @media all and (min-width: 1400px) {
+                font-size: 54px;
+            }
         }
 
         p {
             font-size: 16px;
-            font-family: $main-font;
+            font-family: $header-font-narrow;
 
             @media all and (min-width: 1000px) {
-                font-size: 18px;
+                font-size: 20px;
             }
 
             @media all and (min-width: 1400px) {
-                font-size: 20px;
+                font-size: 26px;
             }
         }
     }
