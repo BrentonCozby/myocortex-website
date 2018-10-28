@@ -6,22 +6,26 @@ section.nfl-combine-pro-day.top {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    padding: 0 40px;
 
     .mcx-logo {
         position: absolute;
-        width: 80%;
+        width: 95%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
         @media all and (min-width: 600px) {
+            width: 80%;
+        }
+
+        @media all and (min-width: 1100px) {
             width: 70%;
         }
     }
 
     .textbox {
         position: absolute;
+        padding: 0 40px;
         top: 50%;
         left: 50%;
         width: 100%;
