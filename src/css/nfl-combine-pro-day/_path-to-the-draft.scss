@@ -5,11 +5,17 @@ section.nfl-combine-pro-day.path-to-the-draft {
 
     .textbox {
         padding: 30px;
+        padding-bottom: 240px;
         z-index: 1;
+
+        @media all and (min-width: 600px) {
+            padding-bottom: 370px;
+        }
 
         @media all and (min-width: 1100px) {
             margin-left: 45%;
             max-width: 800px;
+            padding-bottom: 0;
         }
 
         h3 {
