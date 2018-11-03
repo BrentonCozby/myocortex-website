@@ -1,16 +1,16 @@
 import webpack from 'webpack'
 import { resolve } from 'path'
-import * as config from './config.js'
+import * as config from './config'
 
 export default {
     entry: {
         bundle: ['./src/js/index.js'],
-        common: ['./src/js/common/index.js']
+        common: ['./src/js/common/index.js'],
     },
     output: {
         filename: '[name].js',
         path: resolve(__dirname, 'dist', 'js'),
-        publicPath: config.PP
+        publicPath: config.PP,
     },
     module: {
         rules: [
@@ -19,15 +19,9 @@ export default {
                 exclude: /(node_modules)/,
                 use: [{
                     loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            ['env', { modules: false }],
-                            'stage-0'
-                        ]
-                    }
-                }]
-            }
-        ]
+                }],
+            },
+        ],
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -40,6 +34,6 @@ export default {
             SITE_IMAGE: JSON.stringify(config.SITE_IMAGE),
             DEVELOPER_NAME: JSON.stringify(config.DEVELOPER_NAME),
             DEVELOPER_URL: JSON.stringify(config.DEVELOPER_URL)
-        })
-    ]
+        }),
+    ],
 }
