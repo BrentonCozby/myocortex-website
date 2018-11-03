@@ -18,7 +18,6 @@ $(document).ready(() => {
         ctaTitle()
         switchLogo('systems')
         switchLogo('tools')
-        switchLogo('nfl-combine-pro-day')
     }, 200, { leading: true }))
 
     setTimeout(() => {
