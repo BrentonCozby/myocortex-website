@@ -1,8 +1,11 @@
-// shared
-@import "helpers";
-@import "base";
-@import "footer";
-@import "menu";
+@import 'html5boilerplate';
+@import 'sanitize';
+@import 'include-media';
+@import 'base';
+@import 'helpers';
+@import 'footer';
+@import 'print';
+@import 'menu';
 
 // homepage sections
 @import "homepage/above-the-fold";

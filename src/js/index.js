@@ -1,3 +1,7 @@
+import 'utils/errors'
+import 'utils/video'
+import 'utils/contact_me'
+
 import throttle from 'lodash.throttle'
 import smoothScrollInit from './smooth-scroll'
 import {
@@ -22,7 +26,7 @@ $(document).ready(() => {
 
     setTimeout(() => {
         if ($('#particles-js').length > 0) {
-            particlesJS.load('particles-js', 'vendor/particlesjs/particlesjs-config.json', () => {
+            particlesJS.load('particles-js', 'particlesjs/particlesjs-config.json', () => {
 
             })
         }

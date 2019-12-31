@@ -5,8 +5,8 @@
     <%- include(`${partials}/menu`); -%>
 
     <div class="group-training" id="main-logo-container">
-        <a href="<%= PP %>">
-            <img class="main-logo" src="<%= PP %>images/logos/myocortex_logo_black.svg" alt="MYOCORTEX full logo">
+        <a href="<%= PP %>/">
+            <img class="main-logo" src="<%= PP %>/images/logos/myocortex_logo_black.svg" alt="MYOCORTEX full logo">
         </a>
     </div>
 
@@ -18,24 +18,24 @@
             <p>It's not CrossFit.</p>
             <p>It's Strength Training evaluated and recorded consistently to ensure positive muscular development. Our coaches bring accountability and empowerment to your training.</p>
             <div class="appear">
-                <a href="<%= PP %>sign-up" class="btn mind-body-link">schedule</a>
+                <a href="<%= PP %>/sign-up" class="btn mind-body-link">schedule</a>
             </div>
         </div>
         <div class="images-container">
-            <img src="<%= PP %>images/people/footballers.png" alt="football players" class="footballers" />
-            <img src="<%= PP %>images/logos/mcx-white.png" alt="White MYOCORTEX logo" class="logo" />
-            <img src="<%= PP %>images/people/jumping-woman.png" alt="jumping woman" class="woman" />
+            <img src="<%= PP %>/images/people/footballers.png" alt="football players" class="footballers" />
+            <img src="<%= PP %>/images/logos/mcx-white.png" alt="White MYOCORTEX logo" class="logo" />
+            <img src="<%= PP %>/images/people/jumping-woman.png" alt="jumping woman" class="woman" />
         </div>
     </section>
     <section class="group-training cta">
         <div class="text">
             <h4 class="appear">Learn More</h4>
-            <a href="<%= PP %>sign-up" class="btn appear learn-more-btn">Contact Us</a>
-            <img src="<%= PP %>images/logos/mcx-contrast-dark.png" class="logo" />
+            <a href="<%= PP %>/sign-up" class="btn appear learn-more-btn">Contact Us</a>
+            <img src="<%= PP %>/images/logos/mcx-contrast-dark.png" class="logo" />
         </div>
     </section>
 
     <%- include(`${partials}/footer`, {classNames: ''}); -%>
-    <%- include(`${partials}/bottom`); -%>
+    <%- include(`${partials}/scripts`); -%>
 </body>
 </html>

@@ -7,22 +7,19 @@ import ejs from 'ejs' // eslint-disable-line import/no-extraneous-dependencies
 import {
     Dir,
     PP,
-    DEV_PATH,
     SITE_TITLE,
     SITE_URL,
-    SITE_IMAGE,
     DESCRIPTION,
     DEVELOPER_NAME,
     DEVELOPER_URL,
-    GOOGLE_ANALYTICS_ID,
-} from '../config'
+    GOOGLE_ANALYTICS_ID
+} from '../globals'
 import transformFiles from './transform-files'
 
 // filenameMap used in views/partials with if statements to check if it exists
-let filenameMap = null
-if (fs.existsSync(resolve(DEV_PATH, 'filename-map.json'))) {
-    const fileContents = fs.readFileSync(resolve(DEV_PATH, 'filename-map.json'), 'utf-8')
-    filenameMap = JSON.parse(fileContents)
+let filenameMap
+if (fs.existsSync(resolve(Dir.dist, 'filename-map.json'))) {
+    filenameMap = JSON.parse(fs.readFileSync(resolve(Dir.dist, 'filename-map.json'), 'utf-8'))
 }
 
 function transformer({ filename, sourcePath, destinationPath }) {
@@ -35,11 +32,11 @@ function transformer({ filename, sourcePath, destinationPath }) {
         PP,
         SITE_TITLE,
         SITE_URL,
-        SITE_IMAGE,
         DESCRIPTION,
         DEVELOPER_NAME,
         DEVELOPER_URL,
         GOOGLE_ANALYTICS_ID,
+        CARD_IMAGE: '',
         NODE_ENV: process.env.NODE_ENV,
         filenameMap,
     })

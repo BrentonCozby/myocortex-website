@@ -1,29 +1,53 @@
-# ejs-sass-static-boilerplate
-Boilerplate for a Static website using EJS and SASS.
+# Website for Myocortex.com
+Use EJS, SASS, and the latest JavaScript syntax to build fully-static production code with fast, live updates during development and the latest optimizations upon production. Global variables are used throughout the project to make it easily reconfigurable and DRY. Focus on building your frontend, not on building your tools.
+
+## Globals
+**`globals.js`**: The variables in this file, such as SITE_TITLE and PP (public path), are used throughout the project. Change them in globals.js and they will be updated throughout your entire codebase where used. They are provided as global variables in your JS and EJS files.
+
+## Basic Usage
+* Use the PP (public path) value from globals.js in the views dir with `<%= PP %>`. This will allow you to deploy your site from whichever directory you set PP to
+* The `src/static` folder:
+    * Everything in this folder will be copied (with folder/file structure maintained) into the dist folder unchanged
+    * If there is an `images/pineapple.jpg` file in `src/static`, you would reference this in any of your *.ejs files (`src/views`) like this:
+        ```html
+            <img src="<%= PP %>/images/pineapple.jpg">
+        ```
+* The main JS file is `src/js/index.js`. This will become `app.js`
+* A separate `vendor.js` bundle will be created from node_modules added to the "vendor" array in webpack.config.js
+* Some SASS helper classes are available in `src/css/_helpers.scss`
+* Add the class 'appear' to any html element to give it a fade-in/fade-out effect when it scrolls into/out-of view
+* Set Google Analytics ID in `globals.js`
+* Favicons: go to https://realfavicongenerator.net/ and put the generated favicons into `src/favicons`
 
 ## DEVELOPMENT
-**Usage:** Run the following scripts in 4 different terminal tabs:
-1. ```npm run setup-for-dev``` and then ```npm start```
-2. ```npm run watch:html```
-3. ```npm run watch:css```
-4. ```npm run watch:js```
 
-**Features:**
-- Watch css, js, and html files and recompile on change
+```yarn dev``` (to prepare files, start server, and watch files)
 
+**Development Features:**
+* CSS updates without browser reload; browser auto-reloads upon JS and HTML updates
+* Source maps for SASS and JS files for easier debugging
 
 ## PRODUCTION
 
-**Usage:** ```npm run prod```
+```yarn build```
 
-**Features:**
-- Hashes css and js filenames in production for cache busting
-- Minification for CSS, JS, and HTML files
-- Autoprefix css
-- Separates vendor code from your code
+**Production Features:**
+* Minification for CSS (with Autoprefixer), JS (with Babel), and HTML files
+* Filename hashing for css and js files (for cache busting)
+* Easy Code-splitting. Hookup code that won't change often (like libraries and packages) in src/js/commmon/index.js
+* Tree-shaking and uglyfication from Webpack
+* Project info banner prepended to the top of JS and CSS files
 
-## Other Features
-- Generate favicons for all devices and media
-- Use the latest JavaScript (babel-preset-stage-0)
-- A Polyfills.js file that only loads if the client doesn't have
-- certain features
+**Other Features:**
+* Use the latest JavaScript syntax thanks to babel-preset-stage-0
+* A polyfills file from Polyfill.io file that only loads if the client doesn't have certain features
+* CSS helpers, including classes for "show/hide on scroll" behavior, "split-box" classes for grid behavior, and more in `_helpers.scss`
+* `print.scss` for common css fixes when printing a web page
+
+**Included Libraries:**
+* *Sanitize.css* - common CSS resets. The evolution of Normalize.css
+* *Font Awesome* - I mainly use it for icons
+* *sanitize-html* - should use this on any user-inputted data)
+* *lodash.throttle* - already used in the CSS helper classes that show/hide an element on-scroll)
+* *include-media* - so you can do things in `sass` like `@include media('>=358px', '<850px') { }`
+* *HTML5Boilerplate* - includes presets in html & css for web best practices, and includes a .htaccess file

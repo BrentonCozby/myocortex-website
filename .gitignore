@@ -1,7 +1,6 @@
 dist
-.env
+*.env
 .DS_Store
-filename-map.json
 
 # Logs
 logs
@@ -60,4 +59,4 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+.envs

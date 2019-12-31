@@ -3,24 +3,32 @@
 import fs from 'fs'
 import crypto from 'crypto'
 import { resolve } from 'path'
-import { Dir, DEV_PATH } from '../config'
+import { Dir } from '../globals'
 import transformFiles from './transform-files'
 
-const dirs = [
+const dirsToHash = [
     resolve(Dir.dist, 'js'),
-    resolve(Dir.dist, 'css'),
+    resolve(Dir.dist, 'css')
+]
+
+const patternsToSkip = [
+    /\.lazy\./
 ]
 
 const mapData = {}
 
 function transformer({ filename, sourcePath, destinationPath }) {
+    if (patternsToSkip.some(pattern => pattern.test(filename))) {
+        return
+    }
+
     const oldFilePath = resolve(sourcePath, filename)
 
     const fileContents = fs.readFileSync(oldFilePath, 'utf-8')
 
     const hash = crypto.createHash('md5').update(fileContents).digest('hex')
 
-    if (filename.indexOf(hash) !== -1) {
+    if (filename.indexOf(hash) >= 0) {
         console.log(`${filename} is unchanged.`)
 
         const str = filename.split('.')
@@ -55,9 +63,30 @@ function hashFilenames(directories) {
         transformFiles(dir, {}, transformer)
     })
 
-    fs.writeFileSync(resolve(DEV_PATH, 'filename-map.json'), JSON.stringify(mapData), 'utf-8')
+    // add the javascript files (hashed by webpack)
+    // transformFiles(resolve(Dir.dist, 'js'), {}, ({ filename }) => {
+    //     if (!filename.includes('app') && !filename.includes('vendor')) {
+    //         return
+    //     }
 
-    console.log('\nFilenames hashed!\n')
+    //     const noHash = filename.split('.').reduce((acc, curr, index) => {
+    //         if (index > 0 && ['js', 'map'].indexOf(curr) === -1) {
+    //             return acc
+    //         }
+
+    //         acc.push(curr)
+
+    //         return acc
+    //     }, [])
+
+    //     const baseFilename = noHash.join('.')
+
+    //     mapData[baseFilename] = filename
+    // })
+
+    fs.writeFileSync(resolve(Dir.dist, 'filename-map.json'), JSON.stringify(mapData), 'utf-8')
+
+    console.log('\nFilenames hashed! filename-map.json created.\n')
 }
 
-hashFilenames(dirs)
+hashFilenames(dirsToHash)

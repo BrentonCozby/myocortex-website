@@ -9,10 +9,22 @@ $header-font: 'Pirulen', sans-serif;
 $header-font-narrow: 'Pathway Gothic One', sans-serif;
 $main-font: 'Open Sans', sans-serif;
 $mcx-red: #B63033;
+$appear-transition-opacity: 300ms;
+$appear-transition-transform: 10000ms;
 
 * {
     box-sizing: border-box;
     position: relative;
+}
+
+html,
+p,
+a,
+li,
+span,
+button,
+input,
+textarea {
     font-family: $main-font;
     font-weight: 300;
 }
@@ -27,10 +39,25 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $header-font;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity $appear-transition-opacity, transform $appear-transition-transform;
 }
 
 section {
