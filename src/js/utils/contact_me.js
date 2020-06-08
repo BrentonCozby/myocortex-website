@@ -1,4 +1,4 @@
-import escape from 'escape-html'
+import {htmlEscape} from 'escape-goat'
 import './jqBootstrapValidation'
 
 /* eslint-disable */
@@ -12,11 +12,11 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            var name = escape($("input#name").val());
-            var email = escape($("input#email").val());
-            var phone = escape($("input#phone").val());
+            var name = htmlEscape($("input#name").val());
+            var email = htmlEscape($("input#email").val());
+            var phone = htmlEscape($("input#phone").val());
             var subject = $("select#subject").val();
-            var message = escape($("textarea#message").val());
+            var message = htmlEscape($("textarea#message").val());
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {

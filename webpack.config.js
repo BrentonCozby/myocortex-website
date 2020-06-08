@@ -10,7 +10,7 @@ module.exports = (env = {}) => {
 
     return {
         entry: {
-            vendor: ['lodash.throttle', 'lodash.debounce', 'sanitize-html', 'picturefill', 'lazysizes'],
+            vendor: ['lodash.throttle', 'lodash.debounce', 'escape-goat', 'picturefill', 'lazysizes'],
             app: ['./src/js/index.js'],
         },
         output: {

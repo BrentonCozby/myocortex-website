@@ -1,0 +1,111 @@
+$border-width: 4px;
+$border-color: #444;
+
+section.nfl-combine-pro-day-summer-2020.brag {
+    border: $border-width solid $border-color;
+
+    .split-2 {
+        &:nth-of-type(1) {
+            color: #555;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        &:nth-of-type(2) {
+            color: #000;
+            background-color: rgba(70, 50, 0, .30);
+        }
+
+        &:nth-of-type(3) {
+            color: #ccc;
+            background-color: rgba(0, 10, 20, .9);
+        }
+    }
+
+    .split-box.textbox {
+        padding: 20px;
+        border: 5px solid #444;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+
+        p {
+            font-size: 20px;
+            margin: 0;
+            font-family: $header-font-narrow;
+        }
+
+        @media all and (min-width: 768px) {
+            padding: 20px;
+        }
+
+        @media all and (min-width: 900px) {
+            p {
+                font-size: 22px;
+            }
+        }
+
+        @media all and (min-width: 1100px) {
+            padding: 5% 10%;
+        }
+
+        @media all and (min-width: 1400px) {
+            p {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .split-box.image-container {
+        z-index: 2;
+        align-self: stretch;
+        min-height: 50vh;
+        width: 100%;
+
+        @media all and (min-width: 768px) {
+            width: 50%;
+            min-height: 40vw;
+        }
+
+        @media all and (min-width: 1300px) {
+            min-height: 35vw;
+        }
+
+        span {
+            display: block;
+            height: 100%;
+            width: 100%;
+            border: $border-width solid $border-color;
+            background-size: cover;
+            background-position: 0% 50%;
+        }
+
+        span[miami-river-brickell] {
+            background-image: url('../../images/miami-river-brickell.png');
+        }
+
+        span[brickell-coast-night] {
+            background-image: url('../../images/brickell-coast-night.png');
+            background-position: 0% 0%;
+        }
+
+        span[downtown-miami-night] {
+            background-image: url('../../images/downtown-miami-night.png');
+            background-position: 0% 65%;
+        }
+    }
+
+    .mcx {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        z-index: 1;
+        opacity: .1;
+
+        @media all and (min-width: 768px) {
+            display: block;
+        }
+    }
+}

@@ -47,7 +47,7 @@ Use EJS, SASS, and the latest JavaScript syntax to build fully-static production
 **Included Libraries:**
 * *Sanitize.css* - common CSS resets. The evolution of Normalize.css
 * *Font Awesome* - I mainly use it for icons
-* *sanitize-html* - should use this on any user-inputted data)
-* *lodash.throttle* - already used in the CSS helper classes that show/hide an element on-scroll)
+* *escape-goat* - should use this on any user-inputted data
+* *lodash.throttle* - already used in the CSS helper classes that show/hide an element on-scroll
 * *include-media* - so you can do things in `sass` like `@include media('>=358px', '<850px') { }`
 * *HTML5Boilerplate* - includes presets in html & css for web best practices, and includes a .htaccess file
