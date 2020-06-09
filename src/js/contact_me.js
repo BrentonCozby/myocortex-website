@@ -1,5 +1,5 @@
-import {htmlEscape} from 'escape-goat'
-import './jqBootstrapValidation'
+import dompurify from 'dompurify'
+import './utils/jqBootstrapValidation'
 
 /* eslint-disable */
 $(function() {
@@ -12,11 +12,11 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            var name = htmlEscape($("input#name").val());
-            var email = htmlEscape($("input#email").val());
-            var phone = htmlEscape($("input#phone").val());
+            var name = dompurify.sanitize($("input#name").val());
+            var email = dompurify.sanitize($("input#email").val());
+            var phone = dompurify.sanitize($("input#phone").val());
             var subject = $("select#subject").val();
-            var message = htmlEscape($("textarea#message").val());
+            var message = dompurify.sanitize($("textarea#message").val());
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {

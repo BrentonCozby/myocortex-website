@@ -2,200 +2,121 @@
 <html lang="en">
 <%- include(`${partials}/head`, {pageTitle: 'NFL Combine | Pro Day | Summer 2020'}); -%>
 <body>
-    <%- include(`${partials}/menu`); -%>
+  <%- include(`${partials}/menu`); -%>
 
-    <div class="nfl-combine-pro-day-summer-2020" id="main-logo-container">
-        <a href="<%= PP %>/">
-            <img class="main-logo" src="<%= PP %>/images/logos/myocortex_logo_white.svg" alt="MYOCORTEX full logo">
-        </a>
+  <div class="nfl-combine-pro-day-summer-2020" id="main-logo-container">
+    <a href="<%= PP %>/">
+      <img class="main-logo" src="<%= PP %>/images/logos/myocortex_logo_white.svg" alt="MYOCORTEX full logo">
+    </a>
+  </div>
+
+  <section class="nfl-combine-pro-day-summer-2020 top">
+    <div class="filter"></div>
+    <img class="mcx-logo" src="<%= PP %>/images/logos/mcx-dark-gray.png" alt="MCX White logo">
+    <div class="textbox">
+      <p class="subtitle">"The people's combine"</p>
+      <p class="subtitle">Miami's only competitive sports program</p>
+      <h1 class="title large">NFL Combine | <span class="pro-day">Pro Day</span></h1>
+      <h1 class="title small">NFL Combine <span class="pro-day">Pro Day</span></h1>
+      <p class="subtitle">8-week training program</p>
+      <p class="subtitle date">Summer 2020</p>
     </div>
+    <a href="#program-content" class="down-arrow"><i class="fas fa-angle-down"></i></a>
+  </section>
 
-    <section class="nfl-combine-pro-day-summer-2020 top">
-        <div class="filter"></div>
-        <img class="mcx-logo" src="<%= PP %>/images/logos/mcx-dark-gray.png" alt="MCX White logo">
-        <div class="textbox">
-            <h1 class="title large">NFL Combine | <span class="pro-day">Pro Day</span></h1>
-            <h1 class="title small">NFL Combine <span class="pro-day">Pro Day</span></h1>
-            <p class="subtitle">8-week training program</p>
-            <p class="subtitle date">Jan. 2 - Feb. 27</p>
-        </div>
-        <a href="#brag" class="down-arrow"><i class="fas fa-angle-down"></i></a>
-    </section>
+  <section class="nfl-combine-pro-day-summer-2020 program-content" id="program-content">
+    <h3 class="large-heading">How do you stack up?</h3>
+    <p style="max-width: 600px;">Ignite your inner-athlete and train like a pro. Our
+      competitive sports performance program includes 2-3x
+      sessions per week and 2 laser-timed NFL, NBA,
+      MLB outdoor workouts per month. Your performance
+      metrics will compete against your favorite pro athletes
+      and other People’s Combine peers. You are guaranteed
+      to lose body fat, build muscle, increase strength and
+      power.
+    </p>
+    <br>
+    <p>Our world-class system includes:</p>
+    <ul>
+      <li>8-12 sessions per month</li>
+      <li>6 laser-times events per month</li>
+      <li>2 strength coaches per session</li>
+      <li>Bio Individualized Nutrition</li>
+      <li>Muscle Imbalance Tune-ups</li>
+      <li>Discounted Thorne Supplements</li>
+      <li>Accountability Coaches</li>
+      <li>And More</li>
+    </ul>
+    <br>
+    <h4 style="margin-bottom: 0;">How will you stack up?</h4>
+  </section>
 
-    <section class="nfl-combine-pro-day-summer-2020 brag" id="brag">
-        <div class="split-2">
-            <div class="split-box image-container">
-                <span miami-river-brickell title="Miami River Brickell"></span>
-            </div>
-            <div class="split-box textbox">
-                <p>MCX is the only athletic training facility in the industry located in Downtown Miami, Miami’s bustling epicenter.  Walking distance to Brickell and three miles away from South Beach. Downtown Brickell Miami is truly the entertainment and international financial capital of the country.</p>
-            </div>
-            <img src="<%= PP %>/images/logos/mcx-dark-gray.png" alt="MCX Logo" class="mcx">
-        </div>
-        <div class="split-2">
-            <div class="split-box textbox">
-                <p>Being the most coveted address packed with gleaming skyscrapers, sweeping bay views, streets flooded with luxury retail, multicultural restaurants, clubs, bars, European sports cars, and young professionals with an average income that is twice that of the greater Miami area.  Sports professionals, bankers and executives all concentrated in a few zip codes provide access to opportunities at every moment.</p>
-            </div>
-            <div class="split-box image-container">
-                <span brickell-coast-night title="Brickell Coast at Night"></span>
-            </div>
-        </div>
-        <div class="split-2">
-            <div class="split-box image-container">
-                <span downtown-miami-night title="Downtown Miami at Night"></span>
-            </div>
-            <div class="split-box textbox">
-                <p>If you need an escape, Brickell Key provides an escape a few blocks away where you can run or walk on an island with views of South Beach and Key Biscayne. Just like our process of training, coaching and educating is what got “Future Hall of Famer” Peyton Manning and “Hall of Famers” Randy Moss and Ray Lewis to a level of professional success, Downtown Brickell Miami is a high niche of people of prominence and celebrity. There is nothing like it…</p>
-            </div>
-        </div>
-    </section>
+  <section class="nfl-combine-pro-day-summer-2020 event-details">
+    <h3>Event Details</h3>
+    <p style="font-size: 22px;">Our laser timed events will consist of drills from the NFL, NBA, and MLB.</p>
+    <ul>
+      <li>The bench press test, test for strength-endurance. It will consist of two classes: 135lb and 225lb. We will work hard on proper technique to improve strength and decrease overuse injuries.</li>
+      <li>40 yard dash will test absolute speed which is tested by our laser timers. Our lower body days will consist of sprint mechanics and strength to improve speed.</li>
+      <li>3 Cone Drill tests agility, power, and quickness</li>
+      <li>The shuttle will test lateral agility, power and your ability to change directions as fast as possible</li>
+      <li>NBA Lane agility tests agility and quickness in all directions</li>
+      <li>Vertical jump will test your vertical power</li>
+      <li>Broad jump will test horizontal power and you must land on both feet without falling</li>
+      <li>MLB 60 yard dash</li>
+      <li>Plus Many More</li>
+    </ul>
+  </section>
 
-    <section class="nfl-combine-pro-day-summer-2020 trent-saunders">
-        <div class="split-2">
-            <div class="split-box">
-                <h3>Trent Saunders, OL</h3>
-                <p>"The experience at MYOCORTEX is top of the line. They target muscles in the most interactive way with isolation and muscles technique exercises, that transfers to real power instead of compensated power allowing max performance. The only way to describe Myocortex it is a Game changer."</p>
-            </div>
-            <div class="split-box">
-                <img src="<%= PP %>/images/people/trent-saunders.jpg" alt="Trent Saunders">
-            </div>
-        </div>
-    </section>
+  <section class="nfl-combine-pro-day-summer-2020 services">
+    <h3>Description of Services</h3>
+    <p>Services in addition to training:</p>
+    <ul style="max-width: 600px;">
+      <li>
+        Accountability Coaching (1 call per week; 4 calls/month)
+      </li>
+      <li>
+        Meal Plan (PDF) We will choose a goal of weight loss, maintenance or weight gain and use the meal plan
+        according to the goal
+      </li>
+      <li>
+        Grocery List (PDF) This is an easy to follow list that will take the guess work out of grocery shopping
+      </li>
+      <li>
+        Styku/Body metrics is the most accurate way of measuring body composition and circumferences using infared
+        lights
+      </li>
+      <li>
+        Biomechanical Tune-up (1 session per month) Muscle Activation Techniques is the world's most effective way of
+        addressing muscular imbalances and weakness to improve strength, recovery, mobility and decrease aches and
+        pains. Just ask Peyton Manning!
+      </li>
+      <li>
+        Discounted Thorne Research Products. Thorne leads the world in quality control and is the nutrition provider
+        for UFC and USA Olympic teams.
+      </li>
+      <li>
+        Nutrition coaching call is a detailed consultation discussing individualized details of your meal plan and
+        answering questions or concerns to ensure we are reaching your goals
+      </li>
+    </ul>
+  </section>
 
-    <section class="nfl-combine-pro-day-summer-2020 path-to-the-draft">
-        <div class="textbox">
-            <h3>Path to the Draft</h3>
-            <p>At MYOCORTEX, we have developed a proprietary regeneration phase in order to provide specific athlete-defined training programs. We hold ourselves accountable for every rep by checking our work before and after every session to ensure our athletes are progressing.</p>
-            <p>Our goal is to build resiliency and durability while improving speed, strength, agility, explosive power, and endurance.</p>
-        </div>
-        <img class="footballers" src="<%= PP %>/images/people/footballers.png" alt="footballers">
-    </section>
+  <section class="nfl-combine-pro-day-summer-2020 closing-statement">
+    <h3>The path to greatness begins here.</h3>
+    <h3>Space is limited.</h3>
+  </section>
 
-    <section class="nfl-combine-pro-day-summer-2020 medical">
-        <img src="<%= PP %>/images/people/kneeling-stretch.png" alt="kneeling-stretch" class="kneeling-stretch">
-        <h3>Medical</h3>
-        <div class="textbox">
-            <ul>
-                <li>Concierge Physical Therapy</li>
-                <li>Chiropractic Therapy</li>
-                <li>Muscle Activation Techniques</li>
-                <li>Massage Therapy</li>
-                <li>Cupping</li>
-                <li>Kinesio-tapping</li>
-                <li>Myofascial Release</li>
-                <li>Acupuncture</li>
-                <li>Dry Needling</li>
-            </ul>
-            <ul>
-                <li>Traditional Chinese Medicine (TCM) Acupuncture</li>
-                <li>Ultrasound</li>
-                <li>Low-energy Shockwave</li>
-                <li>Platelet Rich Plasma (PRP)</li>
-                <li>Adipose Stem Cells</li>
-                <li>Adipose Bone Marrow Stem Cells</li>
-                <li>Neurofunctional Electric and IV Therapy</li>
-            </ul>
-        </div>
-    </section>
+  <section class="nfl-combine-pro-day-summer-2020 cta">
+    <div class="filter"></div>
+    <div class="text">
+      <p style="margin: 0;">To tour the training facility, click "Learn More" below</p>
+      <h4 class="appear">NFL Combine | Pro Day</h4>
+      <a href="<%= PP %>/sign-up" class="btn appear sign-up-btn">Learn More</a>
+      <img src="<%= PP %>/images/logos/mcx-contrast-dark.png" class="logo" />
+    </div>
+  </section>
 
-    <section class="nfl-combine-pro-day-summer-2020 wonderlic">
-        <h3>Wonderlic Test Interview Training Preparation</h3>
-        <p>By working with our in-house Sports Psychologist, each athlete will get insight into the Wonderlic Test with test-taking strategies exclusively developed to maximize scores. In addition, they will work one on one to be prepared for team and media interviews.</p>
-    </section>
-
-    <!-- <section class="nfl-combine-pro-day-summer-2020 dedrick-mackey">
-        <div class="textbox">
-            <h3>Dedrick Mackey, DB Purdue University</h3>
-            <p>"When I first started training at MCX, they immediately used MAT to address my imbalances that were causing my hamstring to be very tight. The team developed my strength the right way and I never felt more mobile and strong, all while improving my footwork."</p>
-            <p>"They taught me how training smarter, not harder, is best and that has carried over to my success on the field. I look forward to working with them during my school breaks in the future."</p>
-        </div>
-    </section> -->
-
-    <section class="nfl-combine-pro-day-summer-2020 nutrition-support">
-        <img class="vertical" src="<%= PP %>/images/backgrounds/vegetables-vertical.jpg" alt="vegetables">
-        <img class="horizontal" src="<%= PP %>/images/backgrounds/vegetables-horizontal.jpg" alt="vegetables">
-        <div class="textbox">
-            <h3>Nutrition Support</h3>
-            <p><b>Lush Meals Miami</b> will provide the athletes every day with freshly cooked organic food chosen to maximize muscle growth, fuel workouts, and decrease inflammation.</p>
-            <p>Our proprietary recovery drink will be provided every day to decrease inflammation which will accelerate the recovery process.</p>
-            <p>Protein shakes and performance supplements are powered by <b>ISAGENIX</b> who use dairy from grass-fed cows in New Zealand, free from banned substances tested by Informed Sport.</p>
-        </div>
-    </section>
-
-    <!-- <section class="nfl-combine-pro-day-summer-2020 marlin-brooks">
-        <div class="filter"></div>
-        <img src="<%= PP %>/images/people/ohio-22.jpeg" alt="Marlin Brooks Ohio University Football">
-        <div class="textbox">
-            <h3>Marlin Brooks, DB Ohio University</h3>
-            <p>"I absolutely love working with MYOCORTEX. Their process has aided my technique and elevated my game to another level throughout high school and into prepping me for college. Every time I come home for break it is my priority to get into their facility to get my body worked on and to improve my skill."</p>
-        </div>
-    </section> -->
-
-    <section class="nfl-combine-pro-day-summer-2020 mike-montero">
-        <div class="filter"></div>
-        <img src="<%= PP %>/images/people/mike-montero.jpg" alt="Mike Montero OL AAF">
-        <div class="textbox">
-            <h3>Mike Montero, OL</h3>
-            <p>"My experience with MYOCORTEX has been only the best. I came in with muscle imbalances, but through MAT and a focus on muscle isolation, I have not only become stronger and faster, but also a stronger offensive lineman. I highly recommend MYOCORTEX if you want to step your game up to the next level."</p>
-        </div>
-    </section>
-
-    <section class="nfl-combine-pro-day-summer-2020 lodging-and-transportation">
-        <div class="split-2">
-            <div class="split-box textbox">
-                <h3>Lodging and Transportation</h3>
-                <p>We have contracted Habitat Residences-Condo Hotel, a family owned and operated facility for our 8-week program located just a few steps away from Miami's renowned financial center, Brickell Area, and the Miami metro.</p>
-                <p>As a courtesy, they will provide the athletes with transportation to and from the training facility on all training days.</p>
-            </div>
-            <div class="split-box" habitat-residences-living-room title="Habitat Residences-Condo Hotel living room"></div>
-        </div>
-        <div class="split-3">
-            <div class="split-box" habitat-residences-pool title="Habitat Residences-Condo Hotel pool"></div>
-            <div class="split-box" habitat-residences-front title="Habitat Residences-Condo Hotel front"></div>
-            <div class="split-box" habitat-residences-bed title="Habitat Residences-Condo Hotel bed"></div>
-        </div>
-    </section>
-
-    <section class="nfl-combine-pro-day-summer-2020 support-at-indy">
-        <div class="filter"></div>
-        <h3 class="main-title">Support at Indy | Pro Day</h3>
-        <p class="subtitle">Preparation is everything. Our staff will travel with the athletes to ensure that they have proper nutrient timing, are neurologically prepared, and to reinforce techniques practiced throughout our training period. <span class="no-wrap">(March 2-5, 2019)</span></p>
-        <div class="split-4">
-            <div class="split-box">
-                <h4>Friday</h4>
-                <p>TE, OL, PK, ST</p>
-            </div>
-            <div class="split-box">
-                <h4>Saturday</h4>
-                <p>QB, RB, WO</p>
-            </div>
-            <div class="split-box">
-                <h4>Sunday</h4>
-                <p>DL, LB, EDGE</p>
-            </div>
-            <div class="split-box">
-                <h4>Monday</h4>
-                <p>DB, S</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="nfl-combine-pro-day-summer-2020 closing-statement">
-        <h3>Closing Statement</h3>
-        <p>We want to take this opportunity to thank you for considering MCX to coach your athlete. Our process is like no other company out there in the market. The athletes' physical and mental health is our number one priority to building a long-lasting career.</p>
-        <p>Our program is limited to a small number of athletes in order to provide individual attention and superior quality. Accountability is everything!</p>
-    </section>
-
-    <section class="nfl-combine-pro-day-summer-2020 cta">
-        <div class="filter"></div>
-        <div class="text">
-            <h4 class="appear">NFL Combine | Pro Day</h4>
-            <a href="<%= PP %>/sign-up" class="btn appear sign-up-btn">sign up</a>
-            <img src="<%= PP %>/images/logos/mcx-contrast-dark.png" class="logo" />
-        </div>
-    </section>
-
-    <%- include(`${partials}/footer`, {classNames: ''}); -%>
-    <%- include(`${partials}/scripts`); -%>
+  <%- include(`${partials}/footer`, {classNames: ''}); -%>
+  <%- include(`${partials}/scripts`); -%>
 </body>
 </html>

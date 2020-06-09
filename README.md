@@ -21,7 +21,7 @@ Use EJS, SASS, and the latest JavaScript syntax to build fully-static production
 
 ## DEVELOPMENT
 
-```yarn dev``` (to prepare files, start server, and watch files)
+```npm run dev``` (to prepare files, start server, and watch files)
 
 **Development Features:**
 * CSS updates without browser reload; browser auto-reloads upon JS and HTML updates
@@ -29,7 +29,7 @@ Use EJS, SASS, and the latest JavaScript syntax to build fully-static production
 
 ## PRODUCTION
 
-```yarn build```
+```npm run build```
 
 **Production Features:**
 * Minification for CSS (with Autoprefixer), JS (with Babel), and HTML files
@@ -43,11 +43,13 @@ Use EJS, SASS, and the latest JavaScript syntax to build fully-static production
 * A polyfills file from Polyfill.io file that only loads if the client doesn't have certain features
 * CSS helpers, including classes for "show/hide on scroll" behavior, "split-box" classes for grid behavior, and more in `_helpers.scss`
 * `print.scss` for common css fixes when printing a web page
+* Prettier instead of EsLint - `npm run prettier`; /prettier.config.js
+* Lazy loading! check out /src/js/lazy-module.js for an example
 
 **Included Libraries:**
 * *Sanitize.css* - common CSS resets. The evolution of Normalize.css
 * *Font Awesome* - I mainly use it for icons
-* *escape-goat* - should use this on any user-inputted data
+* *jQuery* - JavaScript helpers
+* *dompurify* - should use this on any user-inputted data
 * *lodash.throttle* - already used in the CSS helper classes that show/hide an element on-scroll
-* *include-media* - so you can do things in `sass` like `@include media('>=358px', '<850px') { }`
 * *HTML5Boilerplate* - includes presets in html & css for web best practices, and includes a .htaccess file

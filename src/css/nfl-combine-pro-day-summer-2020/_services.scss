@@ -1,0 +1,15 @@
+section.nfl-combine-pro-day-summer-2020.services {
+  background-image: url('../../images/backgrounds/systems-background.jpg');
+  background-size: cover;
+  background-position: left;
+  padding: 80px 40px;
+  color: #ccc;
+
+  @media all and (min-width: 800px) {
+    padding: 80px;
+  }
+
+  @media all and (min-width: 1400px) {
+    padding: 120px 80px;
+  }
+}

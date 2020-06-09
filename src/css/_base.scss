@@ -50,6 +50,11 @@ h6 {
     letter-spacing: 2px;
 }
 
+li {
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
 .lazyload,
 .lazyloading {
     opacity: 0;
@@ -99,7 +104,7 @@ a {
         content: '→';
         font-size: 20px;
         line-height: 1;
-        top: 9px;
+        top: 7px;
         right: 20px;
         transition: right 200ms;
     }

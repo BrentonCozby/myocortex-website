@@ -1,0 +1,18 @@
+section.nfl-combine-pro-day-summer-2020.event-details {
+  background-color: #000;
+  background-image:
+      linear-gradient(rgba(0, 0, 0, .90), rgba(0, 0, 0, .90)),
+      url('../../images/backgrounds/particles-background-gray.png');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 40px;
+  color: #ccc;
+
+  @media all and (min-width: 800px) {
+    padding: 80px;
+  }
+
+  @media all and (min-width: 1400px) {
+    padding: 120px 80px;
+  }
+}

@@ -1,6 +1,6 @@
-import 'utils/errors'
-import 'utils/video'
-import 'utils/contact_me'
+import './utils/errors'
+import './video'
+import './contact_me'
 
 import throttle from 'lodash.throttle'
 import smoothScrollInit from './smooth-scroll'

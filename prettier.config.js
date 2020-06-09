@@ -1,18 +1,20 @@
 module.exports = {
-    tabWidth: 4,
-    semi: false,
-    singleQuote: true,
-    printWidth: 120,
-    trailingComma: 'es5',
-    bracketSpacing: true,
-    jsxBracketSameLine: false,
-    arrowParens: 'avoid',
-    overrides: [
-        {
-            files: '.prettierrc',
-            options: {
-                parser: 'json',
-            },
-        },
-    ],
+  printWidth: 120,
+  tabWidth: 2,
+  useTabs: false,
+  semi: false,
+  singleQuote: true,
+  trailingComma: 'es5',
+  bracketSpacing: false,
+  jsxBracketSameLine: false,
+  proseWrap: 'always',
+  overrides: [
+    {
+      files: '.prettierrc',
+      options: {
+        parser: 'json'
+      }
+    }
+  ]
 }
+  

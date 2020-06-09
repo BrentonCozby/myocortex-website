@@ -76,8 +76,16 @@ section.nfl-combine-pro-day-summer-2020.top {
         text-transform: uppercase;
         margin: 10px 0;
 
+        &.date {
+            font-size: 32px;
+        }
+
         @media all and (min-width: 600px) {
             font-size: 26px;
+
+            &.date {
+                font-size: 44px;
+            }
         }
     }
 }
