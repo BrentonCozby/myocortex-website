@@ -1,0 +1,35 @@
+#main-logo-container.learn-more {
+    position: absolute;
+
+    h4 {
+        font-size: 9px;
+        margin-left: 15px;
+        margin-top: 0;
+
+        @media all and (min-width: 768px) {
+            font-size: 14px;
+        }
+    }
+}
+
+section.learn-more.top {
+    min-height: 100vh;
+
+    @media all and (min-width: 768px) {
+        background-color: #fff;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%),
+            linear-gradient(rgba(255, 255, 255, .75), rgba(255, 255, 255, .25)),
+            url('../../../images/backgrounds/particles-background.png');
+        background-size: 100% auto;
+        background-position: right center;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+}

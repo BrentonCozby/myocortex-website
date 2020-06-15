@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include(`${partials}/head`, {pageTitle: 'Sign-up'}); -%>
+<%- include(`${partials}/head`, {pageTitle: 'Learn More'}); -%>
 <body>
     <%- include(`${partials}/menu`); -%>
 
-    <div class="sign-up" id="main-logo-container">
+    <div class="learn-more" id="main-logo-container">
         <a href="<%= PP %>/">
             <img class="main-logo" src="<%= PP %>/images/logos/myocortex_logo_black_with_mcx.svg" alt="MYOCORTEX full logo">
         </a>
     </div>
 
-    <section class="sign-up top">
+    <section class="learn-more top">
         <div class="flex-container">
-            <div class="text-box">
-                <h1 class="page-title">founders</h1>
-                <div class="founders"><a href="<%= PP %>/rob" class="founder-container"><img src="<%= PP %>/images/people/rob_headshot.jpg" alt="Rob"/>
-              <div class="name-and-title">
-                <p class="name">Rob DiDonato</p>
-              </div></a><a href="<%= PP %>/courtney" class="founder-container"><img src="<%= PP %>/images/people/courtney_headshot.jpg" alt="Courtney"/>
-              <div class="name-and-title">
-                <p class="name">Courtney Paige Alvarez</p>
-              </div></a></div>
-            </div>
             <div class="form-container">
                 <h2>Information Inquiry</h2>
                 <form id="sign-up-form">
@@ -50,12 +40,12 @@
         </div>
     </section>
 
-    <section class="sign-up break-barriers">
+    <section class="learn-more break-barriers">
         <h4 class="break-barriers-statement">break barriers.<br>redefine your results.</h4>
         <h4 class="respect-the-process">respect the process</h4>
     </section>
 
-    <%- include(`${partials}/footer`, {classNames: 'sign-up'}); -%>
+    <%- include(`${partials}/footer`, {classNames: 'learn-more'}); -%>
     <%- include(`${partials}/scripts`); -%>
 </body>
 </html>

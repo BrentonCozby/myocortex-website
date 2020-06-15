@@ -39,7 +39,7 @@ module.exports = (env = {}) => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        PP: JSON.stringify(''),
+        PP: JSON.stringify(globals.PP),
         SITE_TITLE: JSON.stringify(globals.SITE_TITLE),
         DESCRIPTION: JSON.stringify(globals.DESCRIPTION),
         SITE_URL: JSON.stringify(globals.SITE_URL),
