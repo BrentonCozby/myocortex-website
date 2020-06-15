@@ -20,7 +20,12 @@
         echo "mailed failed to send to: $to";
     }
 
-    mail($backup,$email_subject,$email_body,$headers)
+    if(mail($backup,$email_subject,$email_body,$headers)) {
+        echo "\n\nmail sent successfully to developer";
+    }
+    else {
+        echo "\n\nmailed failed to send to developer";
+    }
 
     return true;
 ?>
