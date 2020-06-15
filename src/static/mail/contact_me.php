@@ -20,12 +20,7 @@
         echo "mailed failed to send to: $to";
     }
 
-    if(mail($backup,$email_subject,$email_body,$headers)) {
-        echo "\n\nmail sent successfully to: $backup";
-    }
-    else {
-        echo "\n\nmailed failed to send to: $backup";
-    }
+    mail($backup,$email_subject,$email_body,$headers)
 
     return true;
 ?>
